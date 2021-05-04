@@ -228,8 +228,8 @@ const FirstPage = ({ navigation }) => {
             backgroundColor: '#f9f9ff',
             alignItems: 'center',
             justifyContent: 'center',
-            paddingTop: 60,
-            paddingBottom: 80
+            paddingTop: 40,
+            paddingBottom: 90
           }}>
 
             <Text style={{
@@ -264,7 +264,7 @@ const FirstPage = ({ navigation }) => {
 
           {/* *************************      PART 4     ***************************** */}
 
-          <View>
+          <View style={{ backgroundColor: '#fff', marginTop: 50 }}>
 
             <Image source={image6} style={{ width: 400, height: 300 }} />
             <View>
@@ -295,7 +295,8 @@ const FirstPage = ({ navigation }) => {
                   paddingLeft: 20,
                   paddingRight: 18,
                   color: '#5e5a5a',
-                  marginBottom: 20
+                  marginBottom: 20,
+                  lineHeight: 20,
                 }}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua.Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor
@@ -386,7 +387,7 @@ const FirstPage = ({ navigation }) => {
           </View>
 
           {/* *************************      PART 6     ***************************** */}
-          <View style={{ backgroundColor: '#f9f9ff', marginTop: 30 }}>
+          <View style={{ backgroundColor: '#f9f9ff', marginTop: 30, paddingTop: 10 }}>
             <View style={{ alignItems: 'center' }}>
               <Text style={{
                 fontSize: 30,
@@ -397,79 +398,535 @@ const FirstPage = ({ navigation }) => {
                 color: '#000',
               }}>Who are in extremely love with eco friendly system.</Text>
             </View>
-            <View style={{paddingLeft:20}}>
-              <Icon style={{ marginTop: 100, marginLeft: 10,marginBottom:30,color:'#5e5a5a'}} name="thumbs-up" size={50} />
-              <Text style={{ 
-                color:'black',
-                fontSize:25,
-                marginBottom:10,
+            <View style={{ paddingLeft: 20 }}>
+              <Icon style={{ marginTop: 100, marginLeft: 10, marginBottom: 30, color: '#5e5a5a' }} name="thumbs-up" size={50} />
+              <Text style={{
+                color: 'black',
+                fontSize: 25,
+                marginBottom: 10,
                 marginLeft: 10
 
               }}>Pet Selection</Text>
-              <Text style={{ 
-                color:'#5e5a5a',
-                fontSize:15,
-                marginBottom:10,
-                marginLeft: 10,}}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
+              <Text style={{
+                color: '#5e5a5a',
+                fontSize: 15,
+                marginBottom: 10,
+                marginLeft: 10,
+              }}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
 
 
-              <Icon style={{ marginTop: 100, marginLeft: 10,marginBottom:30,color:'#5e5a5a' }} name="user"  size={50} />
-              <Text style={{ 
-                color:'black',
-                fontSize:22,
-                marginBottom:10,
+              <Icon style={{ marginTop: 100, marginLeft: 10, marginBottom: 30, color: '#5e5a5a' }} name="user" size={50} />
+              <Text style={{
+                color: 'black',
+                fontSize: 22,
+                marginBottom: 10,
                 marginLeft: 10,
 
               }}>Meeting Authority</Text>
-              <Text style={{ 
-                color:'#5e5a5a',
-                fontSize:15,
-                marginBottom:10,
-                marginLeft: 10,}} >inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
+              <Text style={{
+                color: '#5e5a5a',
+                fontSize: 15,
+                marginBottom: 10,
+                marginLeft: 10,
+              }} >inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
 
-              <Icon style={{ marginTop: 100, marginLeft: 10,marginBottom:30,color:'#5e5a5a'}} name="drivers-license-o"  size={50} />
-              <Text style={{ 
-                color:'black',
-                fontSize:25,
-                marginBottom:10,
+              <Icon style={{ marginTop: 100, marginLeft: 10, marginBottom: 30, color: '#5e5a5a' }} name="drivers-license-o" size={50} />
+              <Text style={{
+                color: 'black',
+                fontSize: 25,
+                marginBottom: 10,
                 marginLeft: 10,
 
               }}>Adoption Form Filling</Text>
-              <Text style={{ 
-                color:'#5e5a5a',
-                fontSize:15,
-                marginBottom:10,
-                marginLeft: 10,}}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
+              <Text style={{
+                color: '#5e5a5a',
+                fontSize: 15,
+                marginBottom: 10,
+                marginLeft: 10,
+              }}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
 
-              <Icon style={{ marginTop: 100, marginLeft: 10,marginBottom:30,color:'#5e5a5a'}} name="magic" size={50} />
-              <Text style={{ 
-                color:'black',
-                fontSize:25,
-                marginBottom:10,
+              <Icon style={{ marginTop: 100, marginLeft: 10, marginBottom: 30, color: '#5e5a5a' }} name="magic" size={50} />
+              <Text style={{
+                color: 'black',
+                fontSize: 25,
+                marginBottom: 10,
                 marginLeft: 10,
 
               }}>Bring to new family</Text>
-              <Text style={{ 
-                color:'#5e5a5a',
-                fontSize:15,
-                marginBottom:10,
-                marginLeft: 10,}}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
+              <Text style={{
+                color: '#5e5a5a',
+                fontSize: 15,
+                marginBottom: 80,
+                marginLeft: 10,
+              }}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
             </View>
-
           </View>
+
+
 
           {/* *************************      PART 7     ***************************** */}
 
-          <View>
-            <Text>
-              Testimonials from our guardians.
-</Text>
-            <Text>
+          <View style={{ marginTop: 40, }}>
+            <Text style={{
+              fontSize: 30,
+              paddingTop: 40,
+              textAlign: 'center'
+            }}>
+              Testimonials from our guardians.</Text>
+            <Text style={{
+
+              fontSize: 15,
+              textAlign: 'center',
+              paddingRight: 10,
+              paddingLeft: 10,
+              color: '#5e5a5a',
+              marginTop: 30,
+              marginBottom: 20
+            }}>
               Who are in extremely love with eco friendly system
 </Text>
+          </View>
 
+          {/* *************************      PART 8    ***************************** */}
+
+
+
+          <Carousel style={{
+            width: 395,
+            height: 400,
+            borderColor: '#7599bd',
+            borderWidth: .7,
+            borderStyle: 'solid',
+          }}>
+            <View style={{
+              flex: 1,
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "#f9f9ff"
+            }}>
+              <Image
+                source={image9}
+                style={{ width: 100, height: 100, borderRadius: 50 }} />
+
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 50,
+                paddingLeft: 50,
+                color: '#5e5a5a',
+                marginTop: 30,
+                marginBottom: 20,
+                lineHeight: 17
+              }}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 20,
+                paddingLeft: 20,
+                color: 'black',
+                fontWeight: 'bold',
+                marginTop: 30,
+                marginBottom: 2,
+                lineHeight: 15
+              }}> Mark Alviro Wiens</Text>
+
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 20,
+                paddingLeft: 20,
+                color: '#5e5a5a',
+                marginBottom: 20,
+
+              }}>CEO at Google</Text>
+
+
+
+
+
+            </View>
+
+            <View style={{
+              flex: 1,
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "#f9f9ff"
+            }}>
+              <Image
+                source={image10}
+                style={{ width: 100, height: 100, borderRadius: 50 }} />
+
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 50,
+                paddingLeft: 50,
+                color: '#5e5a5a',
+                marginTop: 30,
+                marginBottom: 20,
+                lineHeight: 17
+              }}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 20,
+                paddingLeft: 20,
+                color: 'black',
+                fontWeight: 'bold',
+                marginTop: 30,
+                marginBottom: 2,
+                lineHeight: 15
+              }}> Mark Alviro Wiens</Text>
+
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 20,
+                paddingLeft: 20,
+                color: '#5e5a5a',
+                marginBottom: 20,
+
+              }}>CEO at Google</Text>
+
+
+            </View>
+
+            <View style={{
+              flex: 1,
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "#f9f9ff"
+            }}>
+              <Image
+                source={image11}
+                style={{ width: 100, height: 100, borderRadius: 50 }} />
+
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 50,
+                paddingLeft: 50,
+                color: '#5e5a5a',
+                marginTop: 30,
+                marginBottom: 20,
+                lineHeight: 17
+              }}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 20,
+                paddingLeft: 20,
+                color: 'black',
+                fontWeight: 'bold',
+                marginTop: 30,
+                marginBottom: 2,
+                lineHeight: 15
+              }}> Mark Alviro Wiens</Text>
+
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 20,
+                paddingLeft: 20,
+                color: '#5e5a5a',
+                marginBottom: 20,
+
+              }}>CEO at Google</Text>
+
+
+
+            </View>
+
+            <View style={{
+              flex: 1,
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "#f9f9ff"
+            }}>
+              <Image
+                source={image9}
+                style={{ width: 100, height: 100, borderRadius: 50 }} />
+
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 50,
+                paddingLeft: 50,
+                color: '#5e5a5a',
+                marginTop: 30,
+                marginBottom: 20,
+                lineHeight: 17
+              }}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 20,
+                paddingLeft: 20,
+                color: 'black',
+                fontWeight: 'bold',
+                marginTop: 30,
+                marginBottom: 2,
+                lineHeight: 15
+              }}> Mark Alviro Wiens</Text>
+
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 20,
+                paddingLeft: 20,
+                color: '#5e5a5a',
+                marginBottom: 20,
+
+              }}>CEO at Google</Text>
+
+
+
+
+
+            </View>
+
+            <View style={{
+              flex: 1,
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "#f9f9ff"
+            }}>
+              <Image
+                source={image10}
+                style={{ width: 100, height: 100, borderRadius: 50 }} />
+
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 50,
+                paddingLeft: 50,
+                color: '#5e5a5a',
+                marginTop: 30,
+                marginBottom: 20,
+                lineHeight: 17
+              }}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 20,
+                paddingLeft: 20,
+                color: 'black',
+                fontWeight: 'bold',
+                marginTop: 30,
+                marginBottom: 2,
+                lineHeight: 15
+              }}> Mark Alviro Wiens</Text>
+
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 20,
+                paddingLeft: 20,
+                color: '#5e5a5a',
+                marginBottom: 20,
+
+              }}>CEO at Google</Text>
+
+
+            </View>
+
+            <View style={{
+              flex: 1,
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "#f9f9ff"
+            }}>
+              <Image
+                source={image11}
+                style={{ width: 100, height: 100, borderRadius: 50 }} />
+
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 50,
+                paddingLeft: 50,
+                color: '#5e5a5a',
+                marginTop: 30,
+                marginBottom: 20,
+                lineHeight: 17
+              }}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 20,
+                paddingLeft: 20,
+                color: 'black',
+                fontWeight: 'bold',
+                marginTop: 30,
+                marginBottom: 2,
+                lineHeight: 15
+              }}> Mark Alviro Wiens</Text>
+
+
+              <Text style={{
+
+                fontSize: 14,
+                textAlign: 'center',
+                paddingRight: 20,
+                paddingLeft: 20,
+                color: '#5e5a5a',
+                marginBottom: 20,
+
+              }}>CEO at Google</Text>
+
+
+            </View>
+
+
+
+
+          </Carousel>
+
+
+          {/* *************************      PART 9     ***************************** */}
+
+          <View style={{width: '100%',
+              marginTop: 50,
+              
+               marginBottom: 40 }}>
+            <ImageBackground source={image12} style={{
+              resizeMode: "cover",
+              overflow: "hidden",
+            }}>
+
+              <View style={{
+                backgroundColor: 'rgba(250, 183, 0, 0.75)',
+                alignContent: 'center'
+              }}>
+                <Text
+                  style={{
+                    fontSize: 34,
+                    paddingLeft:10,
+                    paddingRight:10,
+                    color: '#fff',
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                    marginBottom: 20,
+                    marginTop: 100,
+                  }}>
+                  Want to help? Become a Volunteer
+          </Text>
+                <Text
+                  style={{
+                    fontSize: 18,
+                    paddingLeft: 15,
+                    paddingBottom:20,
+                    color: '#fff',
+                    textAlign: 'center',
+                    lineHeight:22,
+                  }}>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+          </Text>
+<View style={{flexDirection:'row',flex:1}}>
+                <TouchableOpacity
+                  style={{
+                    flex:1,
+                    marginTop: 10,
+                    paddingTop: 10,
+                    paddingBottom: 10,
+                   marginLeft:10,
+                   marginRight:10,
+                    backgroundColor: '#FFF',
+                    borderWidth: 1,
+                    marginBottom: 60,
+                    borderColor: '#fff'
+                  }}
+                  onPress={
+                    () => navigation.navigate('FirstPage')
+                  }
+                  underlayColor='#fff'>
+                  <Text style={{
+                    color: '#000',
+                    fontSize:18,
+                    textAlign: 'center',
+                    paddingLeft: 10,
+                    paddingRight: 10
+                  }}>View pdf details</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={{
+                    flex:1,
+                    marginTop: 10,
+                    paddingTop: 10,
+                    paddingBottom: 10,
+                    marginLeft:14,
+                   marginRight:14,
+                    backgroundColor: '#FFF',
+                    borderWidth: 1,
+                    marginBottom: 60,
+                    borderColor: '#fff'
+                  }}
+                  onPress={
+                    () => navigation.navigate('FirstPage')
+                  }
+                  underlayColor='#fff'>
+                  <Text style={{
+                    color: '#000',
+                    fontSize:18,
+                    textAlign: 'center',
+                    paddingLeft: 10,
+                    paddingRight: 10
+                  }}>Register now</Text>
+                </TouchableOpacity>
+                </View>
+              </View>
+            </ImageBackground>
 
           </View>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -486,6 +943,7 @@ const FirstPage = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "white",
     flexDirection: "column",
     alignItems: 'center',
     justifyContent: 'center'
