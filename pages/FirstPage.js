@@ -819,10 +819,10 @@ const FirstPage = ({ navigation }) => {
 
           {/* *************************      PART 9     ***************************** */}
 
-          <View style={{width: '100%',
-              marginTop: 50,
-              
-               marginBottom: 40 }}>
+          <View style={{
+            width: '100%',
+            marginTop: 50,
+          }}>
             <ImageBackground source={image12} style={{
               resizeMode: "cover",
               overflow: "hidden",
@@ -835,8 +835,8 @@ const FirstPage = ({ navigation }) => {
                 <Text
                   style={{
                     fontSize: 34,
-                    paddingLeft:10,
-                    paddingRight:10,
+                    paddingLeft: 10,
+                    paddingRight: 10,
                     color: '#fff',
                     fontWeight: 'bold',
                     textAlign: 'center',
@@ -849,64 +849,64 @@ const FirstPage = ({ navigation }) => {
                   style={{
                     fontSize: 18,
                     paddingLeft: 15,
-                    paddingBottom:20,
+                    paddingBottom: 20,
                     color: '#fff',
                     textAlign: 'center',
-                    lineHeight:22,
+                    lineHeight: 22,
                   }}>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
           </Text>
-<View style={{flexDirection:'row',flex:1}}>
-                <TouchableOpacity
-                  style={{
-                    flex:1,
-                    marginTop: 10,
-                    paddingTop: 10,
-                    paddingBottom: 10,
-                   marginLeft:10,
-                   marginRight:10,
-                    backgroundColor: '#FFF',
-                    borderWidth: 1,
-                    marginBottom: 60,
-                    borderColor: '#fff'
-                  }}
-                  onPress={
-                    () => navigation.navigate('FirstPage')
-                  }
-                  underlayColor='#fff'>
-                  <Text style={{
-                    color: '#000',
-                    fontSize:18,
-                    textAlign: 'center',
-                    paddingLeft: 10,
-                    paddingRight: 10
-                  }}>View pdf details</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  style={{
-                    flex:1,
-                    marginTop: 10,
-                    paddingTop: 10,
-                    paddingBottom: 10,
-                    marginLeft:14,
-                   marginRight:14,
-                    backgroundColor: '#FFF',
-                    borderWidth: 1,
-                    marginBottom: 60,
-                    borderColor: '#fff'
-                  }}
-                  onPress={
-                    () => navigation.navigate('FirstPage')
-                  }
-                  underlayColor='#fff'>
-                  <Text style={{
-                    color: '#000',
-                    fontSize:18,
-                    textAlign: 'center',
-                    paddingLeft: 10,
-                    paddingRight: 10
-                  }}>Register now</Text>
-                </TouchableOpacity>
+                <View style={{ flexDirection: 'row', flex: 1 }}>
+                  <TouchableOpacity
+                    style={{
+                      flex: 1,
+                      marginTop: 10,
+                      paddingTop: 10,
+                      paddingBottom: 10,
+                      marginLeft: 10,
+                      marginRight: 10,
+                      backgroundColor: '#FFF',
+                      borderWidth: 1,
+                      marginBottom: 60,
+                      borderColor: '#fff'
+                    }}
+                    onPress={
+                      () => navigation.navigate('FirstPage')
+                    }
+                    underlayColor='#fff'>
+                    <Text style={{
+                      color: '#000',
+                      fontSize: 18,
+                      textAlign: 'center',
+                      paddingLeft: 10,
+                      paddingRight: 10
+                    }}>View pdf details</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={{
+                      flex: 1,
+                      marginTop: 10,
+                      paddingTop: 10,
+                      paddingBottom: 10,
+                      marginLeft: 14,
+                      marginRight: 14,
+                      backgroundColor: '#FFF',
+                      borderWidth: 1,
+                      marginBottom: 60,
+                      borderColor: '#fff'
+                    }}
+                    onPress={
+                      () => navigation.navigate('FirstPage')
+                    }
+                    underlayColor='#fff'>
+                    <Text style={{
+                      color: '#000',
+                      fontSize: 18,
+                      textAlign: 'center',
+                      paddingLeft: 10,
+                      paddingRight: 10
+                    }}>Register now</Text>
+                  </TouchableOpacity>
                 </View>
               </View>
             </ImageBackground>
@@ -916,18 +916,254 @@ const FirstPage = ({ navigation }) => {
 
 
 
+          {/* ************************************************* */}
+          <View style={{ backgroundColor: '#101010', width: '100%' }}>
+            <Text style={{
+              fontSize: 27,
+              paddingLeft: 15,
+
+              color: '#fff',
+              fontWeight: 'bold',
+
+              marginBottom: 20,
+              marginTop: 100,
+            }}>About Us</Text>
+            <Text
+              style={{
+                color: '#5e5a5a',
+                fontSize: 15,
+                paddingLeft: 15,
+                lineHeight: 20
+              }}>
+              Few would argue that, despite the advanc ements off eminism over the past three decades, women still face a double standard when it comes to their behavior. While men’s borderline-inappropriate behavior. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</Text>
+
+            <Text style={{
+              fontSize: 27,
+              paddingLeft: 15,
+              color: '#fff',
+              fontWeight: 'bold',
+
+              marginBottom: 20,
+              marginTop: 20,
+            }}>
+              Useful Links
+</Text>
+            <View style={{ flexDirection: 'row', flex: 1 }}>
+              <TouchableOpacity
+                style={{
+                  marginTop: 10,
+                  flex: 1,
+                  justifyContent: 'flex-start',
+                  paddingTop: 10,
+                  paddingBottom: 10,
+
+                }}
+                onPress={
+                  () => navigation.navigate('FirstPage')
+                }
+                underlayColor='#fff'>
+                <Text style={{
+                  color: '#5e5a5a',
+                  fontSize: 15,
+                  paddingLeft: 15,
+                  lineHeight: 20
+                }}>Home </Text>
+
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{
+                  marginTop: 10,
+                  flex: 1,
+                  justifyContent: 'flex-start',
+                  paddingTop: 10,
+                  paddingBottom: 10,
+
+                }}
+                onPress={
+                  () => navigation.navigate('FirstPage')
+                }
+                underlayColor='#fff'>
+                <Text style={{
+                  color: '#5e5a5a',
+                  fontSize: 15,
+                  paddingLeft: 15,
+                  lineHeight: 20
+                }}>Pricing</Text>
+
+              </TouchableOpacity>
+
+            </View>
+
+            <View style={{ flexDirection: 'row', flex: 1 }}>
+              <TouchableOpacity
+                style={{
+                  marginTop: 10,
+                  flex: 1,
+                  justifyContent: 'flex-start',
+                  paddingTop: 10,
+                  paddingBottom: 10,
+
+                }}
+                onPress={
+                  () => navigation.navigate('FirstPage')
+                }
+                underlayColor='#fff'>
+                <Text style={{
+                  color: '#5e5a5a',
+                  fontSize: 15,
+                  paddingLeft: 15,
+                  lineHeight: 20
+                }}>Service</Text>
+
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{
+                  marginTop: 10,
+                  flex: 1,
+                  justifyContent: 'flex-start',
+                  paddingTop: 10,
+                  paddingBottom: 10,
+
+                }}
+                onPress={
+                  () => navigation.navigate('FirstPage')
+                }
+                underlayColor='#fff'>
+                <Text style={{
+                  color: '#5e5a5a',
+                  fontSize: 15,
+                  paddingLeft: 15,
+                  lineHeight: 20
+                }}>Team</Text>
+
+              </TouchableOpacity>
+
+            </View>
+
+
+            <View style={{ flexDirection: 'row', flex: 1 }}>
+              <TouchableOpacity
+                style={{
+                  marginTop: 10,
+                  flex: 1,
+                  justifyContent: 'flex-start',
+                  paddingTop: 10,
+                  paddingBottom: 10,
+
+                }}
+                onPress={
+                  () => navigation.navigate('FirstPage')
+                }
+                underlayColor='#fff'>
+                <Text style={{
+                  color: '#5e5a5a',
+                  fontSize: 15,
+                  paddingLeft: 15,
+                  lineHeight: 20
+                }}>About </Text>
+
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{
+                  marginTop: 10,
+                  flex: 1,
+                  justifyContent: 'flex-start',
+                  paddingTop: 10,
+                  paddingBottom: 10,
+
+                }}
+                onPress={
+                  () => navigation.navigate('FirstPage')
+                }
+                underlayColor='#fff'>
+                <Text style={{
+                  color: '#5e5a5a',
+                  fontSize: 15,
+                  paddingLeft: 15,
+                  lineHeight: 20
+                }}>Blog</Text>
+
+              </TouchableOpacity>
+
+            </View>
+
+            <View style={{ flexDirection: 'row', flex: 1 }}>
+              <TouchableOpacity
+                style={{
+                  marginTop: 10,
+                  flex: 1,
+                  justifyContent: 'flex-start',
+                  paddingTop: 10,
+                  paddingBottom: 10,
+
+                }}
+                onPress={
+                  () => navigation.navigate('FirstPage')
+                }
+                underlayColor='#fff'>
+                <Text style={{
+                  color: '#5e5a5a',
+                  fontSize: 15,
+                  paddingLeft: 15,
+                  lineHeight: 20
+                }}>Case Study </Text>
+
+              </TouchableOpacity>
+
+
+            </View>
 
 
 
+            <Text style={{
+              fontSize: 27,
+              paddingLeft: 10,
+              color: '#fff',
+              fontWeight: 'bold',
+              marginBottom: 20,
+              marginTop: 30,
+            }}>Contact Us</Text>
+
+            <View style={{ marginTop: 30, flexDirection: 'row', flex: 1, width: 300 }}>
+              <Icon style={{ marginLeft: 20, flex: 1 }} name="home" color="white" size={30} />
+              <Text style={{ marginLeft: -189, color: 'white', flex: 1, fontSize: 17, lineHeight: 40 }}>Binghamton, New York</Text>
+            </View>
+            <Text style={{ marginLeft: 60, color: '#5e5a5a', flex: 1, fontSize: 17, lineHeight: 40 }}>4343 Hinkle Deegan Lake Road</Text>
 
 
+            <View style={{ marginTop: 30, flexDirection: 'row', flex: 1, width: 300 }}>
+              <Icon style={{ marginLeft: 20, flex: 1 }} name="phone" color="white" size={30} />
+              <Text style={{ marginLeft: -189, color: 'white', flex: 1, fontSize: 17, lineHeight: 40 }}>00 (953) 9865 562</Text>
+            </View>
+            <Text style={{ marginLeft: 60, color: '#5e5a5a', flex: 1, fontSize: 17, lineHeight: 40 }}>Mon to Fri 9am to 6 pmd</Text>
 
 
+            <View style={{ marginTop: 30, flexDirection: 'row', flex: 1, width: 300 }}>
+              <Icon style={{ marginLeft: 20, flex: 1 }} name="envelope" color="white" size={30} />
+              <Text style={{ marginLeft: -189, color: 'white', flex: 1, fontSize: 17, lineHeight: 40 }}>support@colorlib.com</Text>
+            </View>
+            <Text style={{ marginLeft: 60, color: '#5e5a5a', flex: 1, fontSize: 17, lineHeight: 40 }}>Send us your query anytime!</Text>
 
 
+          </View>
 
+          {/* *************************      PART 11     ***************************** */}
 
+          <View style={{backgroundColor: '#484848',width:'100%' ,paddingTop:40,paddingBottom:80}}>
 
+           
+              <Text style={{fontSize: 14, color: 'white', paddingLeft: 10 }}>Copyright ©2021 All rights reserved | This template is made</Text>
+         
+           
+              <View style={{ flexDirection: 'row', flex: 1,paddingTop:15,paddingLeft:10,width:200}}>
+                <Text style={{ flex: 1, fontSize: 14, color:'white' }}>with</Text>
+                <Icon style={{ flex: 1 }} name="heart" color="#FCCB1A" size={20} />
+                <Text style={{ flex: 1, fontSize: 14, color: 'white' }}>by</Text>
+                <Text style={{ flex: 1, fontSize: 14, color:'#FCCB1A' }}>Colorlib</Text>
+            </View>
+
+          </View>
 
 
 
