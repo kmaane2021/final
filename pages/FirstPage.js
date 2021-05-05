@@ -76,26 +76,31 @@ const FirstPage = ({ navigation }) => {
           {/* ************************* PART 1  IMAGEBACKGROUND     ***************************** */}
 
           <ImageBackground source={image1} style={styles.imgBk1}>
-
+            
+            <View style={{width:"95%"}}>
             <Text
               style={styles.hLWhite}>
               ADOPT US. WE NEED YOUR HELP.
             </Text>
+            </View>
 
-
+          <View style={{width:"80%"}}>
             <Text
               style={styles.pLWhite}>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp
               or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
             </Text>
-
-
+            </View>
+            
+            <View style={{width:"55%"}}>
             <TouchableOpacity
               style={styles.touchableLWhite}
               onPress={() => navigation.navigate('FirstPage')}
               underlayColor='#fff'>
               <Text style={styles.touchableTCBlack}>FIND A PET TO ADOPT</Text>
             </TouchableOpacity>
+           </View>
+
 
 
           </ImageBackground>
@@ -106,8 +111,9 @@ const FirstPage = ({ navigation }) => {
           {/* ************************* PART 2  CAROUSEL     ***************************** */}
 
 
-
+<View >
           <Carousel style={styles.carousel}>
+            
             <View style={styles.carouselView}>
               <Image source={image2} style={{ width: '100%', height: '100%' }} />
             </View>
@@ -133,8 +139,8 @@ const FirstPage = ({ navigation }) => {
               <Image source={image5} style={{ width: '100%', height: '100%' }} />
             </View>
           </Carousel>
-
-
+          </View>
+    
           {/* *************************      PART 3      ***************************** */}
 
 
@@ -148,7 +154,7 @@ const FirstPage = ({ navigation }) => {
                 () => navigation.navigate('FirstPage')
               }
               underlayColor='#fff'>
-              <Text style={styles.touchableTCWhite}>FIND A PET TO ADOPT</Text>
+              <Text style={styles.touchableTCWhite}>Fill Adoption Form</Text>
             </TouchableOpacity>
           </View>
 
@@ -160,9 +166,10 @@ const FirstPage = ({ navigation }) => {
 
 
 
-          <View style={{ marginTop: 50 }}>
+          <View style={styles.view4}>
 
-            <Image source={image6} style={{ width: 400, height: 300 }} />
+            <Image source={image6} style={{ width: "100%" ,height:220}} />
+           
             <View>
               <Text
                 style={styles.hBlack4}>
@@ -183,11 +190,11 @@ const FirstPage = ({ navigation }) => {
                 style={styles.touchableLYellow}
                 onPress={() => navigation.navigate('FirstPage')}
                 underlayColor='#fff'>
-                <Text style={styles.touchableTCBlack}>GET DETAILS</Text>
+                <Text style={styles.touchableTCWhite}>GET DETAILS</Text>
               </TouchableOpacity>
-
+              </View>
             </View>
-          </View>
+         
 
 
 
@@ -205,7 +212,7 @@ const FirstPage = ({ navigation }) => {
             }}
           >
 
-            <View style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+            <View style={{backgroundColor: 'transparent',alignContent:'center' }}>
 
               <View style={styles.modal}>
                 <WebView
@@ -223,12 +230,9 @@ const FirstPage = ({ navigation }) => {
             </View>
           </Modal>
 
-
-
-
-          <View style={{ alignContent: 'center' }} >
-            <ImageBackground source={image7} style={{ width: 360, height: 300 }}>
-              <Icon style={{ marginTop: 100, marginLeft: 130 }} name="play" color="white" size={100} onPress={() => setModalVisible(true)} />
+          <View style={styles.view5} >
+            <ImageBackground source={image7} style={styles.imgModal5}>
+              <Icon style={styles.icon5} name="play" color="white" size={100} onPress={() => setModalVisible(true)} />
             </ImageBackground>
 
           </View>
@@ -237,7 +241,9 @@ const FirstPage = ({ navigation }) => {
           {/* *************************      PART 6     ***************************** */}
 
           <View style={{ alignItems: 'center' }}>
+
             <Text style={styles.hBlack6}>Watch this video how they live here</Text>
+           
             <Text style={styles.pC6}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</Text>
           </View>
 
@@ -284,7 +290,7 @@ const FirstPage = ({ navigation }) => {
 
           {/* *************************      PART 9    ***************************** */}
 
-
+<View style={styles.view9}> 
 
           <Carousel style={styles.carousel9}>
 
@@ -361,7 +367,7 @@ const FirstPage = ({ navigation }) => {
 
           </Carousel>
 
-
+          </View>
           {/* *************************      PART 10     ***************************** */}
 
           <View style={{
@@ -529,76 +535,74 @@ const FirstPage = ({ navigation }) => {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "white",
-    flexDirection: "column",
-    alignItems: 'center',
-    justifyContent: 'center'
+const styles = ScaledSheet.create({
 
-
-  },
-
-  ///////////////////////////////// PART 1 /////////////////////////////////////////////
-
-
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////    STYLE      /////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+container:
+{
+  flexDirection:'column',
+  flex: 1,
+  backgroundColor:'#fff'
+  //alignItems: 'center',
+  //justifyContent: 'center'
+},
   container2:
   {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
+    // alignItems: 'center',
+    // justifyContent: 'center'
   },
 
   imgBk1:
   {
     height: null,
+    width:"100%",
     resizeMode: "cover",
     overflow: "hidden",
   },
 
   hLWhite:
   {
-    fontSize: 35,
-    paddingLeft: 15,
+    fontSize: "32@s",
+    paddingLeft: "15@s",
     color: '#fff',
     fontWeight: 'bold',
     textAlign: 'left',
-    marginBottom: 20,
-    marginTop: 200,
+    marginBottom: "15@s",
+    marginTop: "200@s",
   },
 
   pLWhite:
   {
-    fontSize: 18,
-    paddingLeft: 15,
+    fontSize: "15@s",
+    paddingLeft: "15@s",
     color: '#fff',
     textAlign: 'left',
-    marginBottom: 20
+    marginBottom: "20@s"
   },
 
   touchableLWhite:
   {
-    marginTop: 10,
-    justifyContent: 'flex-start',
-    paddingTop: 10,
-    paddingBottom: 10,
+
+    paddingTop: "10@s",
+    paddingBottom: "10@s",
     backgroundColor: '#fff',
-    borderWidth: 1,
-    marginLeft: 10,
-    marginRight: 160,
-    marginBottom: 60,
+    borderWidth: "1@s",
+    marginLeft: "15@s",
+    marginBottom: "60@s",
     borderColor: '#fff'
   },
 
 
   touchableTCBlack:
   {
-    fontSize: 18,
+    fontSize: "14@s",
     color: '#000',
     textAlign: 'center',
-    paddingLeft: 10,
-    paddingRight: 10
+    paddingLeft: "10@s",
+    paddingRight: "10@s"
   },
 
 
@@ -607,13 +611,18 @@ const styles = StyleSheet.create({
 
   carousel:
   {
-    marginTop: 30
+    marginTop: "30@s",
+  
   },
 
   carouselView:
   {
+    flex:1,
+    width:'100%',
     justifyContent: "center",
     alignItems: "center",
+   
+    
   },
 
 
@@ -621,30 +630,31 @@ const styles = StyleSheet.create({
 
   viewCenter3:
   {
-    marginTop: 20,
+    marginTop: "80@s",
+    marginBottom: "80@s",
     backgroundColor: '#f9f9ff',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 40,
-    paddingBottom: 90
+    paddingTop: "30@s",
+    paddingBottom: "30@s"
   },
 
   hBlack3:
   {
-    fontSize: 40,
+    fontSize: "32@s",
     textAlign: 'center',
-    paddingTop: 40
+    paddingTop: "40@s"
   },
 
 
   touchableCYellow:
   {
-    marginTop: 10,
+    marginTop: "10@s",
     justifyContent: 'center',
-    paddingTop: 10,
-    paddingBottom: 10,
+    paddingTop: "10@s",
+    paddingBottom: "10@s",
     backgroundColor: '#fab700',
-    borderWidth: 1,
+    borderWidth: "1@s",
     borderColor: '#fff'
   },
 
@@ -653,8 +663,8 @@ const styles = StyleSheet.create({
     color: '#fff',
     textAlign: 'center',
     fontWeight: 'bold',
-    paddingLeft: 10,
-    paddingRight: 10
+    paddingLeft: "10@s",
+    paddingRight: "10@s"
   },
 
 
@@ -664,201 +674,262 @@ const styles = StyleSheet.create({
   ///////////////////////////////// Part 4 /////////////////////////////////////////////
 
 
+  view4:
+  {
+marginBottom:"150@s"
+  },
+
   hBlack4:
   {
     color: '#000',
-    fontSize: 40,
-    paddingLeft: 20,
-    paddingRight: 18,
-    marginBottom: 20,
-    marginTop: 80
+    fontSize: "34@s",
+    paddingLeft: "20@s",
+    marginBottom: "20@s",
+    marginTop: "80@s"
   },
 
   h2Black4:
   {
-    fontSize: 16,
-    paddingLeft: 20,
-    paddingRight: 15,
+    fontSize: "15@s",
+    paddingLeft: "20@s",
     color: '#000',
-    marginBottom: 20
+    marginBottom: "20@s"
   },
 
   pGray4:
   {
-    fontSize: 15,
-    paddingLeft: 20,
-    paddingRight: 18,
+    fontSize: "14@s",
+    paddingLeft: "20@s",
+    paddingRight: "10@s",
     color: '#5e5a5a',
-    marginBottom: 20,
-    lineHeight: 20
+    marginBottom: "20@s",
+    lineHeight: "20@s"
   },
 
   touchableLYellow: {
 
-    marginTop: 10,
-    justifyContent: 'flex-start',
-    paddingTop: 10,
-    paddingBottom: 10,
+    marginTop: "10@s",
+    paddingTop: "10@s",
+    paddingBottom: "10@s",
     backgroundColor: '#fab700',
     borderWidth: 1,
-    marginLeft: 17,
-    marginRight: 220,
-    marginBottom: 60,
+    marginBottom:'10@s',
+    marginLeft: "17@s",
+    marginRight: "220@s",
     borderColor: '#fff'
 
   },
 
   ///////////////////////////////// Part 5 MODAL/////////////////////////////////////////////
+imgModal5:
+{
+//justifyContent:"center",
+width:"96%",
+height:"200@s"
+},
+
+
+icon5:
+{
+paddingLeft:"120@s",
+paddingTop:"50@s"
+},
+
+view5:
+{
+alignItems:"center",
+paddingLeft:"10@s",
+//justifyContent:"center",
+alignContent:"center"
+
+},
+
+
 
   modal:
   {
-    width: 400,
-    height: 200,
-    marginTop: 280
+    width: "450@s",
+    height: "200@s",
+    marginTop: "28@s"
   },
+
+  buttonClose: 
+  {
+    backgroundColor: "#2196F3",
+  },
+  button: 
+  {
+    borderRadius: "20@s",
+    padding: "10@s",
+    elevation: "2@s",
+    marginBottom: "20@s"
+  },
+textStyle:
+{
+textAlign:'center',
+fontWeight:'bold'
+},
 
   ///////////////////////////////// Part 6 /////////////////////////////////////////////
   hBlack6: {
 
-    fontSize: 20,
-    paddingTop: 40
+    fontSize: "18@s",
+    paddingTop: "40@s"
 
   },
 
   pC6:
   {
 
-    fontSize: 16,
+    fontSize: "15@s",
     textAlign: 'center',
-    paddingRight: 10,
-    paddingLeft: 10,
+    paddingRight: "10@s",
+    paddingLeft: "10@s",
     color: '#5e5a5a',
-    marginTop: 30,
-    marginBottom: 20
+    marginTop: "30@s",
+    marginBottom: "20@s"
 
   },
 
   ///////////////////////////////// Part 7 /////////////////////////////////////////////
 
   V7: {
-    backgroundColor: '#f9f9ff', marginTop: 30, paddingTop: 10
+    backgroundColor: '#f9f9ff',
+     marginTop: "30@s", 
+     paddingTop: "10@s"
   },
 
   hBlack7: {
-    fontSize: 30,
-    paddingTop: 40,
+    fontSize: "30@s",
+    fontWeight:'bold',
+    paddingTop: "40@s",
   },
 
   h2Black7: {
-    fontSize: 16,
-    color: '#000',
+    color: '#5e5a5a',
+    fontSize: "14@s",
+    textAlign:'center',
+    marginBottom: "10@s",
+    marginTop:"10@s",
+    marginLeft: "10@s"
   },
 
   viewIcon7:
   {
 
-    paddingLeft: 20
+    paddingLeft: "20@s"
   },
 
 
   icons7:
   {
-    marginTop: 100, marginLeft: 10, marginBottom: 30, color: '#5e5a5a'
+    marginTop: "100@s", 
+    marginLeft: "10@s",
+     marginBottom: "30@s", 
+     color: '#5e5a5a'
   },
 
   hIcons7:
   {
     color: 'black',
-    fontSize: 25,
-    marginBottom: 10,
-    marginLeft: 10
+    fontSize: "20@s",
+    fontWeight:'bold',
+    marginBottom: "10@s",
+    marginLeft: "10@s"
 
   },
 
   pIcons7:
   {
     color: '#5e5a5a',
-    fontSize: 15,
-    marginBottom: 10,
-    marginLeft: 10,
+    fontSize: "15@s",
+    marginBottom: "10@s",
+    marginLeft: "10@s",
     color: '#5e5a5a',
-    fontSize: 15,
-    marginBottom: 10,
-    marginLeft: 10,
+    fontSize: "15@s",
+    marginBottom: "10@s",
+    marginLeft: "10@s"
   },
 
   ///////////////////////////////// Part 8 /////////////////////////////////////////////
 
 
   hBlack8: {
-    fontSize: 30,
-    paddingTop: 40,
+    fontSize: "30@s",
+    paddingTop: "40@s",
+    fontWeight:'bold',
     textAlign: 'center'
   },
   h2Black8: {
 
-    fontSize: 15,
+    fontSize: "14@s",
     textAlign: 'center',
-    paddingRight: 10,
-    paddingLeft: 10,
+    paddingRight: "10@s",
+    paddingLeft: "10@s",
     color: '#5e5a5a',
-    marginTop: 30,
-    marginBottom: 20
+    marginTop: "30@s",
+    marginBottom: "60@s"
   },
   ///////////////////////////////// Part 9 /////////////////////////////////////////////
 
-  carousel9:
-  {
-    width: 395,
-    height: 400,
-    borderColor: '#7599bd',
-    borderWidth: .7,
-    borderStyle: 'solid',
+
+  view9:{
+    borderStyle:'solid',
+    borderWidth:.9,
+    height:"370@s",
+
   },
+ 
+    carousel9:
+    {
+
+      backgroundColor: '#f9f9ff',
+    },
 
   carousel9Content:
   {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#f9f9ff"
+      flex:1,
+      width:'100%',
+      height:"300@s",
+      justifyContent: "center",
+      alignItems: "center",
   },
 
-  pCarousel9: {
-
-    fontSize: 14,
+  pCarousel9: 
+  {
+    fontSize: "12@s",
     textAlign: 'center',
-    paddingRight: 50,
-    paddingLeft: 50,
+    paddingRight: "50@s",
+    paddingLeft: "50@s",
     color: '#5e5a5a',
-    marginTop: 30,
-    marginBottom: 20,
-    lineHeight: 17
+    marginTop: "30@s",
+    marginBottom: "20@s",
+    lineHeight: "17@s"
   },
 
 
   hCarousel9:
   {
 
-    fontSize: 14,
+    fontSize: "14@s",
     textAlign: 'center',
-    paddingRight: 20,
-    paddingLeft: 20,
+    paddingRight: "20@s",
+    paddingLeft: "20@s",
     color: 'black',
     fontWeight: 'bold',
-    marginTop: 30,
-    marginBottom: 2,
-    lineHeight: 15
+    marginTop: "30@s",
+    marginBottom: "2@s",
+    lineHeight: "15@s"
   },
 
   h2Carousel9: {
 
-    fontSize: 14,
+    fontSize: "14@s",
     textAlign: 'center',
-    paddingRight: 20,
-    paddingLeft: 20,
+    paddingRight: "20@s",
+    paddingLeft: "20@s",
     color: '#5e5a5a',
-    marginBottom: 20,
+    marginBottom: "20@s",
 
   },
   ///////////////////////////////// Part 10 /////////////////////////////////////////////
@@ -874,48 +945,48 @@ const styles = StyleSheet.create({
     alignContent: 'center'
   },
   hBlack10: {
-    fontSize: 34,
-    paddingLeft: 10,
-    paddingRight: 10,
+    fontSize: "30@s",
+    paddingLeft: "10@s",
+    paddingRight: "10@s",
     color: '#fff',
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 20,
-    marginTop: 100,
+    marginBottom: "20@s",
+    marginTop: "100@s",
   },
 
   p10: {
-    fontSize: 18,
-    paddingLeft: 15,
-    paddingBottom: 20,
+    fontSize: "15@s",
+    paddingLeft: "15@s",
+    paddingBottom: "20@s",
     color: '#fff',
     textAlign: 'center',
-    lineHeight: 22,
+    lineHeight: "22@s",
   },
 
   touchableL10: {
     flex: 1,
-    marginTop: 10,
-    paddingTop: 10,
-    paddingBottom: 10,
-    marginLeft: 10,
-    marginRight: 10,
+    marginTop: "10@s",
+    paddingTop: "10@s",
+    paddingBottom: "10@s",
+    marginLeft: "10@s",
+    marginRight: "10@s",
     backgroundColor: '#FFF',
     borderWidth: 1,
-    marginBottom: 60,
+    marginBottom: "60@s",
     borderColor: '#fff'
   },
 
   touchable2L10: {
     flex: 1,
-    marginTop: 10,
-    paddingTop: 10,
-    paddingBottom: 10,
-    marginLeft: 14,
-    marginRight: 14,
+    marginTop: "10@s",
+    paddingTop: "10@s",
+    paddingBottom: "10@s",
+    marginLeft: "14@s",
+    marginRight: "14@s",
     backgroundColor: '#FFF',
     borderWidth: 1,
-    marginBottom: 60,
+    marginBottom: "60@s",
     borderColor: '#fff'
   },
   ///////////////////////////////// Part 11 /////////////////////////////////////////////
@@ -924,44 +995,44 @@ const styles = StyleSheet.create({
   {
     backgroundColor: '#101010',
     width: '100%',
-    paddingBottom: 90
+    paddingBottom: "90@s"
   },
 
   hLWhite11: {
-    fontSize: 27,
-    paddingLeft: 15,
+    fontSize: "27@s",
+    paddingLeft: "15@s",
 
     color: '#fff',
     fontWeight: 'bold',
 
-    marginBottom: 20,
-    marginTop: 100,
+    marginBottom: "20@s",
+    marginTop: "100@s",
   },
 
   p11: {
     color: '#5e5a5a',
-    fontSize: 15,
-    paddingLeft: 15,
-    lineHeight: 20
+    fontSize: "15@s",
+    paddingLeft: "15@s",
+    lineHeight: "20@s"
   },
 
 
   h2LWhite11:
   {
-    fontSize: 27,
-    paddingLeft: 15,
+    fontSize: "27@s",
+    paddingLeft: "15@s",
     color: '#fff',
     fontWeight: 'bold',
-    marginBottom: 20,
-    marginTop: 20,
+    marginBottom: "20@s",
+    marginTop: "50@s"
   },
 
   touchableL11: {
-    marginTop: 10,
+    marginTop: "10@s",
     flex: 1,
     justifyContent: 'flex-start',
-    paddingTop: 10,
-    paddingBottom: 10,
+    paddingTop: "10@s",
+    paddingBottom: "10@s"
 
   },
   ///////////////////////////////// Part 12 /////////////////////////////////////////////
@@ -969,14 +1040,16 @@ const styles = StyleSheet.create({
 
 
 
-  buttonClose: {
+  buttonClose: 
+  {
     backgroundColor: "#2196F3",
   },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-    marginBottom: 20,
+  button: 
+  {
+    borderRadius: "20@s",
+    padding: "10@s",
+    elevation: "2@s",
+    marginBottom: "20@s"
   },
 });
 
