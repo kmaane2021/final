@@ -19,7 +19,7 @@ import ThirdPage from './pages/ThirdPage';
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
-const NavigationDrawerStructure = (props)=> {
+const NavigationDrawerStructure = (props) => {
   //Structure for the navigatin Drawer
   const toggleDrawer = () => {
     //Props to open/close the drawer
@@ -28,10 +28,10 @@ const NavigationDrawerStructure = (props)=> {
 
   return (
     <View style={{ flexDirection: 'row' }}>
-      <TouchableOpacity onPress={()=> toggleDrawer()}>
+      <TouchableOpacity onPress={() => toggleDrawer()}>
         {/*Donute Button Image */}
         <Image
-          source={{uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/drawerWhite.png'}}
+          source={{ uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/drawerWhite.png' }}
           style={{
             width: 25,
             height: 25,
@@ -45,31 +45,31 @@ const NavigationDrawerStructure = (props)=> {
 
 function firstScreenStack({ navigation }) {
   return (
-      <Stack.Navigator initialRouteName="FirstPage">
-        <Stack.Screen
-          name="FirstPage"
-          component={FirstPage}
-          options={{
-            title: 'PetShelter', //Set Header Title
-            headerRight: ()=>
-              <NavigationDrawerStructure
-                navigationProps={navigation}
-              />,
-            headerStyle: {
-            
-            },
-            
-            headerTintColor: 'white', //Set Header text color
-            headerRightContainerStyle:{
-              paddingRight: 30,
-            },
-            headerTransparent:true,
-            headerTitleStyle: {
-              fontWeight: 'bold', //Set Header text style
-            },
-          }}
-        />
-      </Stack.Navigator>
+    <Stack.Navigator initialRouteName="FirstPage">
+      <Stack.Screen
+        name="FirstPage"
+        component={FirstPage}
+        options={{
+          title: 'PetShelter', //Set Header Title
+          headerRight: () =>
+            <NavigationDrawerStructure
+              navigationProps={navigation}
+            />,
+          headerStyle: {
+
+          },
+
+          headerTintColor: 'white', //Set Header text color
+          headerRightContainerStyle: {
+            paddingRight: 30,
+          },
+          headerTransparent: true,
+          headerTitleStyle: {
+            fontWeight: 'bold', //Set Header text style
+          },
+        }}
+      />
+    </Stack.Navigator>
   );
 }
 
@@ -78,7 +78,7 @@ function secondScreenStack({ navigation }) {
     <Stack.Navigator
       initialRouteName="SecondPage"
       screenOptions={{
-        headerLeft: ()=>
+        headerLeft: () =>
           <NavigationDrawerStructure
             navigationProps={navigation}
           />,
@@ -95,14 +95,14 @@ function secondScreenStack({ navigation }) {
         component={SecondPage}
         options={{
           title: 'Second Page', //Set Header Title
-          
-        }}/>
+
+        }} />
       <Stack.Screen
         name="ThirdPage"
         component={ThirdPage}
         options={{
           title: 'Third Page', //Set Header Title
-        }}/>
+        }} />
     </Stack.Navigator>
   );
 }
