@@ -77,14 +77,14 @@ const FirstPage = ({ navigation }) => {
 
           <ImageBackground source={image1} style={styles.imgBk1}>
             
-            <View style={{width:"95%"}}>
+            <View style={styles.v1hLWhite}>
             <Text
               style={styles.hLWhite}>
               ADOPT US. WE NEED YOUR HELP.
             </Text>
             </View>
 
-          <View style={{width:"80%"}}>
+          <View style={styles.v1pLwhite}>
             <Text
               style={styles.pLWhite}>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp
@@ -92,7 +92,7 @@ const FirstPage = ({ navigation }) => {
             </Text>
             </View>
             
-            <View style={{width:"55%"}}>
+            <View style={mode === "portrait" ? styles.v1touchableLWhite : styles.v1touchableLWhite2}>
             <TouchableOpacity
               style={styles.touchableLWhite}
               onPress={() => navigation.navigate('FirstPage')}
@@ -111,8 +111,8 @@ const FirstPage = ({ navigation }) => {
           {/* ************************* PART 2  CAROUSEL     ***************************** */}
 
 
-<View >
-          <Carousel style={styles.carousel}>
+<View>
+{mode === "portrait" ? <Carousel style={styles.carousel}>
             
             <View style={styles.carouselView}>
               <Image source={image2} style={{ width: '100%', height: '100%' }} />
@@ -138,7 +138,34 @@ const FirstPage = ({ navigation }) => {
             <View style={styles.carouselView}>
               <Image source={image5} style={{ width: '100%', height: '100%' }} />
             </View>
-          </Carousel>
+          </Carousel> : 
+          
+          <Carousel style={styles.carousel}>
+            
+            <View style={styles.carouselView} style={{flexDirection:"row",flex:1}}>
+              <Image source={image2} style={{ width: '50%', height: '100%',flex:.5 }} />
+              <Image source={image3} style={{ width: '50%', height: '100%',flex:.5 }} />
+            </View>
+            <View style={styles.carouselView} style={{flexDirection:"row",flex:1}}>
+              <Image source={image4} style={{ width: '50%', height: '100%',flex:.5 }} />
+              <Image source={image5} style={{ width: '50%', height: '100%',flex:.5 }} />
+            </View>
+            <View style={styles.carouselView} style={{flexDirection:"row",flex:1}}>
+              <Image source={image2} style={{ width: '50%', height: '100%',flex:.5 }} />
+              <Image source={image3} style={{ width: '50%', height: '100%',flex:.5 }} />
+            </View>
+            <View style={styles.carouselView} style={{flexDirection:"row",flex:1}}>
+              <Image source={image4} style={{ width: '50%', height: '100%',flex:.5 }} />
+              <Image source={image5} style={{ width: '50%', height: '100%',flex:.5 }} />
+            </View><View style={styles.carouselView} style={{flexDirection:"row",flex:1}}>
+              <Image source={image2} style={{ width: '50%', height: '100%',flex:.5 }} />
+              <Image source={image3} style={{ width: '50%', height: '100%',flex:.5 }} />
+            </View>
+            <View style={styles.carouselView} style={{flexDirection:"row",flex:1}}>
+              <Image source={image4} style={{ width: '50%', height: '100%',flex:.5 }} />
+              <Image source={image5} style={{ width: '50%', height: '100%',flex:.5 }} />
+            </View>
+          </Carousel>}
           </View>
     
           {/* *************************      PART 3      ***************************** */}
@@ -563,6 +590,11 @@ container:
     overflow: "hidden",
   },
 
+  v1hLWhite:
+  {
+    width:"95%"
+  },
+
   hLWhite:
   {
     fontSize: "32@s",
@@ -574,6 +606,11 @@ container:
     marginTop: "200@s",
   },
 
+  v1pLwhite:
+  {
+    width:"90%"
+  },
+
   pLWhite:
   {
     fontSize: "15@s",
@@ -582,6 +619,17 @@ container:
     textAlign: 'left',
     marginBottom: "20@s"
   },
+
+v1touchableLWhite:
+{
+  width:"55%"
+},
+
+v1touchableLWhite2:
+{
+  width:"30%"
+},
+
 
   touchableLWhite:
   {
