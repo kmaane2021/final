@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Button,View,Text,Image,StyleSheet,SafeAreaView,ScrollView,ImageBackground,TouchableOpacity,ViewComponent,Modal,Pressable,Dimensions,} from 'react-native';
+import { Button, View, Text, Image, StyleSheet, SafeAreaView, ScrollView, ImageBackground, TouchableOpacity, ViewComponent, Modal, Pressable, Dimensions, } from 'react-native';
 import Carousel from "pinar";
 import { Video, AVPlaybackStatus } from 'expo-av';
 import { WebView } from "react-native-webview";
@@ -76,30 +76,30 @@ const FirstPage = ({ navigation }) => {
           {/* ************************* PART 1  IMAGEBACKGROUND     ***************************** */}
 
           <ImageBackground source={image1} style={styles.imgBk1}>
-            
+
             <View style={styles.v1hLWhite}>
-            <Text
-              style={styles.hLWhite}>
-              ADOPT US. WE NEED YOUR HELP.
+              <Text
+                style={styles.hLWhite}>
+                ADOPT US. WE NEED YOUR HELP.
             </Text>
             </View>
 
-          <View style={styles.v1pLwhite}>
-            <Text
-              style={styles.pLWhite}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp
-              or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+            <View style={styles.v1pLwhite}>
+              <Text
+                style={styles.pLWhite}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp
+                or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
             </Text>
             </View>
-            
+
             <View style={mode === "portrait" ? styles.v1touchableLWhite : styles.v1touchableLWhite2}>
-            <TouchableOpacity
-              style={styles.touchableLWhite}
-              onPress={() => navigation.navigate('FirstPage')}
-              underlayColor='#fff'>
-              <Text style={styles.touchableTCBlack}>FIND A PET TO ADOPT</Text>
-            </TouchableOpacity>
-           </View>
+              <TouchableOpacity
+                style={styles.touchableLWhite}
+                onPress={() => navigation.navigate('FirstPage')}
+                underlayColor='#fff'>
+                <Text style={styles.touchableTCBlack}>FIND A PET TO ADOPT</Text>
+              </TouchableOpacity>
+            </View>
 
 
 
@@ -111,68 +111,68 @@ const FirstPage = ({ navigation }) => {
           {/* ************************* PART 2  CAROUSEL     ***************************** */}
 
 
-<View>
-{mode === "portrait" ? <Carousel style={styles.carousel}>
-            
-            <View style={styles.carouselView}>
-              <Image source={image2} style={{ width: '100%', height: '100%' }} />
-            </View>
-            <View style={styles.carouselView}>
-              <Image source={image3} style={{ width: '100%', height: '100%' }} />
-            </View>
-            <View style={styles.carouselView}>
-              <Image source={image4} style={{ width: '100%', height: '100%' }} />
-            </View>
-            <View style={styles.carouselView}>
-              <Image source={image5} style={{ width: '100%', height: '100%' }} />
-            </View>
-            <View style={styles.carouselView}>
-              <Image source={image2} style={{ width: '100%', height: '100%' }} />
-            </View>
-            <View style={styles.carouselView}>
-              <Image source={image3} style={{ width: '100%', height: '100%' }} />
-            </View>
-            <View style={styles.carouselView}>
-              <Image source={image4} style={{ width: '100%', height: '100%' }} />
-            </View>
-            <View style={styles.carouselView}>
-              <Image source={image5} style={{ width: '100%', height: '100%' }} />
-            </View>
-          </Carousel> : 
-          
-          <Carousel style={styles.carousel}>
-            
-            <View style={styles.carouselView} style={{flexDirection:"row",flex:1}}>
-              <Image source={image2} style={{ width: '50%', height: '100%',flex:.5 }} />
-              <Image source={image3} style={{ width: '50%', height: '100%',flex:.5 }} />
-            </View>
-            <View style={styles.carouselView} style={{flexDirection:"row",flex:1}}>
-              <Image source={image4} style={{ width: '50%', height: '100%',flex:.5 }} />
-              <Image source={image5} style={{ width: '50%', height: '100%',flex:.5 }} />
-            </View>
-            <View style={styles.carouselView} style={{flexDirection:"row",flex:1}}>
-              <Image source={image2} style={{ width: '50%', height: '100%',flex:.5 }} />
-              <Image source={image3} style={{ width: '50%', height: '100%',flex:.5 }} />
-            </View>
-            <View style={styles.carouselView} style={{flexDirection:"row",flex:1}}>
-              <Image source={image4} style={{ width: '50%', height: '100%',flex:.5 }} />
-              <Image source={image5} style={{ width: '50%', height: '100%',flex:.5 }} />
-            </View><View style={styles.carouselView} style={{flexDirection:"row",flex:1}}>
-              <Image source={image2} style={{ width: '50%', height: '100%',flex:.5 }} />
-              <Image source={image3} style={{ width: '50%', height: '100%',flex:.5 }} />
-            </View>
-            <View style={styles.carouselView} style={{flexDirection:"row",flex:1}}>
-              <Image source={image4} style={{ width: '50%', height: '100%',flex:.5 }} />
-              <Image source={image5} style={{ width: '50%', height: '100%',flex:.5 }} />
-            </View>
-          </Carousel>}
+          <View>
+            {mode === "portrait" ? <Carousel style={styles.carousel}>
+
+              <View style={styles.carouselView}>
+                <Image source={image2} style={{ width: '100%', height: '100%' }} />
+              </View>
+              <View style={styles.carouselView}>
+                <Image source={image3} style={{ width: '100%', height: '100%' }} />
+              </View>
+              <View style={styles.carouselView}>
+                <Image source={image4} style={{ width: '100%', height: '100%' }} />
+              </View>
+              <View style={styles.carouselView}>
+                <Image source={image5} style={{ width: '100%', height: '100%' }} />
+              </View>
+              <View style={styles.carouselView}>
+                <Image source={image2} style={{ width: '100%', height: '100%' }} />
+              </View>
+              <View style={styles.carouselView}>
+                <Image source={image3} style={{ width: '100%', height: '100%' }} />
+              </View>
+              <View style={styles.carouselView}>
+                <Image source={image4} style={{ width: '100%', height: '100%' }} />
+              </View>
+              <View style={styles.carouselView}>
+                <Image source={image5} style={{ width: '100%', height: '100%' }} />
+              </View>
+            </Carousel> :
+
+              <Carousel style={styles.carousel}>
+
+                <View style={styles.carouselView} style={{ flexDirection: "row", flex: 1 }}>
+                  <Image source={image2} style={{ width: '50%', height: '100%', flex: .5 }} />
+                  <Image source={image3} style={{ width: '50%', height: '100%', flex: .5 }} />
+                </View>
+                <View style={styles.carouselView} style={{ flexDirection: "row", flex: 1 }}>
+                  <Image source={image4} style={{ width: '50%', height: '100%', flex: .5 }} />
+                  <Image source={image5} style={{ width: '50%', height: '100%', flex: .5 }} />
+                </View>
+                <View style={styles.carouselView} style={{ flexDirection: "row", flex: 1 }}>
+                  <Image source={image2} style={{ width: '50%', height: '100%', flex: .5 }} />
+                  <Image source={image3} style={{ width: '50%', height: '100%', flex: .5 }} />
+                </View>
+                <View style={styles.carouselView} style={{ flexDirection: "row", flex: 1 }}>
+                  <Image source={image4} style={{ width: '50%', height: '100%', flex: .5 }} />
+                  <Image source={image5} style={{ width: '50%', height: '100%', flex: .5 }} />
+                </View><View style={styles.carouselView} style={{ flexDirection: "row", flex: 1 }}>
+                  <Image source={image2} style={{ width: '50%', height: '100%', flex: .5 }} />
+                  <Image source={image3} style={{ width: '50%', height: '100%', flex: .5 }} />
+                </View>
+                <View style={styles.carouselView} style={{ flexDirection: "row", flex: 1 }}>
+                  <Image source={image4} style={{ width: '50%', height: '100%', flex: .5 }} />
+                  <Image source={image5} style={{ width: '50%', height: '100%', flex: .5 }} />
+                </View>
+              </Carousel>}
           </View>
-    
+
           {/* *************************      PART 3      ***************************** */}
 
 
 
-          <View style={styles.viewCenter3}>
+          <View style={mode === "portrait" ? styles.viewCenter3 : styles.viewCenter32}>
 
             <Text style={styles.hBlack3}>Please select your favourite pet</Text>
             <TouchableOpacity
@@ -195,8 +195,8 @@ const FirstPage = ({ navigation }) => {
 
           <View style={styles.view4}>
 
-            <Image source={image6} style={{ width: "100%" ,height:220}} />
-           
+            <Image source={image6} style={mode === "portrait" ? styles.img4 : styles.img42} />
+
             <View>
               <Text
                 style={styles.hBlack4}>
@@ -214,14 +214,14 @@ const FirstPage = ({ navigation }) => {
           </Text>
 
               <TouchableOpacity
-                style={styles.touchableLYellow}
+                style={mode === "portrait" ? styles.touchableLYellow4 : styles.touchableLYellow42}
                 onPress={() => navigation.navigate('FirstPage')}
                 underlayColor='#fff'>
-                <Text style={styles.touchableTCWhite}>GET DETAILS</Text>
+                <Text style={styles.touchableTCWhite4}>GET DETAILS</Text>
               </TouchableOpacity>
-              </View>
             </View>
-         
+          </View>
+
 
 
 
@@ -229,7 +229,7 @@ const FirstPage = ({ navigation }) => {
 
           <Modal
             animationType="fade"
-            transparent={false}
+            transparent={true}
             visible={modalVisible}
             supportedOrientations={['landscape']}
             onRequestClose={() => {
@@ -239,27 +239,27 @@ const FirstPage = ({ navigation }) => {
             }}
           >
 
-            <View style={{backgroundColor: 'transparent',alignContent:'center' }}>
+            <View style={styles.video5}>
 
-              <View style={styles.modal}>
-                <WebView
-                  source={{ html: '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ARA0AxrnHdM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>' }}
-                />
+              <View>
+                <Pressable
+                  style={styles.button}
+                  onPress={() => setModalVisible(!modalVisible)}>
+                  <Text style={styles.x5}>  X  </Text>
+                </Pressable>
               </View>
 
-              <Pressable
-                style={[styles.button, styles.buttonClose]}
-                onPress={() => setModalVisible(!modalVisible)}
-              >
-                <Text style={styles.textStyle}>Hide Modal</Text>
-              </Pressable>
-
+              <View style={ mode === "portrait" ? styles.modal5 : styles.modal52}>
+                <WebView source={{ html: '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ARA0AxrnHdM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>' }}/>
+              </View>
             </View>
+
+
           </Modal>
 
-          <View style={styles.view5} >
-            <ImageBackground source={image7} style={styles.imgModal5}>
-              <Icon style={styles.icon5} name="play" color="white" size={100} onPress={() => setModalVisible(true)} />
+          <View style={mode === "portrait" ? styles.view5 : styles.view52} >
+            <ImageBackground source={image7} style={mode === "portrait" ? styles.imgModal5 : styles.imgModal52}>
+              <Icon style={mode === "portrait" ? styles.icon5 : styles.icon52} name="play" color="white" size={80} onPress={() => setModalVisible(true)} />
             </ImageBackground>
 
           </View>
@@ -270,7 +270,7 @@ const FirstPage = ({ navigation }) => {
           <View style={{ alignItems: 'center' }}>
 
             <Text style={styles.hBlack6}>Watch this video how they live here</Text>
-           
+
             <Text style={styles.pC6}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</Text>
           </View>
 
@@ -317,82 +317,82 @@ const FirstPage = ({ navigation }) => {
 
           {/* *************************      PART 9    ***************************** */}
 
-<View style={styles.view9}> 
+          <View style={styles.view9}>
 
-          <Carousel style={styles.carousel9}>
+            <Carousel style={styles.carousel9}>
 
-            <View style={styles.carousel9Content}>
-              <Image source={image9} style={{ width: 100, height: 100, borderRadius: 50 }} />
-              <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-              <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-              <Text style={styles.h2Carousel9}>CEO at Google</Text>
-            </View>
-
-
-            <View style={styles.carousel9Content}>
-              <Image source={image10} style={{ width: 100, height: 100, borderRadius: 50 }} />
-              <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-              <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-              <Text style={styles.h2Carousel9}>CEO at Google</Text>
-            </View>
-
-            <View style={styles.carousel9Content}>
-              <Image source={image11} style={{ width: 100, height: 100, borderRadius: 50 }} />
-              <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-              <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-              <Text style={styles.h2Carousel9}>CEO at Google</Text>
-            </View>
-
-            <View style={styles.carousel9Content}>
-              <Image source={image9} style={{ width: 100, height: 100, borderRadius: 50 }} />
-              <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-              <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-              <Text style={styles.h2Carousel9}>CEO at Google</Text>
-            </View>
+              <View style={styles.carousel9Content}>
+                <Image source={image9} style={{ width: 100, height: 100, borderRadius: 50 }} />
+                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                <Text style={styles.h2Carousel9}>CEO at Google</Text>
+              </View>
 
 
-            <View style={styles.carousel9Content}>
-              <Image source={image10} style={{ width: 100, height: 100, borderRadius: 50 }} />
-              <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-              <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-              <Text style={styles.h2Carousel9}>CEO at Google</Text>
-            </View>
+              <View style={styles.carousel9Content}>
+                <Image source={image10} style={{ width: 100, height: 100, borderRadius: 50 }} />
+                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                <Text style={styles.h2Carousel9}>CEO at Google</Text>
+              </View>
 
-            <View style={styles.carousel9Content}>
-              <Image source={image11} style={{ width: 100, height: 100, borderRadius: 50 }} />
-              <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-              <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-              <Text style={styles.h2Carousel9}>CEO at Google</Text>
-            </View>
+              <View style={styles.carousel9Content}>
+                <Image source={image11} style={{ width: 100, height: 100, borderRadius: 50 }} />
+                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                <Text style={styles.h2Carousel9}>CEO at Google</Text>
+              </View>
 
-            <View style={styles.carousel9Content}>
-              <Image source={image9} style={{ width: 100, height: 100, borderRadius: 50 }} />
-              <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-              <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-              <Text style={styles.h2Carousel9}>CEO at Google</Text>
-            </View>
-
-
-            <View style={styles.carousel9Content}>
-              <Image source={image10} style={{ width: 100, height: 100, borderRadius: 50 }} />
-              <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-              <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-              <Text style={styles.h2Carousel9}>CEO at Google</Text>
-            </View>
-
-            <View style={styles.carousel9Content}>
-              <Image source={image11} style={{ width: 100, height: 100, borderRadius: 50 }} />
-              <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-              <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-              <Text style={styles.h2Carousel9}>CEO at Google</Text>
-            </View>
+              <View style={styles.carousel9Content}>
+                <Image source={image9} style={{ width: 100, height: 100, borderRadius: 50 }} />
+                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                <Text style={styles.h2Carousel9}>CEO at Google</Text>
+              </View>
 
 
+              <View style={styles.carousel9Content}>
+                <Image source={image10} style={{ width: 100, height: 100, borderRadius: 50 }} />
+                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                <Text style={styles.h2Carousel9}>CEO at Google</Text>
+              </View>
+
+              <View style={styles.carousel9Content}>
+                <Image source={image11} style={{ width: 100, height: 100, borderRadius: 50 }} />
+                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                <Text style={styles.h2Carousel9}>CEO at Google</Text>
+              </View>
+
+              <View style={styles.carousel9Content}>
+                <Image source={image9} style={{ width: 100, height: 100, borderRadius: 50 }} />
+                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                <Text style={styles.h2Carousel9}>CEO at Google</Text>
+              </View>
+
+
+              <View style={styles.carousel9Content}>
+                <Image source={image10} style={{ width: 100, height: 100, borderRadius: 50 }} />
+                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                <Text style={styles.h2Carousel9}>CEO at Google</Text>
+              </View>
+
+              <View style={styles.carousel9Content}>
+                <Image source={image11} style={{ width: 100, height: 100, borderRadius: 50 }} />
+                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                <Text style={styles.h2Carousel9}>CEO at Google</Text>
+              </View>
 
 
 
 
-          </Carousel>
+
+
+            </Carousel>
 
           </View>
           {/* *************************      PART 10     ***************************** */}
@@ -530,11 +530,11 @@ const FirstPage = ({ navigation }) => {
             <Text style={{ fontSize: 14, color: 'white', paddingLeft: 10 }}>Copyright ©2021 All rights reserved | This template is made</Text>
 
 
-            <View style={{ flexDirection: 'row', flex: 1,paddingBottom:10, paddingTop: 5, paddingLeft: 10, width: 192 }}>
+            <View style={{ flexDirection: 'row', flex: 1, paddingBottom: 10, paddingTop: 5, paddingLeft: 10, width: 192 }}>
               <Text style={{ flex: .17, fontSize: 14, color: 'white' }}>with</Text>
-              <Icon style={{ flex: .15}} name="heart" color="#FCCB1A" size={20} />
+              <Icon style={{ flex: .15 }} name="heart" color="#FCCB1A" size={20} />
               <Text style={{ flex: .1, fontSize: 14, color: 'white' }}>by</Text>
-              <Text style={{ flex: .4 ,fontSize: 14, color: '#FCCB1A' }}>Colorlib</Text>
+              <Text style={{ flex: .4, fontSize: 14, color: '#FCCB1A' }}>Colorlib</Text>
             </View>
 
 
@@ -564,17 +564,17 @@ const FirstPage = ({ navigation }) => {
 
 const styles = ScaledSheet.create({
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////    STYLE      /////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////
-container:
-{
-  flexDirection:'column',
-  flex: 1,
-  backgroundColor:'#fff'
-  //alignItems: 'center',
-  //justifyContent: 'center'
-},
+  /////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////    STYLE      /////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////////////////
+  container:
+  {
+    flexDirection: 'column',
+    flex: 1,
+    backgroundColor: '#fff'
+    //alignItems: 'center',
+    //justifyContent: 'center'
+  },
   container2:
   {
     flex: 1,
@@ -585,14 +585,14 @@ container:
   imgBk1:
   {
     height: null,
-    width:"100%",
+    width: "100%",
     resizeMode: "cover",
     overflow: "hidden",
   },
 
   v1hLWhite:
   {
-    width:"95%"
+    width: "95%"
   },
 
   hLWhite:
@@ -608,7 +608,7 @@ container:
 
   v1pLwhite:
   {
-    width:"90%"
+    width: "90%"
   },
 
   pLWhite:
@@ -620,15 +620,15 @@ container:
     marginBottom: "20@s"
   },
 
-v1touchableLWhite:
-{
-  width:"55%"
-},
+  v1touchableLWhite:
+  {
+    width: "55%"
+  },
 
-v1touchableLWhite2:
-{
-  width:"30%"
-},
+  v1touchableLWhite2:
+  {
+    width: "30%"
+  },
 
 
   touchableLWhite:
@@ -660,17 +660,17 @@ v1touchableLWhite2:
   carousel:
   {
     marginTop: "30@s",
-  
+
   },
 
   carouselView:
   {
-    flex:1,
-    width:'100%',
+    flex: 1,
+    width: '100%',
     justifyContent: "center",
     alignItems: "center",
-   
-    
+
+
   },
 
 
@@ -680,6 +680,19 @@ v1touchableLWhite2:
   {
     marginTop: "80@s",
     marginBottom: "80@s",
+    backgroundColor: '#f9f9ff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: "30@s",
+    paddingBottom: "30@s"
+  },
+
+  viewCenter32:
+  {
+    marginTop: "80@s",
+    marginBottom: "80@s",
+    marginLeft: "15@s",
+    marginRight: "15@s",
     backgroundColor: '#f9f9ff',
     alignItems: 'center',
     justifyContent: 'center',
@@ -702,17 +715,16 @@ v1touchableLWhite2:
     paddingTop: "10@s",
     paddingBottom: "10@s",
     backgroundColor: '#fab700',
-    borderWidth: "1@s",
-    borderColor: '#fff'
   },
 
   touchableTCWhite:
   {
     color: '#fff',
     textAlign: 'center',
+    fontSize: '16@s',
     fontWeight: 'bold',
-    paddingLeft: "10@s",
-    paddingRight: "10@s"
+    paddingLeft: "20@s",
+    paddingRight: "20@s"
   },
 
 
@@ -724,13 +736,25 @@ v1touchableLWhite2:
 
   view4:
   {
-marginBottom:"150@s"
+    marginBottom: "150@s"
   },
 
+  img4:
+  {
+    width: "100%",
+    height: "290@s"
+  },
+
+  img42:
+  {
+    width: "100%",
+    height: "440@s"
+  },
   hBlack4:
   {
     color: '#000',
     fontSize: "34@s",
+    fontWeight: 'bold',
     paddingLeft: "20@s",
     marginBottom: "20@s",
     marginTop: "80@s"
@@ -754,75 +778,138 @@ marginBottom:"150@s"
     lineHeight: "20@s"
   },
 
-  touchableLYellow: {
+  touchableLYellow4: {
 
     marginTop: "10@s",
     paddingTop: "10@s",
     paddingBottom: "10@s",
     backgroundColor: '#fab700',
-    borderWidth: 1,
-    marginBottom:'10@s',
+    marginBottom: '10@s',
     marginLeft: "17@s",
-    marginRight: "220@s",
-    borderColor: '#fff'
+    marginRight: "190@s",
 
+
+  },
+
+  touchableLYellow42: {
+
+    marginTop: "10@s",
+    paddingTop: "10@s",
+    paddingBottom: "10@s",
+    backgroundColor: '#fab700',
+    marginBottom: '10@s',
+    marginLeft: "17@s",
+    marginRight: "450@s",
+
+
+  },
+
+  touchableTCWhite4:
+  {
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: '16@s',
+    fontWeight: 'bold',
+    paddingLeft: "20@s",
+    paddingRight: "20@s"
   },
 
   ///////////////////////////////// Part 5 MODAL/////////////////////////////////////////////
-imgModal5:
-{
-//justifyContent:"center",
-width:"96%",
-height:"200@s"
-},
-
-
-icon5:
-{
-paddingLeft:"120@s",
-paddingTop:"50@s"
-},
-
-view5:
-{
-alignItems:"center",
-paddingLeft:"10@s",
-//justifyContent:"center",
-alignContent:"center"
-
-},
-
-
-
-  modal:
+  imgModal5:
   {
-    width: "450@s",
+
+    width: "100%",
+    height: "200@s"
+  },
+
+  imgModal52:
+  {
+    alignItems: "center",
+    width: "100%",
+    height: "300@s"
+  },
+
+
+
+  icon5:
+  {
+    paddingLeft: "150@s",
+    paddingTop: "60@s"
+  },
+
+
+  icon52:
+  {
+    paddingLeft: "10@s",
+    paddingTop: "100@s"
+  },
+
+  view5:
+  {
+    paddingRight: '15@s',
+    paddingLeft: '15@s',
+
+  },
+
+  view52:
+  {
+    paddingRight: '30@s',
+    paddingLeft: '30@s',
+
+  },
+
+
+
+  modal5:
+  {
+    width: "100%",
     height: "200@s",
-    marginTop: "28@s"
+    alignContent: 'center',
+    backgroundColor: 'black',
+  
   },
 
-  buttonClose: 
+  modal52:
   {
-    backgroundColor: "#2196F3",
+    width: "100%",
+    height: "250@s",
+    alignContent: 'center',
+    backgroundColor: 'black',
+  
   },
-  button: 
+
+  video5:
   {
-    borderRadius: "20@s",
-    padding: "10@s",
-    elevation: "2@s",
-    marginBottom: "20@s"
-  },
-textStyle:
-{
-textAlign:'center',
-fontWeight:'bold'
+
+  flex: 1,
+  backgroundColor:'rgba(52, 52, 52, 0.8)',
+  justifyContent:'center'
 },
+
+
+  button:
+  {
+    padding: "10@s",
+    //elevation: "2@s",
+    //marginBottom: "20@s",
+    //backgroundColor: "#2196F3",
+    backgroundColor:'rgba(0, 0, 0, 0.6)'
+  },
+
+  x5:
+  {
+    textAlign: 'right',
+    color:'#F1ECEB',
+    fontWeight: 'bold',
+    fontSize: '20@s'
+  },
 
   ///////////////////////////////// Part 6 /////////////////////////////////////////////
   hBlack6: {
 
     fontSize: "18@s",
-    paddingTop: "40@s"
+    paddingTop: "40@s",
+    fontWeight:'bold'
 
   },
 
@@ -831,11 +918,11 @@ fontWeight:'bold'
 
     fontSize: "15@s",
     textAlign: 'center',
-    paddingRight: "10@s",
-    paddingLeft: "10@s",
+    paddingRight: "15@s",
+    paddingLeft: "15@s",
     color: '#5e5a5a',
     marginTop: "30@s",
-    marginBottom: "20@s"
+    marginBottom: "40@s"
 
   },
 
@@ -843,22 +930,22 @@ fontWeight:'bold'
 
   V7: {
     backgroundColor: '#f9f9ff',
-     marginTop: "30@s", 
-     paddingTop: "10@s"
+    marginTop: "30@s",
+    paddingTop: "10@s"
   },
 
   hBlack7: {
     fontSize: "30@s",
-    fontWeight:'bold',
+    fontWeight: 'bold',
     paddingTop: "40@s",
   },
 
   h2Black7: {
     color: '#5e5a5a',
     fontSize: "14@s",
-    textAlign:'center',
+    textAlign: 'center',
     marginBottom: "10@s",
-    marginTop:"10@s",
+    marginTop: "10@s",
     marginLeft: "10@s"
   },
 
@@ -871,17 +958,17 @@ fontWeight:'bold'
 
   icons7:
   {
-    marginTop: "100@s", 
+    marginTop: "100@s",
     marginLeft: "10@s",
-     marginBottom: "30@s", 
-     color: '#5e5a5a'
+    marginBottom: "30@s",
+    color: '#5e5a5a'
   },
 
   hIcons7:
   {
     color: 'black',
     fontSize: "20@s",
-    fontWeight:'bold',
+    fontWeight: 'bold',
     marginBottom: "10@s",
     marginLeft: "10@s"
 
@@ -905,7 +992,7 @@ fontWeight:'bold'
   hBlack8: {
     fontSize: "30@s",
     paddingTop: "40@s",
-    fontWeight:'bold',
+    fontWeight: 'bold',
     textAlign: 'center'
   },
   h2Black8: {
@@ -921,29 +1008,29 @@ fontWeight:'bold'
   ///////////////////////////////// Part 9 /////////////////////////////////////////////
 
 
-  view9:{
-    borderStyle:'solid',
-    borderWidth:.9,
-    height:"370@s",
+  view9: {
+    borderStyle: 'solid',
+    borderWidth: .9,
+    height: "370@s",
 
   },
- 
-    carousel9:
-    {
 
-      backgroundColor: '#f9f9ff',
-    },
+  carousel9:
+  {
+
+    backgroundColor: '#f9f9ff',
+  },
 
   carousel9Content:
   {
-      flex:1,
-      width:'100%',
-      height:"300@s",
-      justifyContent: "center",
-      alignItems: "center",
+    flex: 1,
+    width: '100%',
+    height: "300@s",
+    justifyContent: "center",
+    alignItems: "center",
   },
 
-  pCarousel9: 
+  pCarousel9:
   {
     fontSize: "12@s",
     textAlign: 'center',
@@ -1086,19 +1173,6 @@ fontWeight:'bold'
   ///////////////////////////////// Part 12 /////////////////////////////////////////////
 
 
-
-
-  buttonClose: 
-  {
-    backgroundColor: "#2196F3",
-  },
-  button: 
-  {
-    borderRadius: "20@s",
-    padding: "10@s",
-    elevation: "2@s",
-    marginBottom: "20@s"
-  },
 });
 
 export default FirstPage;
