@@ -32,6 +32,7 @@ const FirstPage = ({ navigation }) => {
 
   const [dimensions, setDimensions] = useState({ window, screen });
   const [mode, setMode] = useState("portrait");
+
   const [modalVisible, setModalVisible] = useState(false);
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
@@ -249,8 +250,8 @@ const FirstPage = ({ navigation }) => {
                 </Pressable>
               </View>
 
-              <View style={ mode === "portrait" ? styles.modal5 : styles.modal52}>
-                <WebView source={{ html: '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ARA0AxrnHdM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>' }}/>
+              <View style={mode === "portrait" ? styles.modal5 : styles.modal52}>
+                <WebView source={{ html: '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ARA0AxrnHdM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>' }} />
               </View>
             </View>
 
@@ -282,35 +283,77 @@ const FirstPage = ({ navigation }) => {
 
 
           <View style={styles.V7}>
+
             <View style={{ alignItems: 'center' }}>
               <Text style={styles.hBlack7}>Process to adopt a pet</Text>
               <Text style={styles.h2Black7}>Who are in extremely love with eco friendly system.</Text>
             </View>
-            <View style={styles.viewIcon7}>
-              <Icon style={styles.icons7} name="thumbs-up" size={50} />
-              <Text style={styles.hIcons7}>Pet Selection</Text>
-              <Text style={styles.pIcons7}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
+
+            {mode === "portrait" ?
+              <View style={styles.viewIcon7}>
+                <Icon style={styles.icons7} name="thumbs-up" size={50} />
+                <Text style={styles.hIcons7}>Pet Selection</Text>
+                <Text style={styles.pIcons7}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
 
 
-              <Icon style={styles.icons7} name="user" size={50} />
-              <Text style={styles.hIcons7}>Meeting Authority</Text>
-              <Text style={styles.pIcons7} >inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
+                <Icon style={styles.icons7} name="user" size={50} />
+                <Text style={styles.hIcons7}>Meeting Authority</Text>
+                <Text style={styles.pIcons7} >inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
 
-              <Icon style={styles.icons7} name="drivers-license-o" size={50} />
-              <Text style={styles.hIcons7}>Adoption Form Filling</Text>
-              <Text style={styles.pIcons7}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
+                <Icon style={styles.icons7} name="drivers-license-o" size={50} />
+                <Text style={styles.hIcons7}>Adoption Form Filling</Text>
+                <Text style={styles.pIcons7}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
 
-              <Icon style={styles.icons7} name="magic" size={50} />
-              <Text style={styles.hIcons7}>Bring to new family</Text>
-              <Text style={styles.pIcons7}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
-            </View>
+                <Icon style={styles.icons7} name="magic" size={50} />
+                <Text style={styles.hIcons7}>Bring to new family</Text>
+                <Text style={styles.pIcons7}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
+              </View> :
+
+
+              <View style={styles.viewIcon7}>
+
+                <View style={{ flexDirection: 'row', flex: 1 }}>
+                  <View style={{ flex: .5 }}>
+                    <Icon style={styles.icons7} name="thumbs-up" size={50} />
+                    <Text style={styles.hIcons7}>Pet Selection</Text>
+                    <Text style={styles.pIcons7}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
+                  </View>
+
+                  <View style={{ flex: .5 }}>
+                    <Icon style={styles.icons7} name="user" size={50} />
+                    <Text style={styles.hIcons7}>Meeting Authority</Text>
+                    <Text style={styles.pIcons7} >inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
+                  </View>
+
+                </View>
+                <View style={{ flexDirection: 'row', flex: 1 }}>
+                  <View style={{ flex: .5 }}>
+                    <Icon style={styles.icons7} name="drivers-license-o" size={50} />
+                    <Text style={styles.hIcons7}>Adoption Form Filling</Text>
+                    <Text style={styles.pIcons7}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
+                  </View>
+
+                  <View style={{ flex: .5 }}>
+                    <Icon style={styles.icons7} name="magic" size={50} />
+                    <Text style={styles.hIcons7}>Bring to new family</Text>
+                    <Text style={styles.pIcons7}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
+                  </View>
+                </View>
+
+              </View>}
+
           </View>
+
+
+
+
+
 
 
 
           {/* *************************      PART 8     ***************************** */}
 
-          <View style={{ marginTop: 40, }}>
+          <View style={styles.v8}>
             <Text style={styles.hBlack8}>Testimonials from our guardians.</Text>
             <Text style={styles.h2Black8}>Who are in extremely love with eco friendly system</Text>
           </View>
@@ -319,7 +362,7 @@ const FirstPage = ({ navigation }) => {
 
           <View style={styles.view9}>
 
-            <Carousel style={styles.carousel9}>
+            {mode === "portrait" ? <Carousel style={styles.carousel9}>
 
               <View style={styles.carousel9Content}>
                 <Image source={image9} style={{ width: 100, height: 100, borderRadius: 50 }} />
@@ -388,11 +431,122 @@ const FirstPage = ({ navigation }) => {
               </View>
 
 
+            </Carousel> :
+              <Carousel style={styles.carousel92}>
+                <View style={{ flexDirection: 'row', flex: 1 }}>
+
+                  <View style={styles.carousel9Content92}>
+                    <Image source={image9} style={styles.img92} />
+                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
+                  </View>
+
+                  <View style={styles.carousel9Content92}>
+                    <Image source={image10} style={styles.img92} />
+                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
+                  </View>
+                </View>
+                <View style={{ flexDirection: 'row', flex: 1 }}>
+
+                  <View style={styles.carousel9Content92}>
+                    <Image source={image10} style={styles.img92} />
+                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
+                  </View>
+
+                  <View style={styles.carousel9Content92}>
+                    <Image source={image11} style={styles.img92} />
+                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
+                  </View>
+                </View>
+                <View style={{ flexDirection: 'row', flex: 1 }}>
+
+                  <View style={styles.carousel9Content92}>
+                    <Image source={image11} style={styles.img92} />
+                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
+                  </View>
+
+                  <View style={styles.carousel9Content92}>
+                    <Image source={image9} style={styles.img92} />
+                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
+                  </View>
+                </View>
+                <View style={{ flexDirection: 'row', flex: 1 }}>
+
+                  <View style={styles.carousel9Content92}>
+                    <Image source={image9} style={styles.img92} />
+                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
+                  </View>
+
+                  <View style={styles.carousel9Content92}>
+                    <Image source={image10} style={styles.img92} />
+                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
+                  </View>
+                </View>
+                <View style={{ flexDirection: 'row', flex: 1 }}>
+
+                  <View style={styles.carousel9Content92}>
+                    <Image source={image10} style={styles.img92} />
+                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
+                  </View>
+
+                  <View style={styles.carousel9Content92}>
+                    <Image source={image11} style={styles.img92} />
+                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
+                  </View>
+                </View>
+                <View style={{ flexDirection: 'row', flex: 1 }}>
+
+                  <View style={styles.carousel9Content92}>
+                    <Image source={image11} style={styles.img92} />
+                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
+                  </View>
+
+                  <View style={styles.carousel9Content92}>
+                    <Image source={image9} style={styles.img92} />
+                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
+                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
+                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
+                  </View>
+                </View>
+
+
+
+              </Carousel>
 
 
 
 
-            </Carousel>
+
+
+
+
+
+
+
+
+
+            }
 
           </View>
           {/* *************************      PART 10     ***************************** */}
@@ -409,13 +563,13 @@ const FirstPage = ({ navigation }) => {
                 <View style={{ flexDirection: 'row', flex: 1 }}>
 
                   <TouchableOpacity
-                    style={styles.touchableL10} onPress={() => navigation.navigate('FirstPage')}
+                    style={mode === "portrait" ? styles.touchableL10 : styles.touchableL102} onPress={() => navigation.navigate('FirstPage')}
                     underlayColor='#fff'>
                     <Text style={styles.touchableTCBlack}>View pdf details</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity
-                    style={styles.touchable2L10} onPress={() => navigation.navigate('FirstPage')}
+                    style={mode === "portrait" ? styles.touchable2L10 : styles.touchable2L102} onPress={() => navigation.navigate('FirstPage')}
                     underlayColor='#fff'>
                     <Text style={styles.touchableTCBlack}>Register now</Text>
                   </TouchableOpacity>
@@ -432,91 +586,203 @@ const FirstPage = ({ navigation }) => {
           {/* ***********************part 11************************** */}
 
 
-          <View style={styles.view11}>
-            <Text style={styles.hLWhite11}>About Us</Text>
-            <Text style={styles.p11}>Few would argue that, despite the advanc ements off eminism over the past three decades, women still face a double standard when it comes to their behavior. While men’s borderline-inappropriate behavior. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>
+          {mode === "portrait" ? <View style={styles.view11}>
 
-            <Text style={styles.h2LWhite11}>Useful Links</Text>
-
-            <View style={{ flexDirection: 'row', flex: 1 }}>
-
-              <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
-                underlayColor='#fff'>
-                <Text style={styles.p11}>Home </Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity style={styles.touchableL11}
-                onPress={() => navigation.navigate('FirstPage')}
-                underlayColor='#fff'>
-                <Text style={styles.p11}>Pricing</Text>
-              </TouchableOpacity>
-
-            </View>
-
-            <View style={{ flexDirection: 'row', flex: 1 }}>
-              <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
-                underlayColor='#fff'>
-                <Text style={styles.p11}>Service</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
-                underlayColor='#fff'>
-                <Text style={styles.p11}>Team</Text>
-              </TouchableOpacity>
-
+            <View>
+              <Text style={styles.hLWhite11}>About Us</Text>
+              <Text style={styles.p11}>Few would argue that, despite the advanc ements off eminism over the past three decades, women still face a double standard when it comes to their behavior. While men’s borderline-inappropriate behavior. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>
             </View>
 
 
-            <View style={{ flexDirection: 'row', flex: 1 }}>
-              <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
-                underlayColor='#fff'>
-                <Text style={styles.p11}>About </Text>
-              </TouchableOpacity>
+            <View>
+              <Text style={styles.h2LWhite11}>Useful Links</Text>
+              <View style={{ flexDirection: 'row', flex: 1 }}>
 
-              <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
-                underlayColor='#fff'>
-                <Text style={styles.p11}>Blog</Text>
-              </TouchableOpacity>
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                  underlayColor='#fff'>
+                  <Text style={styles.p11}>Home </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.touchableL11}
+                  onPress={() => navigation.navigate('FirstPage')}
+                  underlayColor='#fff'>
+                  <Text style={styles.p11}>Pricing</Text>
+                </TouchableOpacity>
+
+              </View>
+
+              <View style={{ flexDirection: 'row', flex: 1 }}>
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                  underlayColor='#fff'>
+                  <Text style={styles.p11}>Service</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                  underlayColor='#fff'>
+                  <Text style={styles.p11}>Team</Text>
+                </TouchableOpacity>
+
+              </View>
+
+
+              <View style={{ flexDirection: 'row', flex: 1 }}>
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                  underlayColor='#fff'>
+                  <Text style={styles.p11}>About </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                  underlayColor='#fff'>
+                  <Text style={styles.p11}>Blog</Text>
+                </TouchableOpacity>
+              </View>
+
+
+              <View style={{ flexDirection: 'row', flex: 1 }}>
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                  underlayColor='#fff'>
+                  <Text style={styles.p11}>Case Study </Text>
+                </TouchableOpacity>
+              </View>
+
+            </View>
+
+            <View>
+
+              <Text style={styles.hLWhite11}>Contact Us</Text>
+
+              <View style={{ marginTop: 30, flexDirection: 'row', flex: 1, width: 300 }}>
+                <Icon style={{ marginLeft: 20, flex: 1 }} name="home" color="white" size={30} />
+                <Text style={{ marginLeft: -189, color: 'white', flex: 1, fontSize: 17, lineHeight: 40 }}>Binghamton, New York</Text>
+              </View>
+
+              <Text style={{ marginLeft: 60, color: '#5e5a5a', flex: 1, fontSize: 17, lineHeight: 40 }}>4343 Hinkle Deegan Lake Road</Text>
+
+
+              <View style={{ marginTop: 30, flexDirection: 'row', flex: 1, width: 300 }}>
+                <Icon style={{ marginLeft: 20, flex: 1 }} name="phone" color="white" size={30} />
+                <Text style={{ marginLeft: -189, color: 'white', flex: 1, fontSize: 17, lineHeight: 40 }}>00 (953) 9865 562</Text>
+              </View>
+
+
+              <Text style={{ marginLeft: 60, color: '#5e5a5a', flex: 1, fontSize: 17, lineHeight: 40 }}>Mon to Fri 9am to 6 pmd</Text>
+
+
+              <View style={{ marginTop: 30, flexDirection: 'row', flex: 1, width: 300 }}>
+                <Icon style={{ marginLeft: 20, flex: 1 }} name="envelope" color="white" size={30} />
+                <Text style={{ marginLeft: -189, color: 'white', flex: 1, fontSize: 17, lineHeight: 40 }}>support@colorlib.com</Text>
+              </View>
+
+              <Text style={{ marginLeft: 60, color: '#5e5a5a', flex: 1, fontSize: 17, lineHeight: 40 }}>Send us your query anytime!</Text>
+
+
             </View>
 
 
-            <View style={{ flexDirection: 'row', flex: 1 }}>
-              <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
-                underlayColor='#fff'>
-                <Text style={styles.p11}>Case Study </Text>
-              </TouchableOpacity>
-            </View>
+          </View> :
+
+            <View style={styles.view11}>
+
+              <View style={{ flexDirection: 'row', flex: 1 }}>
+
+                {/* First colomun  */}
+                <View style={{ flex: .5 }}>
+                  <Text style={styles.hLWhite11}>About Us</Text>
+                  <Text style={styles.p11}>Few would argue that, despite the advanc ements off eminism over the past three decades, women still face a double standard when it comes to their behavior. While men’s borderline-inappropriate behavior. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>
+                </View>
+
+                {/* second colomun */}
+                <View style={{ flex: .5, }}>
+                  <Text style={styles.h2LWhite112}>Useful Links</Text>
+                  <View style={{ flexDirection: 'row', flex: 1 }}>
+
+                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                      underlayColor='#fff'>
+                      <Text style={styles.p11}>Home </Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.touchableL11}
+                      onPress={() => navigation.navigate('FirstPage')}
+                      underlayColor='#fff'>
+                      <Text style={styles.p11}>Pricing</Text>
+                    </TouchableOpacity>
+
+                  </View>
+
+                  <View style={{ flexDirection: 'row', flex: 1 }}>
+                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                      underlayColor='#fff'>
+                      <Text style={styles.p11}>Service</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                      underlayColor='#fff'>
+                      <Text style={styles.p11}>Team</Text>
+                    </TouchableOpacity>
+
+                  </View>
+
+
+                  <View style={{ flexDirection: 'row', flex: 1 }}>
+                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                      underlayColor='#fff'>
+                      <Text style={styles.p11}>About </Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                      underlayColor='#fff'>
+                      <Text style={styles.p11}>Blog</Text>
+                    </TouchableOpacity>
+                  </View>
+
+
+                  <View style={{ flexDirection: 'row', flex: 1 }}>
+                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                      underlayColor='#fff'>
+                      <Text style={styles.p11}>Case Study </Text>
+                    </TouchableOpacity>
+                  </View>
+
+                </View>
+
+                <View>
+
+                </View>
+              </View>
+
+              {/* row */}
+
+              <Text style={styles.hLWhite11}>Contact Us</Text>
+
+              <View style={{ marginTop: 30, flexDirection: 'row', flex: 1, width: 300 }}>
+                <Icon style={{ marginLeft: 20, flex: 1 }} name="home" color="white" size={30} />
+                <Text style={{ marginLeft: -189, color: 'white', flex: 1, fontSize: 17, lineHeight: 40 }}>Binghamton, New York</Text>
+              </View>
+
+              <Text style={{ marginLeft: 60, color: '#5e5a5a', flex: 1, fontSize: 17, lineHeight: 40 }}>4343 Hinkle Deegan Lake Road</Text>
+
+
+              <View style={{ marginTop: 30, flexDirection: 'row', flex: 1, width: 300 }}>
+                <Icon style={{ marginLeft: 20, flex: 1 }} name="phone" color="white" size={30} />
+                <Text style={{ marginLeft: -189, color: 'white', flex: 1, fontSize: 17, lineHeight: 40 }}>00 (953) 9865 562</Text>
+              </View>
+
+
+              <Text style={{ marginLeft: 60, color: '#5e5a5a', flex: 1, fontSize: 17, lineHeight: 40 }}>Mon to Fri 9am to 6 pmd</Text>
+
+
+              <View style={{ marginTop: 30, flexDirection: 'row', flex: 1, width: 300 }}>
+                <Icon style={{ marginLeft: 20, flex: 1 }} name="envelope" color="white" size={30} />
+                <Text style={{ marginLeft: -189, color: 'white', flex: 1, fontSize: 17, lineHeight: 40 }}>support@colorlib.com</Text>
+              </View>
+
+              <Text style={{ marginLeft: 60, color: '#5e5a5a', flex: 1, fontSize: 17, lineHeight: 40 }}>Send us your query anytime!</Text>
 
 
 
-            <Text style={styles.hLWhite11}>Contact Us</Text>
-
-            <View style={{ marginTop: 30, flexDirection: 'row', flex: 1, width: 300 }}>
-              <Icon style={{ marginLeft: 20, flex: 1 }} name="home" color="white" size={30} />
-              <Text style={{ marginLeft: -189, color: 'white', flex: 1, fontSize: 17, lineHeight: 40 }}>Binghamton, New York</Text>
-            </View>
-
-            <Text style={{ marginLeft: 60, color: '#5e5a5a', flex: 1, fontSize: 17, lineHeight: 40 }}>4343 Hinkle Deegan Lake Road</Text>
 
 
-            <View style={{ marginTop: 30, flexDirection: 'row', flex: 1, width: 300 }}>
-              <Icon style={{ marginLeft: 20, flex: 1 }} name="phone" color="white" size={30} />
-              <Text style={{ marginLeft: -189, color: 'white', flex: 1, fontSize: 17, lineHeight: 40 }}>00 (953) 9865 562</Text>
-            </View>
-
-
-            <Text style={{ marginLeft: 60, color: '#5e5a5a', flex: 1, fontSize: 17, lineHeight: 40 }}>Mon to Fri 9am to 6 pmd</Text>
-
-
-            <View style={{ marginTop: 30, flexDirection: 'row', flex: 1, width: 300 }}>
-              <Icon style={{ marginLeft: 20, flex: 1 }} name="envelope" color="white" size={30} />
-              <Text style={{ marginLeft: -189, color: 'white', flex: 1, fontSize: 17, lineHeight: 40 }}>support@colorlib.com</Text>
-            </View>
-
-            <Text style={{ marginLeft: 60, color: '#5e5a5a', flex: 1, fontSize: 17, lineHeight: 40 }}>Send us your query anytime!</Text>
-
-
-          </View>
+            </View>}
 
 
 
@@ -524,7 +790,7 @@ const FirstPage = ({ navigation }) => {
 
           {/* *************************      PART 12    ***************************** */}
 
-          <View style={{ backgroundColor: '#484848', width: '100%', paddingTop: 40, paddingBottom: 20 }}>
+          {mode === "portrait" ? <View style={{ backgroundColor: '#484848', width: '100%', paddingTop: 40, paddingBottom: 20 }}>
 
 
             <Text style={{ fontSize: 14, color: 'white', paddingLeft: 10 }}>Copyright ©2021 All rights reserved | This template is made</Text>
@@ -547,7 +813,34 @@ const FirstPage = ({ navigation }) => {
 
             </View>
 
-          </View>
+          </View> :
+
+            <View style={{ flexDirection: 'row', flex: 1, backgroundColor: '#484848', width: '100%', paddingTop: 40, paddingBottom: 20 }}>
+
+              <View style={{ flex: .5 }}>
+
+                <Text style={{ fontSize: 14, color: 'white', paddingLeft: 10 }}>Copyright ©2021 All rights reserved | This template is made</Text>
+                <View style={{ flexDirection: 'row', flex: 1, paddingBottom: 10, paddingTop: 5, paddingLeft: 10, width: 192 }}>
+                  <Text style={{ flex: .17, fontSize: 14, color: 'white' }}>with</Text>
+                  <Icon style={{ flex: .15 }} name="heart" color="#FCCB1A" size={20} />
+                  <Text style={{ flex: .1, fontSize: 14, color: 'white' }}>by</Text>
+                  <Text style={{ flex: .4, fontSize: 14, color: '#FCCB1A' }}>Colorlib</Text>
+                </View>
+
+              </View>
+
+              <View style={{ flex: .5,marginLeft: 100}}>
+                <View style={{ flexDirection: 'row', flex: 1, width: 140, backgroundColor: '#484848', paddingLeft: 25, paddingBottom: 30 }}>
+
+                  <Icon style={{ flex: 1 }} name="facebook" color="white" size={15} />
+                  <Icon style={{ flex: 1 }} name="twitter" color="white" size={15} />
+                  <Icon style={{ flex: 1 }} name="dribbble" color="white" size={15} />
+                  <Icon style={{ flex: 1 }} name="behance" color="white" size={15} />
+
+                </View>
+              </View>
+
+            </View>}
 
           {/* *************************      PART 13    ***************************** */}
 
@@ -866,7 +1159,7 @@ const styles = ScaledSheet.create({
     height: "200@s",
     alignContent: 'center',
     backgroundColor: 'black',
-  
+
   },
 
   modal52:
@@ -875,16 +1168,16 @@ const styles = ScaledSheet.create({
     height: "250@s",
     alignContent: 'center',
     backgroundColor: 'black',
-  
+
   },
 
   video5:
   {
 
-  flex: 1,
-  backgroundColor:'rgba(52, 52, 52, 0.8)',
-  justifyContent:'center'
-},
+    flex: 1,
+    backgroundColor: 'rgba(52, 52, 52, 0.8)',
+    justifyContent: 'center'
+  },
 
 
   button:
@@ -893,13 +1186,13 @@ const styles = ScaledSheet.create({
     //elevation: "2@s",
     //marginBottom: "20@s",
     //backgroundColor: "#2196F3",
-    backgroundColor:'rgba(0, 0, 0, 0.6)'
+    backgroundColor: 'rgba(0, 0, 0, 0.6)'
   },
 
   x5:
   {
     textAlign: 'right',
-    color:'#F1ECEB',
+    color: '#F1ECEB',
     fontWeight: 'bold',
     fontSize: '20@s'
   },
@@ -909,7 +1202,7 @@ const styles = ScaledSheet.create({
 
     fontSize: "18@s",
     paddingTop: "40@s",
-    fontWeight:'bold'
+    fontWeight: 'bold'
 
   },
 
@@ -931,6 +1224,7 @@ const styles = ScaledSheet.create({
   V7: {
     backgroundColor: '#f9f9ff',
     marginTop: "30@s",
+    marginBottom: "40@s",
     paddingTop: "10@s"
   },
 
@@ -951,7 +1245,7 @@ const styles = ScaledSheet.create({
 
   viewIcon7:
   {
-
+    marginBottom: '180@s',
     paddingLeft: "20@s"
   },
 
@@ -987,7 +1281,11 @@ const styles = ScaledSheet.create({
   },
 
   ///////////////////////////////// Part 8 /////////////////////////////////////////////
-
+  v8:
+  {
+    marginTop: '50@s',
+    marginBottom: '50@s'
+  },
 
   hBlack8: {
     fontSize: "30@s",
@@ -1009,25 +1307,67 @@ const styles = ScaledSheet.create({
 
 
   view9: {
-    borderStyle: 'solid',
-    borderWidth: .9,
     height: "370@s",
+    justifyContent: 'center',
+    alignItems: 'center'
 
   },
 
   carousel9:
   {
-
+    borderStyle: 'solid',
+    borderWidth: .9,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: '#f9f9ff',
   },
 
   carousel9Content:
   {
-    flex: 1,
-    width: '100%',
-    height: "300@s",
+    // width: '100%',
+    // height: "300@s",
     justifyContent: "center",
     alignItems: "center",
+    alignItems: 'center'
+    // borderColor:'red',
+    // borderWidth:2,
+    // borderStyle:'solid'
+
+  },
+
+  carousel9Content92:
+  {
+    flex: .5,
+    marginLeft: '9@s',
+    marginRight: '9@s',
+    height: "330@s",
+    borderStyle: 'solid',
+    borderWidth: .9,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#f9f9ff',
+
+  },
+
+  carousel92:
+  {
+
+    alignItems: 'center',
+    justifyContent: 'center',
+
+  },
+
+
+
+  img92:
+  {
+    width: '100@s',
+    height: '100@s',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 50
   },
 
   pCarousel9:
@@ -1112,6 +1452,19 @@ const styles = ScaledSheet.create({
     borderColor: '#fff'
   },
 
+  touchableL102: {
+    flex: 1,
+    marginTop: "10@s",
+    paddingTop: "10@s",
+    paddingBottom: "10@s",
+    marginLeft: "180@s",
+    marginRight: "14@s",
+    backgroundColor: '#FFF',
+    borderWidth: 1,
+    marginBottom: "60@s",
+    borderColor: '#fff'
+  },
+
   touchable2L10: {
     flex: 1,
     marginTop: "10@s",
@@ -1119,6 +1472,17 @@ const styles = ScaledSheet.create({
     paddingBottom: "10@s",
     marginLeft: "14@s",
     marginRight: "14@s",
+    backgroundColor: '#FFF',
+    borderWidth: 1,
+    marginBottom: "60@s",
+    borderColor: '#fff'
+  },
+  touchable2L102: {
+    flex: 1,
+    marginTop: "10@s",
+    paddingTop: "10@s",
+    paddingBottom: "10@s",
+    marginRight: "180@s",
     backgroundColor: '#FFF',
     borderWidth: 1,
     marginBottom: "60@s",
@@ -1162,6 +1526,17 @@ const styles = ScaledSheet.create({
     marginTop: "50@s"
   },
 
+
+  h2LWhite112:
+  {
+    fontSize: "27@s",
+    paddingLeft: "15@s",
+    color: '#fff',
+    fontWeight: 'bold',
+    marginBottom: "10@s",
+    marginTop: "100@s"
+  },
+
   touchableL11: {
     marginTop: "10@s",
     flex: 1,
@@ -1170,6 +1545,8 @@ const styles = ScaledSheet.create({
     paddingBottom: "10@s"
 
   },
+
+
   ///////////////////////////////// Part 12 /////////////////////////////////////////////
 
 
