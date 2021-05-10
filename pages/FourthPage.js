@@ -13,7 +13,7 @@ const window = Dimensions.get("window");
 const screen = Dimensions.get("screen");
 
 
-const FirstPage = ({ navigation }) => {
+const FourthPage = ({ navigation }) => {
 
   const image1 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/banner-bg.jpg' };
   const image2 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/c1.jpg' };
@@ -27,6 +27,16 @@ const FirstPage = ({ navigation }) => {
   const image10 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/t2.png' };
   const image11 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/t3.png' };
   const image12 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/call-bg.jpg' };
+
+  const image13 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/dg2.jpg' };
+  const image14 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/dg3.jpg' };
+  const image15 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/dg4.jpg' };
+  const image16 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/dg5.jpg' };
+  const image17 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/dg6.jpg' };
+  const image18 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/dg7.jpg' };
+  const image19 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/dg8.jpg' };
+
+  const image21 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/dg1.jpg' };
 
 
 
@@ -77,478 +87,127 @@ const FirstPage = ({ navigation }) => {
           {/* ************************* PART 1  IMAGEBACKGROUND     ***************************** */}
 
           <ImageBackground source={image1} style={styles.imgBk1}>
+            <View style={styles.viewPart1}>
+              <View >
+                <Text style={styles.h1}> Dogs</Text>
+              </View>
 
-            <View style={styles.v1hLWhite}>
-              <Text
-                style={styles.hLWhite}>
-                ADOPT US. WE NEED YOUR HELP.
-            </Text>
+              <View style={styles.viewTouchable1}>
+                <View style={{ flex: .4 }}>
+                  <TouchableOpacity
+
+                    onPress={() => navigation.navigate('FirstPage')}
+                    underlayColor='#fff'>
+                    <Text style={styles.touchableText1}>Home</Text>
+                  </TouchableOpacity>
+
+                </View>
+                <View style={{ flex: .1 }}>
+                  <Icon style={styles.icon1} name="arrow-right" color='white' size={30} />
+                </View>
+
+
+                <View style={{ flex: .4 }}>
+
+                  <TouchableOpacity
+
+                    onPress={() => navigation.navigate('FourthPage')}
+                    underlayColor='#fff'>
+                    <Text style={styles.touchableText1}>Dogs</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+
             </View>
-
-            <View style={styles.v1pLwhite}>
-              <Text
-                style={styles.pLWhite}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp
-                or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
-            </Text>
-            </View>
-
-            <View style={mode === "portrait" ? styles.v1touchableLWhite : styles.v1touchableLWhite2}>
-              <TouchableOpacity
-                style={styles.touchableLWhite}
-                onPress={() => navigation.navigate('FirstPage')}
-                underlayColor='#fff'>
-                <Text style={styles.touchableTCBlack}>FIND A PET TO ADOPT</Text>
-              </TouchableOpacity>
-            </View>
-
-
-
           </ImageBackground>
 
 
-
-
-          {/* ************************* PART 2  CAROUSEL     ***************************** */}
-
-
-          <View>
-            {mode === "portrait" ? <Carousel style={styles.carousel}>
-
-              <View style={styles.carouselView}>
-                <Image source={image2} style={{ width: '100%', height: '100%' }} />
-              </View>
-              <View style={styles.carouselView}>
-                <Image source={image3} style={{ width: '100%', height: '100%' }} />
-              </View>
-              <View style={styles.carouselView}>
-                <Image source={image4} style={{ width: '100%', height: '100%' }} />
-              </View>
-              <View style={styles.carouselView}>
-                <Image source={image5} style={{ width: '100%', height: '100%' }} />
-              </View>
-              <View style={styles.carouselView}>
-                <Image source={image2} style={{ width: '100%', height: '100%' }} />
-              </View>
-              <View style={styles.carouselView}>
-                <Image source={image3} style={{ width: '100%', height: '100%' }} />
-              </View>
-              <View style={styles.carouselView}>
-                <Image source={image4} style={{ width: '100%', height: '100%' }} />
-              </View>
-              <View style={styles.carouselView}>
-                <Image source={image5} style={{ width: '100%', height: '100%' }} />
-              </View>
-            </Carousel> :
-
-              <Carousel style={styles.carousel}>
-
-                <View style={styles.carouselView} style={{ flexDirection: "row", flex: 1 }}>
-                  <Image source={image2} style={{ width: '50%', height: '100%', flex: .5 }} />
-                  <Image source={image3} style={{ width: '50%', height: '100%', flex: .5 }} />
-                </View>
-                <View style={styles.carouselView} style={{ flexDirection: "row", flex: 1 }}>
-                  <Image source={image4} style={{ width: '50%', height: '100%', flex: .5 }} />
-                  <Image source={image5} style={{ width: '50%', height: '100%', flex: .5 }} />
-                </View>
-                <View style={styles.carouselView} style={{ flexDirection: "row", flex: 1 }}>
-                  <Image source={image2} style={{ width: '50%', height: '100%', flex: .5 }} />
-                  <Image source={image3} style={{ width: '50%', height: '100%', flex: .5 }} />
-                </View>
-                <View style={styles.carouselView} style={{ flexDirection: "row", flex: 1 }}>
-                  <Image source={image4} style={{ width: '50%', height: '100%', flex: .5 }} />
-                  <Image source={image5} style={{ width: '50%', height: '100%', flex: .5 }} />
-                </View><View style={styles.carouselView} style={{ flexDirection: "row", flex: 1 }}>
-                  <Image source={image2} style={{ width: '50%', height: '100%', flex: .5 }} />
-                  <Image source={image3} style={{ width: '50%', height: '100%', flex: .5 }} />
-                </View>
-                <View style={styles.carouselView} style={{ flexDirection: "row", flex: 1 }}>
-                  <Image source={image4} style={{ width: '50%', height: '100%', flex: .5 }} />
-                  <Image source={image5} style={{ width: '50%', height: '100%', flex: .5 }} />
-                </View>
-              </Carousel>}
-          </View>
-
-          {/* *************************      PART 3      ***************************** */}
-
-
-
-          <View style={mode === "portrait" ? styles.viewCenter3 : styles.viewCenter32}>
-
-            <Text style={styles.hBlack3}>Please select your favourite pet</Text>
-            <TouchableOpacity
-              style={styles.touchableCYellow}
-              onPress={
-                () => navigation.navigate('FirstPage')
-              }
-              underlayColor='#fff'>
-              <Text style={styles.touchableTCWhite}>Fill Adoption Form</Text>
-            </TouchableOpacity>
-          </View>
-
-
-
-
-
-          {/* *************************      PART 4     ***************************** */}
-
-
-
-          <View style={styles.view4}>
-
-            <Image source={image6} style={mode === "portrait" ? styles.img4 : styles.img42} />
-
-            <View>
-              <Text
-                style={styles.hBlack4}>
-                Globally Connected by Large Network
-          </Text>
-
-              <Text
-                style={styles.h2Black4}>
-                We are here to listen from you deliver exellence
-          </Text>
-              <Text
-                style={styles.pGray4}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua.Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor
-          </Text>
-
-              <TouchableOpacity
-                style={mode === "portrait" ? styles.touchableLYellow4 : styles.touchableLYellow42}
-                onPress={() => navigation.navigate('FirstPage')}
-                underlayColor='#fff'>
-                <Text style={styles.touchableTCWhite4}>GET DETAILS</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-
-
-
-
-          {/* *************************      PART 5 MODAL    ***************************** */}
-
-          <Modal
-            animationType="fade"
-            transparent={true}
-            visible={modalVisible}
-            supportedOrientations={['landscape']}
-            onRequestClose={() => {
-              a
-              Alert.alert("Modal has been closed.");
-              setModalVisible(!modalVisible);
-            }}
-          >
-
-            <View style={styles.video5}>
-
-              <View>
-                <Pressable
-                  style={styles.button}
-                  onPress={() => setModalVisible(!modalVisible)}>
-                  <Text style={styles.x5}>  X  </Text>
-                </Pressable>
-              </View>
-
-              <View style={mode === "portrait" ? styles.modal5 : styles.modal52}>
-                <WebView source={{ html: '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ARA0AxrnHdM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>' }} />
-              </View>
+          {/* **************************part cats img part 13 ********************************** */}
+          {mode === "portrait" ? <View style={styles.view13}>
+            <View style={styles.viewImg13}>
+              <Image source={image21} style={styles.img13} />
             </View>
 
-
-          </Modal>
-
-          <View style={mode === "portrait" ? styles.view5 : styles.view52} >
-            <ImageBackground source={image7} style={mode === "portrait" ? styles.imgModal5 : styles.imgModal52}>
-              <Icon style={mode === "portrait" ? styles.icon5 : styles.icon52} name="play" color="white" size={80} onPress={() => setModalVisible(true)} />
-            </ImageBackground>
-
-          </View>
-
-
-          {/* *************************      PART 6     ***************************** */}
-
-          <View style={{ alignItems: 'center' }}>
-
-            <Text style={styles.hBlack6}>Watch this video how they live here</Text>
-
-            <Text style={styles.pC6}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</Text>
-          </View>
-
-
-
-          {/* *************************      PART 7    ***************************** */}
-
-
-
-
-          <View style={styles.V7}>
-
-            <View style={{ alignItems: 'center' }}>
-              <Text style={styles.hBlack7}>Process to adopt a pet</Text>
-              <Text style={styles.h2Black7}>Who are in extremely love with eco friendly system.</Text>
+            <View style={styles.viewImg13}>
+              <Image source={image13} style={styles.img13} />
             </View>
 
-            {mode === "portrait" ?
-              <View style={styles.viewIcon7}>
-                <Icon style={styles.icons7} name="thumbs-up" size={50} />
-                <Text style={styles.hIcons7}>Pet Selection</Text>
-                <Text style={styles.pIcons7}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
+            <View style={styles.viewImg13}>
+              <Image source={image14} style={styles.img13} />
+            </View>
+
+            <View style={styles.viewImg13}>
+              <Image source={image15} style={styles.img13} />
+            </View>
+
+            <View style={styles.viewImg13}>
+              <Image source={image16} style={styles.img13} />
+            </View>
+
+            <View style={styles.viewImg13}>
+              <Image source={image17} style={styles.img13} />
+            </View>
+
+            <View style={styles.viewImg13}>
+              <Image source={image18} style={styles.img13} />
+            </View>
+
+            <View style={styles.viewImg13}>
+              <Image source={image19} style={styles.img13} />
+            </View>
+
+          </View> :
 
 
-                <Icon style={styles.icons7} name="user" size={50} />
-                <Text style={styles.hIcons7}>Meeting Authority</Text>
-                <Text style={styles.pIcons7} >inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
-
-                <Icon style={styles.icons7} name="drivers-license-o" size={50} />
-                <Text style={styles.hIcons7}>Adoption Form Filling</Text>
-                <Text style={styles.pIcons7}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
-
-                <Icon style={styles.icons7} name="magic" size={50} />
-                <Text style={styles.hIcons7}>Bring to new family</Text>
-                <Text style={styles.pIcons7}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
-              </View> :
-
-
-              <View style={styles.viewIcon7}>
-
-                <View style={{ flexDirection: 'row', flex: 1 }}>
-                  <View style={{ flex: .5 }}>
-                    <Icon style={styles.icons7} name="thumbs-up" size={50} />
-                    <Text style={styles.hIcons7}>Pet Selection</Text>
-                    <Text style={styles.pIcons7}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
-                  </View>
-
-                  <View style={{ flex: .5 }}>
-                    <Icon style={styles.icons7} name="user" size={50} />
-                    <Text style={styles.hIcons7}>Meeting Authority</Text>
-                    <Text style={styles.pIcons7} >inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
-                  </View>
-
-                </View>
-                <View style={{ flexDirection: 'row', flex: 1 }}>
-                  <View style={{ flex: .5 }}>
-                    <Icon style={styles.icons7} name="drivers-license-o" size={50} />
-                    <Text style={styles.hIcons7}>Adoption Form Filling</Text>
-                    <Text style={styles.pIcons7}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
-                  </View>
-
-                  <View style={{ flex: .5 }}>
-                    <Icon style={styles.icons7} name="magic" size={50} />
-                    <Text style={styles.hIcons7}>Bring to new family</Text>
-                    <Text style={styles.pIcons7}>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.</Text>
-                  </View>
+            <View style={styles.view13}>
+              <View style={{flexDirection:'row',flex:1}}>
+                <View style={styles.viewImg132}>
+                  <Image source={image21} style={styles.img13} />
                 </View>
 
-              </View>}
-
-          </View>
-
-
-
-
-
-
-
-
-          {/* *************************      PART 8     ***************************** */}
-
-          <View style={styles.v8}>
-            <Text style={styles.hBlack8}>Testimonials from our guardians.</Text>
-            <Text style={styles.h2Black8}>Who are in extremely love with eco friendly system</Text>
-          </View>
-
-          {/* *************************      PART 9    ***************************** */}
-
-          <View style={styles.view9}>
-
-            {mode === "portrait" ? <Carousel style={styles.carousel9}>
-
-              <View style={styles.carousel9Content}>
-                <Image source={image9} style={{ width: 100, height: 100, borderRadius: 50 }} />
-                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                <Text style={styles.h2Carousel9}>CEO at Google</Text>
-              </View>
-
-
-              <View style={styles.carousel9Content}>
-                <Image source={image10} style={{ width: 100, height: 100, borderRadius: 50 }} />
-                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                <Text style={styles.h2Carousel9}>CEO at Google</Text>
-              </View>
-
-              <View style={styles.carousel9Content}>
-                <Image source={image11} style={{ width: 100, height: 100, borderRadius: 50 }} />
-                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                <Text style={styles.h2Carousel9}>CEO at Google</Text>
-              </View>
-
-              <View style={styles.carousel9Content}>
-                <Image source={image9} style={{ width: 100, height: 100, borderRadius: 50 }} />
-                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                <Text style={styles.h2Carousel9}>CEO at Google</Text>
-              </View>
-
-
-              <View style={styles.carousel9Content}>
-                <Image source={image10} style={{ width: 100, height: 100, borderRadius: 50 }} />
-                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                <Text style={styles.h2Carousel9}>CEO at Google</Text>
-              </View>
-
-              <View style={styles.carousel9Content}>
-                <Image source={image11} style={{ width: 100, height: 100, borderRadius: 50 }} />
-                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                <Text style={styles.h2Carousel9}>CEO at Google</Text>
-              </View>
-
-              <View style={styles.carousel9Content}>
-                <Image source={image9} style={{ width: 100, height: 100, borderRadius: 50 }} />
-                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                <Text style={styles.h2Carousel9}>CEO at Google</Text>
-              </View>
-
-
-              <View style={styles.carousel9Content}>
-                <Image source={image10} style={{ width: 100, height: 100, borderRadius: 50 }} />
-                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                <Text style={styles.h2Carousel9}>CEO at Google</Text>
-              </View>
-
-              <View style={styles.carousel9Content}>
-                <Image source={image11} style={{ width: 100, height: 100, borderRadius: 50 }} />
-                <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                <Text style={styles.h2Carousel9}>CEO at Google</Text>
-              </View>
-
-
-            </Carousel> :
-              <Carousel style={styles.carousel92}>
-                <View style={{ flexDirection: 'row', flex: 1 }}>
-
-                  <View style={styles.carousel9Content92}>
-                    <Image source={image9} style={styles.img92} />
-                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
-                  </View>
-
-                  <View style={styles.carousel9Content92}>
-                    <Image source={image10} style={styles.img92} />
-                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
-                  </View>
+                <View style={styles.viewImg132}>
+                  <Image source={image13} style={styles.img13} />
                 </View>
-                <View style={{ flexDirection: 'row', flex: 1 }}>
+              </View>
 
-                  <View style={styles.carousel9Content92}>
-                    <Image source={image10} style={styles.img92} />
-                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
-                  </View>
-
-                  <View style={styles.carousel9Content92}>
-                    <Image source={image11} style={styles.img92} />
-                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
-                  </View>
-                </View>
-                <View style={{ flexDirection: 'row', flex: 1 }}>
-
-                  <View style={styles.carousel9Content92}>
-                    <Image source={image11} style={styles.img92} />
-                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
-                  </View>
-
-                  <View style={styles.carousel9Content92}>
-                    <Image source={image9} style={styles.img92} />
-                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
-                  </View>
-                </View>
-                <View style={{ flexDirection: 'row', flex: 1 }}>
-
-                  <View style={styles.carousel9Content92}>
-                    <Image source={image9} style={styles.img92} />
-                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
-                  </View>
-
-                  <View style={styles.carousel9Content92}>
-                    <Image source={image10} style={styles.img92} />
-                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
-                  </View>
-                </View>
-                <View style={{ flexDirection: 'row', flex: 1 }}>
-
-                  <View style={styles.carousel9Content92}>
-                    <Image source={image10} style={styles.img92} />
-                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
-                  </View>
-
-                  <View style={styles.carousel9Content92}>
-                    <Image source={image11} style={styles.img92} />
-                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
-                  </View>
-                </View>
-                <View style={{ flexDirection: 'row', flex: 1 }}>
-
-                  <View style={styles.carousel9Content92}>
-                    <Image source={image11} style={styles.img92} />
-                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
-                  </View>
-
-                  <View style={styles.carousel9Content92}>
-                    <Image source={image9} style={styles.img92} />
-                    <Text style={styles.pCarousel9}>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory</Text>
-                    <Text style={styles.hCarousel9}> Mark Alviro Wiens</Text>
-                    <Text style={styles.h2Carousel9}>CEO at Google</Text>
-                  </View>
+              <View style={{flexDirection:'row',flex:1}}>
+                <View style={styles.viewImg132} >
+                  <Image source={image14} style={styles.img13} />
                 </View>
 
+                <View style={styles.viewImg132}>
+                  <Image source={image15} style={styles.img13} />
+                </View>
+              </View>
+
+              <View style={{flexDirection:'row',flex:1}}>
+                <View style={styles.viewImg132} >
+                  <Image source={image16} style={styles.img13} />
+                </View>
+
+                <View style={styles.viewImg132} >
+                  <Image source={image17} style={styles.img13} />
+                </View>
+              </View>
+
+              <View style={{flexDirection:'row',flex:1}}>
+                <View style={styles.viewImg132} >
+                  <Image source={image18} style={styles.img13} />
+                </View>
+
+                <View style={styles.viewImg132} >
+                  <Image source={image19} style={styles.img13} />
+                </View>
+              </View>
+
+            </View>}
 
 
-              </Carousel>
 
 
 
 
 
-
-
-
-
-
-
-
-
-            }
-
-          </View>
           {/* *************************      PART 10     ***************************** */}
 
           <View style={{
@@ -884,88 +543,47 @@ const styles = ScaledSheet.create({
     overflow: "hidden",
   },
 
-  v1hLWhite:
+  h1:
   {
-    width: "95%"
-  },
-
-  hLWhite:
-  {
-    fontSize: "32@s",
-    paddingLeft: "15@s",
+    fontSize: "37@s",
     color: '#fff',
     fontWeight: 'bold',
-    textAlign: 'left',
+    textAlign: 'center',
     marginBottom: "15@s",
     marginTop: "200@s",
   },
 
-  v1pLwhite:
+
+
+  touchableText1:
   {
-    width: "90%"
+    color: 'white',
+    fontSize: '19@s',
+    textAlign: 'center'
   },
 
-  pLWhite:
+  viewTouchable1:
   {
-    fontSize: "15@s",
-    paddingLeft: "15@s",
-    color: '#fff',
-    textAlign: 'left',
-    marginBottom: "20@s"
-  },
-
-  v1touchableLWhite:
-  {
-    width: "55%"
-  },
-
-  v1touchableLWhite2:
-  {
-    width: "30%"
-  },
-
-
-  touchableLWhite:
-  {
-
-    paddingTop: "10@s",
-    paddingBottom: "10@s",
-    backgroundColor: '#fff',
-    borderWidth: "1@s",
-    marginLeft: "15@s",
-    marginBottom: "60@s",
-    borderColor: '#fff'
-  },
-
-
-  touchableTCBlack:
-  {
-    fontSize: "14@s",
-    color: '#000',
-    textAlign: 'center',
-    paddingLeft: "10@s",
-    paddingRight: "10@s"
-  },
-
-
-
-  ///////////////////////////////// PART 2 CAROUSEL/////////////////////////////////////////////
-
-  carousel:
-  {
-    marginTop: "30@s",
-
-  },
-
-  carouselView:
-  {
+    //width: '250@s',
+    marginLeft: '40@s',
+    marginRight: '40@s',
+    flexDirection: 'row',
     flex: 1,
-    width: '100%',
-    justifyContent: "center",
-    alignItems: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: '90@s'
+  },
+
+  viewPart1:
+
+  {
+    justifyContent: 'center',
+    marginBottom: '60@s',
 
 
   },
+
+
 
 
   ///////////////////////////////// PART 3  DIV TEXT CENTER  /////////////////////////////////////////////
@@ -1140,6 +758,8 @@ const styles = ScaledSheet.create({
 
   view5:
   {
+
+    marginTop: '80@s',
     paddingRight: '15@s',
     paddingLeft: '15@s',
 
@@ -1147,6 +767,7 @@ const styles = ScaledSheet.create({
 
   view52:
   {
+    marginTop: '80@s',
     paddingRight: '30@s',
     paddingLeft: '30@s',
 
@@ -1489,6 +1110,11 @@ const styles = ScaledSheet.create({
     marginBottom: "60@s",
     borderColor: '#fff'
   },
+
+  touchableTCBlack: {
+    textAlign: 'center',
+    fontWeight: 'bold'
+  },
   ///////////////////////////////// Part 11 /////////////////////////////////////////////
 
   view11:
@@ -1520,7 +1146,7 @@ const styles = ScaledSheet.create({
     color: '#5e5a5a',
     fontSize: "15@s",
     paddingLeft: "15@s",
-    paddingRight:'18@s',
+    paddingRight: '18@s',
     lineHeight: "20@s"
   },
 
@@ -1558,7 +1184,7 @@ const styles = ScaledSheet.create({
   txtP11: {
     marginLeft: '60@s',
     color: '#5e5a5a',
-    flex: 1, 
+    flex: 1,
     fontSize: '17@s',
     lineHeight: 40
   },
@@ -1660,8 +1286,47 @@ const styles = ScaledSheet.create({
     backgroundColor: '#484848',
     paddingLeft: '25@s',
     paddingBottom: '30@s'
-  }
+  },
 
+  /////////////////    PART13    ///////////////////////////////////
+
+  img13:
+  {
+    height: "500@s",
+    width: "100%",
+    paddingLeft:'5@s',
+    paddingRight:'5@s',
+
+    flex: 1
+  },
+
+  viewImg13:
+  {
+    marginTop: '50@s',
+    flexDirection: 'column',
+    flex: 1,
+    paddingLeft: '10@s',
+    paddingRight: '10@s',
+  },
+
+  viewImg132:
+  {
+    marginTop: '50@s',
+    flexDirection: 'column',
+    flex:.5,
+    paddingLeft: '10@s',
+    paddingRight: '10@s',
+    paddingTop: '10@s',
+    paddingBottom: '10@s',
+  },
+
+  view13:
+  {
+    marginBottom: '5@s',
+    marginTop:'20@s'
+  },
+
+ 
 });
 
-export default FirstPage;
+export default FourthPage;

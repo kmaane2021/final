@@ -15,6 +15,8 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import FirstPage from './pages/FirstPage';
 import SecondPage from './pages/SecondPage';
 import ThirdPage from './pages/ThirdPage';
+import FourthPage from './pages/FourthPage';
+import FifthPage from './pages/FifthPage';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -42,6 +44,7 @@ const NavigationDrawerStructure = (props) => {
     </View>
   );
 }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function firstScreenStack({ navigation }) {
   return (
@@ -49,8 +52,64 @@ function firstScreenStack({ navigation }) {
       <Stack.Screen
         name="FirstPage"
         component={FirstPage}
+
+      
+
+
+
+        
+
         options={{
           title: 'PetShelter', //Set Header Title
+
+            
+         
+          headerContainerStyle: {
+            backgroundColor:'rgba(0, 0, 0, 0.7)',
+    
+          },
+
+        
+
+
+          headerRight: () =>
+            <NavigationDrawerStructure
+              navigationProps={navigation}
+            />,
+
+          headerTintColor: 'white', //Set Header text color
+
+          headerRightContainerStyle: {
+            paddingRight: 30,
+            backgroundColor: 'rgba(0, 0, 0, 0.7)'
+          },
+
+          headerTransparent: true,
+
+         
+          headerTitleStyle: {
+            fontWeight: 'bold', //Set Header text style
+          },
+
+        }
+      }
+      />
+    </Stack.Navigator>
+  );
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function secondScreenStack({ navigation }) {
+  return (
+    <Stack.Navigator initialRouteName="SecondPage">
+      <Stack.Screen
+        name="SecondPage"
+        component={SecondPage}
+
+        options={{
+          title: 'PetShelter', //Set Header Title
+
           headerRight: () =>
             <NavigationDrawerStructure
               navigationProps={navigation}
@@ -62,10 +121,12 @@ function firstScreenStack({ navigation }) {
           headerTintColor: 'white', //Set Header text color
           headerRightContainerStyle: {
             paddingRight: 30,
+            backgroundColor: 'rgba(0, 0, 0, 0.7)'
           },
           headerTransparent: true,
           headerTitleStyle: {
             fontWeight: 'bold', //Set Header text style
+
           },
         }}
       />
@@ -73,56 +134,194 @@ function firstScreenStack({ navigation }) {
   );
 }
 
-function secondScreenStack({ navigation }) {
-  return (
-    <Stack.Navigator
-      initialRouteName="SecondPage"
-      screenOptions={{
-        headerLeft: () =>
-          <NavigationDrawerStructure
-            navigationProps={navigation}
-          />,
-        headerStyle: {
-          backgroundColor: '#f4511e', //Set Header color
-        },
-        headerTintColor: '#fff', //Set Header text color
-        headerTitleStyle: {
-          fontWeight: 'bold', //Set Header text style
-        }
-      }}>
-      <Stack.Screen
-        name="SecondPage"
-        component={SecondPage}
-        options={{
-          title: 'Second Page', //Set Header Title
 
-        }} />
+function thirdScreenStack({navigation }) {
+  return (
+    <Stack.Navigator initialRouteName="ThirdPage">
       <Stack.Screen
-        name="ThirdPage"
+        name="ThirddPage"
         component={ThirdPage}
+
         options={{
-          title: 'Third Page', //Set Header Title
-        }} />
+          title: 'PetShelter', //Set Header Title
+
+          headerRight: () =>
+            <NavigationDrawerStructure
+              navigationProps={navigation}
+            />,
+          headerStyle: {
+
+          },
+
+          headerTintColor: 'white', //Set Header text color
+          headerRightContainerStyle: {
+            paddingRight: 30,
+            backgroundColor: 'rgba(0, 0, 0, 0.7)'
+          },
+          headerTransparent: true,
+          headerTitleStyle: {
+            fontWeight: 'bold', //Set Header text style
+
+          },
+        }}
+      />
     </Stack.Navigator>
   );
 }
+
+
+function fourthScreenStack({navigation }) {
+  return (
+    <Stack.Navigator initialRouteName="FourthPage">
+      <Stack.Screen
+        name="FourthdPage"
+        component={FourthPage}
+
+        options={{
+          title: 'PetShelter', //Set Header Title
+
+          headerRight: () =>
+            <NavigationDrawerStructure
+              navigationProps={navigation}
+            />,
+          headerStyle: {
+
+          },
+
+          headerTintColor: 'white', //Set Header text color
+          headerRightContainerStyle: {
+            paddingRight: 30,
+            backgroundColor: 'rgba(0, 0, 0, 0.7)'
+          },
+          headerTransparent: true,
+          headerTitleStyle: {
+            fontWeight: 'bold', //Set Header text style
+
+          },
+        }}
+      />
+    </Stack.Navigator>
+  );
+}
+
+
+
+function fifthScreenStack({navigation }) {
+  return (
+    <Stack.Navigator initialRouteName="FifthPage">
+      <Stack.Screen
+        name="FifthdPage"
+        component={FifthPage}
+
+        options={{
+          title: 'PetShelter', //Set Header Title
+
+          headerRight: () =>
+            <NavigationDrawerStructure
+              navigationProps={navigation}
+            />,
+          headerStyle: {
+
+          },
+
+          headerTintColor: 'white', //Set Header text color
+          headerRightContainerStyle: {
+            paddingRight: 30,
+            backgroundColor: 'rgba(0, 0, 0, 0.7)'
+          },
+          headerTransparent: true,
+          headerTitleStyle: {
+            fontWeight: 'bold', //Set Header text style
+
+          },
+        }}
+      />
+    </Stack.Navigator>
+  );
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator
         drawerContentOptions={{
-          activeTintColor: '#e91e63',
+          activeTintColor: 'white',
           itemStyle: { marginVertical: 4 },
-        }}>
+         
+            labelStyle: {
+              color: 'white',
+              fontWeight:'bold',
+              fontSize:17
+            },
+
+        }}
+        drawerStyle={{
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+      
+        }}
+
+
+
+        
+      
+        >
+
+        {/* HOME */}
         <Drawer.Screen
           name="FirstPage"
-          options={{ drawerLabel: 'First page Option' }}
-          component={firstScreenStack} />
+          options={{ drawerLabel: 'HOME', }}
+          component={firstScreenStack}
+
+        />
+      
         <Drawer.Screen
           name="SecondPage"
-          options={{ drawerLabel: 'Second page Option' }}
+          options={{ drawerLabel: 'ABOUT US' }}
           component={secondScreenStack} />
+
+       
+        <Drawer.Screen
+          name="ThirdPage"
+          options={{ drawerLabel: 'CATS' }}
+          component={thirdScreenStack} />
+
+
+       
+        <Drawer.Screen
+          name="FourthdPage"
+          options={{ drawerLabel: 'DOGS' }}
+          component={fourthScreenStack} />
+
+        
+        <Drawer.Screen
+          name="FifthPage"
+          options={{ drawerLabel: 'VOLUNTEER' }}
+          component={fifthScreenStack} />
+
+{/* 
+        
+        <Drawer.Screen
+          name="SixthPage"
+          options={{ drawerLabel: 'BLOGS' }}
+          component={sixthScreenStack} />
+
+        
+        <Drawer.Screen
+          name="SeventhPage"
+          options={{ drawerLabel: 'CONTACT' }}
+          component={seventhScreenStack} />
+
+       
+        <Drawer.Screen
+          name="EighthPage"
+          options={{ drawerLabel: 'DROPDOWN' }}
+          component={eighthScreenStack} />  */}
+          
+        
+
       </Drawer.Navigator>
     </NavigationContainer>
   );
