@@ -7,7 +7,7 @@ import YoutubePlayer from 'react-native-youtube-iframe';
 import { useState, useEffect } from "react";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { ScaledSheet } from "react-native-size-matters";
-import RNPickerSelect from "react-native-picker-select";
+
 
 
 const window = Dimensions.get("window");
@@ -21,9 +21,10 @@ const SixthPage = ({ navigation }) => {
     const image3 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/blog/cat-widget2.jpg' };
     const image4 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/blog/cat-widget3.jpg' };
     const image5 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/blog/feature-img1.jpg' };
-
-
-
+    const image6 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/blog/feature-img2.jpg' };
+    const image7 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/blog/feature-img3.jpg' };
+    const image8 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/blog/feature-img4.jpg' };
+    const image9 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/blog/feature-img5.jpg' };
 
 
 
@@ -93,8 +94,6 @@ const SixthPage = ({ navigation }) => {
                                     <Text style={styles.touchableText1}>View More</Text>
                                 </TouchableOpacity>
 
-
-
                             </View>
 
 
@@ -106,7 +105,7 @@ const SixthPage = ({ navigation }) => {
                     {/* ******************************part 16 ****************************** */}
 
                     <View style={styles.view16}>
-                        <ImageBackground source={image2} style={styles.imgBk16}>
+                        <ImageBackground source={image2} style={mode === "portrait" ? styles.imgBk16 : styles.imgBk162}>
 
 
 
@@ -127,7 +126,7 @@ const SixthPage = ({ navigation }) => {
 
 
                     <View style={styles.view16}>
-                        <ImageBackground source={image3} style={styles.imgBk16}>
+                        <ImageBackground source={image3} style={mode === "portrait" ? styles.imgBk16 : styles.imgBk162}>
 
 
 
@@ -149,7 +148,7 @@ const SixthPage = ({ navigation }) => {
 
 
                     <View style={styles.view16}>
-                        <ImageBackground source={image4} style={styles.imgBk16}>
+                        <ImageBackground source={image4} style={mode === "portrait" ? styles.imgBk16 : styles.imgBk162}>
 
 
 
@@ -171,97 +170,1300 @@ const SixthPage = ({ navigation }) => {
 
 
                     {/* ************************PART 17 ******************************** */}
+                    {mode === "portrait" ?
+                        <View>
+                            <View style={styles.view17}>
 
-                    <View style={styles.view17}>
+                                <View style={styles.v17}>
 
-                        <View style={styles.v17}>
+                                    <View style={{ flex: .2 }}>
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}>Food, </Text>
+                                        </TouchableOpacity>
+                                    </View>
 
-                            <View style={{ flex: .2 }}>
-                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
-                                    underlayColor='#fff'>
-                                    <Text style={styles.p17}>Food, </Text>
-                                </TouchableOpacity>
+                                    <View style={{ flex: .37 }}>
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}>Technology,</Text>
+                                        </TouchableOpacity>
+                                    </View>
+
+                                    <View style={{ flex: .23 }}>
+
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}>Politics,</Text>
+                                        </TouchableOpacity>
+
+                                    </View>
+
+                                    <View style={{ flex: .3 }}>
+
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}> Lifestyle</Text>
+                                        </TouchableOpacity>
+
+                                    </View>
+
+                                </View>
+
+
+
+
+
+
+
+
+                                <View style={styles.v17icons}>
+
+                                    <View style={{ flexDirection: 'row', flex: 1 }} >
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>Mark Wiens</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="user" color="black" size={20} />
+                                        </View>
+
+
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>12 Dec, 2017</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="calendar" color="black" size={20} />
+                                        </View>
+                                    </View>
+
+
+
+                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>1.2M Views</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="eye" color="black" size={20} />
+                                        </View>
+
+
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>06 Comments</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="comment" color="black" size={20} />
+                                        </View>
+                                    </View>
+
+
+
+
+                                </View>
+
+
+
+                                <View style={styles.imgViewIcons17}>
+
+                                    <Image source={image5} style={styles.imgv17} />
+
+                                </View>
+
+
+                                <View style={styles.textv17}>
+                                    <Text style={styles.hv17}>Astronomy Binoculars A Great Alternative</Text>
+                                    <Text style={styles.pv17}>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.</Text>
+                                    <TouchableOpacity
+                                        style={styles.touchable17}
+                                        onPress={() => navigation.navigate('SixthPage')}
+                                        underlayColor='#fff'>
+                                        <Text style={{ fontWeight: 'bold' }}>View More</Text>
+                                    </TouchableOpacity>
+
+                                </View>
+
                             </View>
 
-                            <View style={{ flex: .37 }}>
-                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
-                                    underlayColor='#fff'>
-                                    <Text style={styles.p17}>Technology,</Text>
-                                </TouchableOpacity>
+
+
+
+                            <View style={styles.view17}>
+
+                                <View style={styles.v17}>
+
+                                    <View style={{ flex: .2 }}>
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}>Food, </Text>
+                                        </TouchableOpacity>
+                                    </View>
+
+                                    <View style={{ flex: .37 }}>
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}>Technology,</Text>
+                                        </TouchableOpacity>
+                                    </View>
+
+                                    <View style={{ flex: .23 }}>
+
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}>Politics,</Text>
+                                        </TouchableOpacity>
+
+                                    </View>
+
+                                    <View style={{ flex: .3 }}>
+
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}> Lifestyle</Text>
+                                        </TouchableOpacity>
+
+                                    </View>
+
+                                </View>
+
+
+
+
+                                <View>
+
+
+                                    <View style={{ flexDirection: 'row', flex: 1 }} >
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>Mark Wiens</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="user" color="black" size={20} />
+                                        </View>
+
+
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>12 Dec, 2017</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="calendar" color="black" size={20} />
+                                        </View>
+                                    </View>
+
+
+
+                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>1.2M Views</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="eye" color="black" size={20} />
+                                        </View>
+
+
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>06 Comments</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="comment" color="black" size={20} />
+                                        </View>
+                                    </View>
+
+
+
+
+                                </View>
+
+
+
+                                <View style={styles.imgViewIcons17}>
+
+                                    <Image source={image6} style={styles.imgv17} />
+
+                                </View>
+
+
+                                <View style={styles.textv17}>
+                                    <Text style={styles.hv17}>The Basics Of Buying A Telescope</Text>
+                                    <Text style={styles.pv17}>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.</Text>
+                                    <TouchableOpacity
+                                        style={styles.touchable17}
+                                        onPress={() => navigation.navigate('SixthPage')}
+                                        underlayColor='#fff'>
+                                        <Text style={{ fontWeight: 'bold' }}>View More</Text>
+                                    </TouchableOpacity>
+
+                                </View>
+
                             </View>
 
-                            <View style={{ flex: .23 }}>
 
-                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
-                                    underlayColor='#fff'>
-                                    <Text style={styles.p17}>Politics,</Text>
-                                </TouchableOpacity>
+
+
+
+
+                            <View style={styles.view17}>
+
+                                <View style={styles.v17}>
+
+                                    <View style={{ flex: .2 }}>
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}>Food, </Text>
+                                        </TouchableOpacity>
+                                    </View>
+
+                                    <View style={{ flex: .37 }}>
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}>Technology,</Text>
+                                        </TouchableOpacity>
+                                    </View>
+
+                                    <View style={{ flex: .23 }}>
+
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}>Politics,</Text>
+                                        </TouchableOpacity>
+
+                                    </View>
+
+                                    <View style={{ flex: .3 }}>
+
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}> Lifestyle</Text>
+                                        </TouchableOpacity>
+
+                                    </View>
+
+                                </View>
+
+
+
+
+                                <View>
+
+
+                                    <View style={{ flexDirection: 'row', flex: 1 }} >
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>Mark Wiens</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="user" color="black" size={20} />
+                                        </View>
+
+
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>12 Dec, 2017</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="calendar" color="black" size={20} />
+                                        </View>
+                                    </View>
+
+
+
+                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>1.2M Views</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="eye" color="black" size={20} />
+                                        </View>
+
+
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>06 Comments</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="comment" color="black" size={20} />
+                                        </View>
+                                    </View>
+
+
+
+
+                                </View>
+
+
+
+                                <View style={styles.imgViewIcons17}>
+
+                                    <Image source={image7} style={styles.imgv17} />
+
+                                </View>
+
+
+                                <View style={styles.textv17}>
+                                    <Text style={styles.hv17}>The Glossary Of Telescopes</Text>
+                                    <Text style={styles.pv17}>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.</Text>
+                                    <TouchableOpacity
+                                        style={styles.touchable17}
+                                        onPress={() => navigation.navigate('SixthPage')}
+                                        underlayColor='#fff'>
+                                        <Text style={{ fontWeight: 'bold' }}>View More</Text>
+                                    </TouchableOpacity>
+
+                                </View>
 
                             </View>
 
-                            <View style={{ flex: .3 }}>
 
-                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
-                                    underlayColor='#fff'>
-                                    <Text style={styles.p17}> Lifestyle</Text>
-                                </TouchableOpacity>
+
+
+
+
+                            <View style={styles.view17}>
+
+                                <View style={styles.v17}>
+
+                                    <View style={{ flex: .2 }}>
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}>Food, </Text>
+                                        </TouchableOpacity>
+                                    </View>
+
+                                    <View style={{ flex: .37 }}>
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}>Technology,</Text>
+                                        </TouchableOpacity>
+                                    </View>
+
+                                    <View style={{ flex: .23 }}>
+
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}>Politics,</Text>
+                                        </TouchableOpacity>
+
+                                    </View>
+
+                                    <View style={{ flex: .3 }}>
+
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}> Lifestyle</Text>
+                                        </TouchableOpacity>
+
+                                    </View>
+
+                                </View>
+
+
+
+
+                                <View>
+
+
+                                    <View style={{ flexDirection: 'row', flex: 1 }} >
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>Mark Wiens</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="user" color="black" size={20} />
+                                        </View>
+
+
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>12 Dec, 2017</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="calendar" color="black" size={20} />
+                                        </View>
+                                    </View>
+
+
+
+                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>1.2M Views</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="eye" color="black" size={20} />
+                                        </View>
+
+
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>06 Comments</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="comment" color="black" size={20} />
+                                        </View>
+                                    </View>
+
+
+
+
+                                </View>
+
+
+
+                                <View style={styles.imgViewIcons17}>
+
+                                    <Image source={image8} style={styles.imgv17} />
+
+                                </View>
+
+
+                                <View style={styles.textv17}>
+                                    <Text style={styles.hv17}>The Night Sky</Text>
+                                    <Text style={styles.pv17}>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.</Text>
+                                    <TouchableOpacity
+                                        style={styles.touchable17}
+                                        onPress={() => navigation.navigate('SixthPage')}
+                                        underlayColor='#fff'>
+                                        <Text style={{ fontWeight: 'bold' }}>View More</Text>
+                                    </TouchableOpacity>
+
+                                </View>
 
                             </View>
 
-                        </View>
 
 
 
 
+                            <View style={styles.view17}>
+
+                                <View style={styles.v17}>
+
+                                    <View style={{ flex: .2 }}>
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}>Food, </Text>
+                                        </TouchableOpacity>
+                                    </View>
+
+                                    <View style={{ flex: .37 }}>
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}>Technology,</Text>
+                                        </TouchableOpacity>
+                                    </View>
+
+                                    <View style={{ flex: .23 }}>
+
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}>Politics,</Text>
+                                        </TouchableOpacity>
+
+                                    </View>
+
+                                    <View style={{ flex: .3 }}>
+
+                                        <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.p17}> Lifestyle</Text>
+                                        </TouchableOpacity>
+
+                                    </View>
+
+                                </View>
 
 
 
 
+                                <View>
+
+
+                                    <View style={{ flexDirection: 'row', flex: 1 }} >
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>Mark Wiens</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="user" color="black" size={20} />
+                                        </View>
+
+
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>12 Dec, 2017</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="calendar" color="black" size={20} />
+                                        </View>
+                                    </View>
+
+
+
+                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>1.2M Views</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="eye" color="black" size={20} />
+                                        </View>
+
+
+                                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                                            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={styles.p17}>06 Comments</Text>
+                                            </TouchableOpacity>
+
+                                            <Icon style={{ flex: 1 }} name="comment" color="black" size={20} />
+                                        </View>
+                                    </View>
+
+
+
+
+                                </View>
+
+
+
+                                <View style={styles.imgViewIcons17}>
+
+                                    <Image source={image9} style={styles.imgv17} />
+
+                                </View>
+
+
+                                <View style={styles.textv17}>
+                                    <Text style={styles.hv17}>Telescopes 101</Text>
+                                    <Text style={styles.pv17}>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.</Text>
+                                    <TouchableOpacity
+                                        style={styles.touchable17}
+                                        onPress={() => navigation.navigate('SixthPage')}
+                                        underlayColor='#fff'>
+                                        <Text style={{ fontWeight: 'bold' }}>View More</Text>
+                                    </TouchableOpacity>
+
+                                </View>
+
+                            </View>
+
+
+                        </View> :
                         <View>
 
+                            <View>
 
-                            <View style={{ flexDirection: 'row', flex: 1 }} >
-                                <View style={{ flexDirection: 'row', flex: 1 }}>
-                                    <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
-                                        underlayColor='#fff'>
-                                        <Text style={styles.p17}>Mark Wiens</Text>
-                                    </TouchableOpacity>
+                                <View style={{ flexDirection: 'row', flex: 1, paddingLeft: 20, paddingRight: 20 }}>
 
-                                    <Icon style={{ flex: 1 }} name="user" color="black" size={20} />
+                                    <View style={{ flex: .3 }}>
+                                        <View style={{ flexDirection: 'column', flex: 1 }}>
+                                            <View style={{ flex: 1 }}>
+
+
+                                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                                    underlayColor='#fff'>
+                                                    <Text style={styles.p17}>Food,Technology, </Text>
+                                                </TouchableOpacity>
+
+
+                                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                                    underlayColor='#fff'>
+                                                    <Text style={styles.p17}>Politics,Lifestyle</Text>
+                                                </TouchableOpacity>
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }} >
+                                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                        <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                            underlayColor='#fff'>
+                                                            <Text style={styles.p17}>Mark Wiens</Text>
+                                                        </TouchableOpacity>
+
+                                                        <Icon style={{ flex: 1 }} name="user" color="black" size={20} />
+                                                    </View>
+
+                                                </View>
+
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }} >
+                                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                        <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                            underlayColor='#fff'>
+                                                            <Text style={styles.p17}>12 Dec, 2017</Text>
+                                                        </TouchableOpacity>
+
+                                                        <Icon style={{ flex: 1 }} name="calendar" color="black" size={20} />
+                                                    </View>
+
+                                                </View>
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                        <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                            underlayColor='#fff'>
+                                                            <Text style={styles.p17}>1.2M Views</Text>
+                                                        </TouchableOpacity>
+
+                                                        <Icon style={{ flex: 1 }} name="eye" color="black" size={20} />
+                                                    </View>
+                                                </View>
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                    <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                        underlayColor='#fff'>
+                                                        <Text style={styles.p17}>06 Comments</Text>
+                                                    </TouchableOpacity>
+
+                                                    <Icon style={{ flex: 1 }} name="comment" color="black" size={20} />
+                                                </View>
+
+                                            </View>
+
+                                        </View>
+
+                                    </View>
+
+                                    <View style={{ flex: .7 }}>
+
+                                        <View style={styles.imgViewIcons172}>
+
+                                            <Image source={image5} style={styles.imgv172} />
+
+                                        </View>
+
+                                    </View>
+
+
+
+
+
+
+
                                 </View>
 
 
-                                <View style={{ flexDirection: 'row', flex: 1 }}>
-                                    <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
-                                        underlayColor='#fff'>
-                                        <Text style={styles.p17}>12 Dec, 2017</Text>
-                                    </TouchableOpacity>
 
-                                    <Icon style={{ flex: 1 }} name="calendar" color="black" size={20} />
+                                <View style={{ flexDirection: 'row', flex: 1, paddingLeft: 20, paddingRight: 20 }}>
+                                    <View style={{ flex: .3 }}>
+                                    </View>
+
+                                    <View style={{ flex: .7 }}>
+
+                                        <View style={styles.textv172}>
+                                            <Text style={styles.hv17}>Astronomy Binoculars A Great Alternative</Text>
+                                            <Text style={styles.pv17}>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.</Text>
+                                            <TouchableOpacity
+                                                style={styles.touchable17}
+                                                onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={{ fontWeight: 'bold' }}>View More</Text>
+                                            </TouchableOpacity>
+
+                                        </View>
+                                    </View>
+
+
+
+
                                 </View>
+
                             </View>
 
 
 
-                            <View style={{ flexDirection: 'row', flex: 1 }}>
-                                <View style={{ flexDirection: 'row', flex: 1 }}>
-                                    <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
-                                        underlayColor='#fff'>
-                                        <Text style={styles.p17}>1.2M Views</Text>
-                                    </TouchableOpacity>
+                            {/*  */}
 
-                                    <Icon style={{ flex: 1 }} name="eye" color="black" size={20} />
+                            <View>
+
+                                <View style={{ flexDirection: 'row', flex: 1, paddingLeft: 20, paddingRight: 20 }}>
+
+                                    <View style={{ flex: .3 }}>
+                                        <View style={{ flexDirection: 'column', flex: 1 }}>
+                                            <View style={{ flex: 1 }}>
+
+
+                                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                                    underlayColor='#fff'>
+                                                    <Text style={styles.p17}>Food,Technology, </Text>
+                                                </TouchableOpacity>
+
+
+                                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                                    underlayColor='#fff'>
+                                                    <Text style={styles.p17}>Politics,Lifestyle</Text>
+                                                </TouchableOpacity>
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }} >
+                                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                        <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                            underlayColor='#fff'>
+                                                            <Text style={styles.p17}>Mark Wiens</Text>
+                                                        </TouchableOpacity>
+
+                                                        <Icon style={{ flex: 1 }} name="user" color="black" size={20} />
+                                                    </View>
+
+                                                </View>
+
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }} >
+                                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                        <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                            underlayColor='#fff'>
+                                                            <Text style={styles.p17}>12 Dec, 2017</Text>
+                                                        </TouchableOpacity>
+
+                                                        <Icon style={{ flex: 1 }} name="calendar" color="black" size={20} />
+                                                    </View>
+
+                                                </View>
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                        <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                            underlayColor='#fff'>
+                                                            <Text style={styles.p17}>1.2M Views</Text>
+                                                        </TouchableOpacity>
+
+                                                        <Icon style={{ flex: 1 }} name="eye" color="black" size={20} />
+                                                    </View>
+                                                </View>
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                    <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                        underlayColor='#fff'>
+                                                        <Text style={styles.p17}>06 Comments</Text>
+                                                    </TouchableOpacity>
+
+                                                    <Icon style={{ flex: 1 }} name="comment" color="black" size={20} />
+                                                </View>
+
+                                            </View>
+
+                                        </View>
+
+                                    </View>
+
+                                    <View style={{ flex: .7 }}>
+
+                                        <View style={styles.imgViewIcons172}>
+
+                                            <Image source={image6} style={styles.imgv172} />
+
+                                        </View>
+
+                                    </View>
+
+
+
+
+
+
+
                                 </View>
 
 
-                                <View style={{ flexDirection: 'row', flex: 1 }}>
-                                    <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
-                                        underlayColor='#fff'>
-                                        <Text style={styles.p17}>06 Comments</Text>
-                                    </TouchableOpacity>
 
-                                    <Icon style={{ flex: 1 }} name="comment" color="black" size={20} />
+                                <View style={{ flexDirection: 'row', flex: 1, paddingLeft: 20, paddingRight: 20 }}>
+                                    <View style={{ flex: .3 }}>
+                                    </View>
+
+                                    <View style={{ flex: .7 }}>
+
+                                        <View style={styles.textv172}>
+                                            <Text style={styles.hv17}>The Basics Of Buying A Telescope</Text>
+                                            <Text style={styles.pv17}>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.</Text>
+                                            <TouchableOpacity
+                                                style={styles.touchable17}
+                                                onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={{ fontWeight: 'bold' }}>View More</Text>
+                                            </TouchableOpacity>
+
+                                        </View>
+                                    </View>
+
+
+
+
                                 </View>
+
+                            </View>
+
+                            {/*  */}
+
+                            <View>
+
+                                <View style={{ flexDirection: 'row', flex: 1, paddingLeft: 20, paddingRight: 20 }}>
+
+                                    <View style={{ flex: .3 }}>
+                                        <View style={{ flexDirection: 'column', flex: 1 }}>
+                                            <View style={{ flex: 1 }}>
+
+
+                                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                                    underlayColor='#fff'>
+                                                    <Text style={styles.p17}>Food,Technology, </Text>
+                                                </TouchableOpacity>
+
+
+                                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                                    underlayColor='#fff'>
+                                                    <Text style={styles.p17}>Politics,Lifestyle</Text>
+                                                </TouchableOpacity>
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }} >
+                                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                        <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                            underlayColor='#fff'>
+                                                            <Text style={styles.p17}>Mark Wiens</Text>
+                                                        </TouchableOpacity>
+
+                                                        <Icon style={{ flex: 1 }} name="user" color="black" size={20} />
+                                                    </View>
+
+                                                </View>
+
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }} >
+                                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                        <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                            underlayColor='#fff'>
+                                                            <Text style={styles.p17}>12 Dec, 2017</Text>
+                                                        </TouchableOpacity>
+
+                                                        <Icon style={{ flex: 1 }} name="calendar" color="black" size={20} />
+                                                    </View>
+
+                                                </View>
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                        <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                            underlayColor='#fff'>
+                                                            <Text style={styles.p17}>1.2M Views</Text>
+                                                        </TouchableOpacity>
+
+                                                        <Icon style={{ flex: 1 }} name="eye" color="black" size={20} />
+                                                    </View>
+                                                </View>
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                    <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                        underlayColor='#fff'>
+                                                        <Text style={styles.p17}>06 Comments</Text>
+                                                    </TouchableOpacity>
+
+                                                    <Icon style={{ flex: 1 }} name="comment" color="black" size={20} />
+                                                </View>
+
+                                            </View>
+
+                                        </View>
+
+                                    </View>
+
+                                    <View style={{ flex: .7 }}>
+
+                                        <View style={styles.imgViewIcons172}>
+
+                                            <Image source={image7} style={styles.imgv172} />
+
+                                        </View>
+
+                                    </View>
+
+
+
+
+
+
+
+                                </View>
+
+
+
+                                <View style={{ flexDirection: 'row', flex: 1, paddingLeft: 20, paddingRight: 20 }}>
+                                    <View style={{ flex: .3 }}>
+                                    </View>
+
+                                    <View style={{ flex: .7 }}>
+
+                                        <View style={styles.textv172}>
+                                            <Text style={styles.hv17}>The Glossary Of Telescopes</Text>
+                                            <Text style={styles.pv17}>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.</Text>
+                                            <TouchableOpacity
+                                                style={styles.touchable17}
+                                                onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={{ fontWeight: 'bold' }}>View More</Text>
+                                            </TouchableOpacity>
+
+                                        </View>
+                                    </View>
+
+
+
+
+                                </View>
+
+                            </View>
+                            {/*  */}
+
+
+                            <View>
+
+                                <View style={{ flexDirection: 'row', flex: 1, paddingLeft: 20, paddingRight: 20 }}>
+
+                                    <View style={{ flex: .3 }}>
+                                        <View style={{ flexDirection: 'column', flex: 1 }}>
+                                            <View style={{ flex: 1 }}>
+
+
+                                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                                    underlayColor='#fff'>
+                                                    <Text style={styles.p17}>Food,Technology, </Text>
+                                                </TouchableOpacity>
+
+
+                                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                                    underlayColor='#fff'>
+                                                    <Text style={styles.p17}>Politics,Lifestyle</Text>
+                                                </TouchableOpacity>
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }} >
+                                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                        <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                            underlayColor='#fff'>
+                                                            <Text style={styles.p17}>Mark Wiens</Text>
+                                                        </TouchableOpacity>
+
+                                                        <Icon style={{ flex: 1 }} name="user" color="black" size={20} />
+                                                    </View>
+
+                                                </View>
+
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }} >
+                                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                        <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                            underlayColor='#fff'>
+                                                            <Text style={styles.p17}>12 Dec, 2017</Text>
+                                                        </TouchableOpacity>
+
+                                                        <Icon style={{ flex: 1 }} name="calendar" color="black" size={20} />
+                                                    </View>
+
+                                                </View>
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                        <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                            underlayColor='#fff'>
+                                                            <Text style={styles.p17}>1.2M Views</Text>
+                                                        </TouchableOpacity>
+
+                                                        <Icon style={{ flex: 1 }} name="eye" color="black" size={20} />
+                                                    </View>
+                                                </View>
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                    <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                        underlayColor='#fff'>
+                                                        <Text style={styles.p17}>06 Comments</Text>
+                                                    </TouchableOpacity>
+
+                                                    <Icon style={{ flex: 1 }} name="comment" color="black" size={20} />
+                                                </View>
+
+                                            </View>
+
+                                        </View>
+
+                                    </View>
+
+                                    <View style={{ flex: .7 }}>
+
+                                        <View style={styles.imgViewIcons172}>
+
+                                            <Image source={image8} style={styles.imgv172} />
+
+                                        </View>
+
+                                    </View>
+
+
+
+
+
+
+
+                                </View>
+
+
+
+                                <View style={{ flexDirection: 'row', flex: 1, paddingLeft: 20, paddingRight: 20 }}>
+                                    <View style={{ flex: .3 }}>
+                                    </View>
+
+                                    <View style={{ flex: .7 }}>
+
+                                        <View style={styles.textv172}>
+                                            <Text style={styles.hv17}>The Night Sky</Text>
+                                            <Text style={styles.pv17}>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.</Text>
+                                            <TouchableOpacity
+                                                style={styles.touchable17}
+                                                onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={{ fontWeight: 'bold' }}>View More</Text>
+                                            </TouchableOpacity>
+
+                                        </View>
+                                    </View>
+
+
+
+
+                                </View>
+
+                            </View>
+
+                            {/*  */}
+
+                            <View>
+
+                                <View style={{ flexDirection: 'row', flex: 1, paddingLeft: 20, paddingRight: 20 }}>
+
+                                    <View style={{ flex: .3 }}>
+                                        <View style={{ flexDirection: 'column', flex: 1 }}>
+                                            <View style={{ flex: 1 }}>
+
+
+                                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                                    underlayColor='#fff'>
+                                                    <Text style={styles.p17}>Food,Technology, </Text>
+                                                </TouchableOpacity>
+
+
+                                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
+                                                    underlayColor='#fff'>
+                                                    <Text style={styles.p17}>Politics,Lifestyle</Text>
+                                                </TouchableOpacity>
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }} >
+                                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                        <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                            underlayColor='#fff'>
+                                                            <Text style={styles.p17}>Mark Wiens</Text>
+                                                        </TouchableOpacity>
+
+                                                        <Icon style={{ flex: 1 }} name="user" color="black" size={20} />
+                                                    </View>
+
+                                                </View>
+
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }} >
+                                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                        <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                            underlayColor='#fff'>
+                                                            <Text style={styles.p17}>12 Dec, 2017</Text>
+                                                        </TouchableOpacity>
+
+                                                        <Icon style={{ flex: 1 }} name="calendar" color="black" size={20} />
+                                                    </View>
+
+                                                </View>
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                    <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                        <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                            underlayColor='#fff'>
+                                                            <Text style={styles.p17}>1.2M Views</Text>
+                                                        </TouchableOpacity>
+
+                                                        <Icon style={{ flex: 1 }} name="eye" color="black" size={20} />
+                                                    </View>
+                                                </View>
+
+                                            </View>
+
+                                            <View style={{ flex: 1 }}>
+
+
+
+                                                <View style={{ flexDirection: 'row', flex: 1 }}>
+                                                    <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
+                                                        underlayColor='#fff'>
+                                                        <Text style={styles.p17}>06 Comments</Text>
+                                                    </TouchableOpacity>
+
+                                                    <Icon style={{ flex: 1 }} name="comment" color="black" size={20} />
+                                                </View>
+
+                                            </View>
+
+                                        </View>
+
+                                    </View>
+
+                                    <View style={{ flex: .7 }}>
+
+                                        <View style={styles.imgViewIcons172}>
+
+                                            <Image source={image9} style={styles.imgv172} />
+
+                                        </View>
+
+                                    </View>
+
+
+
+
+
+
+
+                                </View>
+
+
+
+                                <View style={{ flexDirection: 'row', flex: 1, paddingLeft: 20, paddingRight: 20 }}>
+                                    <View style={{ flex: .3 }}>
+                                    </View>
+
+                                    <View style={{ flex: .7 }}>
+
+                                        <View style={styles.textv172}>
+                                            <Text style={styles.hv17}>Telescopes 101</Text>
+                                            <Text style={styles.pv17}>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.</Text>
+                                            <TouchableOpacity
+                                                style={styles.touchable17}
+                                                onPress={() => navigation.navigate('SixthPage')}
+                                                underlayColor='#fff'>
+                                                <Text style={{ fontWeight: 'bold' }}>View More</Text>
+                                            </TouchableOpacity>
+
+                                        </View>
+                                    </View>
+
+
+
+
+                                </View>
+
                             </View>
 
 
@@ -269,128 +1471,8 @@ const SixthPage = ({ navigation }) => {
 
                         </View>
 
-                    
 
-                    <View style={styles.imgView17}>
-
-                        <Image source={image5} style={styles.imgv17} />
-
-                    </View>
-
-
-                    <View style={styles.textv17}>
-                        <Text style={styles.hv17}>Astronomy Binoculars A Great Alternative</Text>
-                        <Text style={styles.pv17}>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.</Text>
-                        <TouchableOpacity
-                            style={styles.touchable17}
-                            onPress={() => navigation.navigate('SixthPage')}
-                            underlayColor='#fff'>
-                            <Text style={{fontWeight:'bold'}}>View More</Text>
-                        </TouchableOpacity>
-
-                    </View>
-
-
-
-
-                     <View style={styles.v17}>
-
-                            <View style={{ flex: .2 }}>
-                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
-                                    underlayColor='#fff'>
-                                    <Text style={styles.p17}>Food, </Text>
-                                </TouchableOpacity>
-                            </View>
-
-                            <View style={{ flex: .37 }}>
-                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
-                                    underlayColor='#fff'>
-                                    <Text style={styles.p17}>Technology,</Text>
-                                </TouchableOpacity>
-                            </View>
-
-                            <View style={{ flex: .23 }}>
-
-                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
-                                    underlayColor='#fff'>
-                                    <Text style={styles.p17}>Politics,</Text>
-                                </TouchableOpacity>
-
-                            </View>
-
-                            <View style={{ flex: .3 }}>
-
-                                <TouchableOpacity onPress={() => navigation.navigate('SixthPage')}
-                                    underlayColor='#fff'>
-                                    <Text style={styles.p17}> Lifestyle</Text>
-                                </TouchableOpacity>
-
-                            </View>
-
-                        </View>
-
-
-                        <View>
-
-
-                            <View style={{ flexDirection: 'row', flex: 1 }} >
-                                <View style={{ flexDirection: 'row', flex: 1 }}>
-                                    <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
-                                        underlayColor='#fff'>
-                                        <Text style={styles.p17}>Mark Wiens</Text>
-                                    </TouchableOpacity>
-
-                                    <Icon style={{ flex: 1 }} name="user" color="black" size={20} />
-                                </View>
-
-
-                                <View style={{ flexDirection: 'row', flex: 1 }}>
-                                    <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
-                                        underlayColor='#fff'>
-                                        <Text style={styles.p17}>12 Dec, 2017</Text>
-                                    </TouchableOpacity>
-
-                                    <Icon style={{ flex: 1 }} name="calendar" color="black" size={20} />
-                                </View>
-                            </View>
-
-
-
-                            <View style={styles.iconView17}style={{ flexDirection: 'row', flex: 1 }}>
-                                <View style={{ flexDirection: 'row', flex: 1 }}>
-                                    <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
-                                        underlayColor='#fff'>
-                                        <Text style={styles.p17}>1.2M Views</Text>
-                                    </TouchableOpacity>
-
-                                    <Icon style={{ flex: 1 }} name="eye" color="black" size={20} />
-                                </View>
-
-
-                                <View style={{ flexDirection: 'row', flex: 1 }}>
-                                    <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('SixthPage')}
-                                        underlayColor='#fff'>
-                                        <Text style={styles.p17}>06 Comments</Text>
-                                    </TouchableOpacity>
-
-                                    <Icon style={{ flex: 1 }} name="comment" color="black" size={20} />
-                                </View>
-                            </View>
-
-
-
-
-                        </View>
-
-
-
-                        
-
-                        
-
-                    </View>
-
-
+                    }
 
 
 
@@ -662,7 +1744,7 @@ const SixthPage = ({ navigation }) => {
 
                 </View>
             </ScrollView>
-        </SafeAreaView>
+        </SafeAreaView >
 
     );
 }
@@ -845,11 +1927,64 @@ const styles = ScaledSheet.create({
     },
 
 
+    /////////////////    PART13    ///////////////////////////////////
+
+  img13:
+  {
+    height: "500@s",
+    width: "100%",
+    paddingLeft:'5@s',
+    paddingRight:'5@s',
+
+    flex: 1
+  },
+
+  viewImg13:
+  {
+    marginTop: '50@s',
+    flexDirection: 'column',
+    flex: 1,
+    paddingLeft: '10@s',
+    paddingRight: '10@s',
+  },
+
+  viewImg132:
+  {
+    marginTop: '50@s',
+    flexDirection: 'column',
+    flex:.5,
+    paddingLeft: '10@s',
+    paddingRight: '10@s',
+    paddingTop: '10@s',
+    paddingBottom: '10@s',
+  },
+
+  view13:
+  {
+    marginBottom: '5@s',
+    marginTop:'20@s'
+  },
+
     /////////////////////////part 16 /////////////////////////////////
     imgBk16:
     {
-        height: '200@s',
-        width: "300@s",
+
+        width: "100%",
+        height: "190@s",
+        // paddingLeft:'10@s',
+        // paddingRight:'10@s',
+        // resizeMode: "cover",
+        // overflow: "hidden",
+    },
+
+
+    imgBk162:
+    {
+
+        width: "100%",
+        height: "260@s",
+        // paddingLeft:'10@s',
+        // paddingRight:'10@s',
         // resizeMode: "cover",
         // overflow: "hidden",
     },
@@ -860,10 +1995,11 @@ const styles = ScaledSheet.create({
 
         justifyContent: 'center',
         alignItems: 'center',
-        marginLeft: '20@s',
-        marginRight: '20@s',
+        width: "100%",
+        paddingLeft: '10@s',
+        paddingRight: '10@s',
         marginTop: '30@s',
-        marginBottom: '30@s'
+        marginBottom: '40@s'
 
 
     },
@@ -873,8 +2009,9 @@ const styles = ScaledSheet.create({
     {
         justifyContent: 'center',
         justifyContent: 'center',
+        height: '60%',
         marginBottom: '5@s',
-        marginTop: '20@s',
+        marginTop: '40@s',
         paddingTop: '20@s',
         paddingBottom: '20@s',
         backgroundColor: 'rgba(0, 0, 0, 0.6)'
@@ -933,7 +2070,7 @@ const styles = ScaledSheet.create({
     iconView17:
     {
         marginTop: '40@s',
-        marginLeft:'20@s'
+        marginLeft: '20@s'
 
     },
 
@@ -942,17 +2079,38 @@ const styles = ScaledSheet.create({
         paddingLeft: '10@s',
         paddingRight: '10@s',
         marginBottom: '40@s',
-        marginTop:'40@s'
+        marginTop: '40@s'
+    },
+
+    imgViewIcons17:
+    {
+        paddingLeft: '10@s',
+        paddingRight: '10@s',
+        marginBottom: '40@s',
+        marginTop: '20@s'
+    },
+
+    imgViewIcons172:
+    {
+        // paddingLeft: '10@s',
+        // paddingRight: '10@s',
+        // marginBottom: '40@s',
+        // marginTop: '20@s'
     },
 
     imgv17: {
-        width: "98%",
-        height: "179@s",
+        width: "95%",
+        height: "179@s"
+    },
+
+    imgv172: {
+        width: "100%",
+        height: "179@s"
     },
     hv17: {
 
         fontSize: '19@s',
-        fontWeight: 'bold',
+        fontWeight: 'bold'
 
     },
 
@@ -969,13 +2127,25 @@ const styles = ScaledSheet.create({
     {
         paddingLeft: '10@s',
         paddingRight: '10@s',
-        marginBottom: '80@s'
+        marginBottom: '10@s'
+    },
+
+    textv172:
+    {
+        paddingLeft: '10@s',
+        paddingRight: '10@s',
+        marginBottom: '30@s',
+        marginTop: "40@s"
     },
 
     touchable17: {
-paddingTop:'30@s'
-    }
+        paddingTop: '30@s'
+    },
 
+    v17icons:
+    {
+        marginBottom: '5@s'
+    }
 });
 
 export default SixthPage;

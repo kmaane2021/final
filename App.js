@@ -18,6 +18,7 @@ import ThirdPage from './pages/ThirdPage';
 import FourthPage from './pages/FourthPage';
 import FifthPage from './pages/FifthPage';
 import SixthPage from './pages/SixthPage';
+import SeventhPage from './pages/SeventhPage';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -53,11 +54,6 @@ function firstScreenStack({ navigation }) {
       <Stack.Screen
         name="FirstPage"
         component={FirstPage}
-
-      
-
-
-
         
 
         options={{
@@ -69,8 +65,6 @@ function firstScreenStack({ navigation }) {
             backgroundColor:'rgba(0, 0, 0, 0.7)',
     
           },
-
-        
 
 
           headerRight: () =>
@@ -279,6 +273,42 @@ function sixthScreenStack({navigation }) {
 }
 
 
+
+function seventhScreenStack({navigation }) {
+  return (
+    <Stack.Navigator initialRouteName="SeventhPage">
+      <Stack.Screen
+        name="SeventhPage"
+        component={SeventhPage}
+
+        options={{
+          title: 'PetShelter', //Set Header Title
+
+          headerRight: () =>
+            <NavigationDrawerStructure
+              navigationProps={navigation}
+            />,
+          headerStyle: {
+
+          },
+
+          headerTintColor: 'white', //Set Header text color
+          headerRightContainerStyle: {
+            paddingRight: 30,
+            backgroundColor: 'rgba(0, 0, 0, 0.7)'
+          },
+          headerTransparent: true,
+          headerTitleStyle: {
+            fontWeight: 'bold', //Set Header text style
+
+          },
+        }}
+      />
+    </Stack.Navigator>
+  );
+}
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function App() {
@@ -343,15 +373,15 @@ function App() {
           name="SixthPage"
           options={{ drawerLabel: 'Blog Home' , }}
           component={sixthScreenStack} />
-{/* 
+
       
         
         <Drawer.Screen
           name="SeventhPage"
-          options={{ drawerLabel: 'CONTACT' }}
+          options={{ drawerLabel: 'Blog Single' }}
           component={seventhScreenStack} />
 
-       
+  {/*      
         <Drawer.Screen
           name="EighthPage"
           options={{ drawerLabel: 'DROPDOWN' }}

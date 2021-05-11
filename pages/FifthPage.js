@@ -7,7 +7,6 @@ import YoutubePlayer from 'react-native-youtube-iframe';
 import { useState, useEffect } from "react";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { ScaledSheet } from "react-native-size-matters";
-import RNPickerSelect from "react-native-picker-select";
 
 
 const window = Dimensions.get("window");
