@@ -17,6 +17,7 @@ import SecondPage from './pages/SecondPage';
 import ThirdPage from './pages/ThirdPage';
 import FourthPage from './pages/FourthPage';
 import FifthPage from './pages/FifthPage';
+import SixthPage from './pages/SixthPage';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -241,6 +242,43 @@ function fifthScreenStack({navigation }) {
 }
 
 
+
+
+function sixthScreenStack({navigation }) {
+  return (
+    <Stack.Navigator initialRouteName="SixthPage">
+      <Stack.Screen
+        name="SixthPage"
+        component={SixthPage}
+
+        options={{
+          title: 'PetShelter', //Set Header Title
+
+          headerRight: () =>
+            <NavigationDrawerStructure
+              navigationProps={navigation}
+            />,
+          headerStyle: {
+
+          },
+
+          headerTintColor: 'white', //Set Header text color
+          headerRightContainerStyle: {
+            paddingRight: 30,
+            backgroundColor: 'rgba(0, 0, 0, 0.7)'
+          },
+          headerTransparent: true,
+          headerTitleStyle: {
+            fontWeight: 'bold', //Set Header text style
+
+          },
+        }}
+      />
+    </Stack.Navigator>
+  );
+}
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function App() {
@@ -272,9 +310,8 @@ function App() {
         {/* HOME */}
         <Drawer.Screen
           name="FirstPage"
-          options={{ drawerLabel: 'HOME', }}
+          options={{ drawerLabel:'HOME', }}
           component={firstScreenStack}
-
         />
       
         <Drawer.Screen
@@ -301,13 +338,13 @@ function App() {
           options={{ drawerLabel: 'VOLUNTEER' }}
           component={fifthScreenStack} />
 
-{/* 
-        
+  
         <Drawer.Screen
           name="SixthPage"
-          options={{ drawerLabel: 'BLOGS' }}
+          options={{ drawerLabel: 'Blog Home' , }}
           component={sixthScreenStack} />
-
+{/* 
+      
         
         <Drawer.Screen
           name="SeventhPage"

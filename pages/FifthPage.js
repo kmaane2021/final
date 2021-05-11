@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, View, Text, Image, StyleSheet, SafeAreaView, ScrollView, ImageBackground, TouchableOpacity, ViewComponent, Modal, Pressable, Dimensions, } from 'react-native';
+import { CheckBox, TextInput, Button, View, Text, Image, StyleSheet, SafeAreaView, ScrollView, ImageBackground, TouchableOpacity, ViewComponent, Modal, Pressable, Dimensions, } from 'react-native';
 import Carousel from "pinar";
 import { Video, AVPlaybackStatus } from 'expo-av';
 import { WebView } from "react-native-webview";
@@ -7,6 +7,7 @@ import YoutubePlayer from 'react-native-youtube-iframe';
 import { useState, useEffect } from "react";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { ScaledSheet } from "react-native-size-matters";
+import RNPickerSelect from "react-native-picker-select";
 
 
 const window = Dimensions.get("window");
@@ -47,6 +48,13 @@ const FifthPage = ({ navigation }) => {
     const video = React.useRef(null);
     const [status, setStatus] = React.useState({});
     const [playing, setPlaying] = useState(false);
+    const [isSelected, setSelection] = useState(false);
+    const [isSelected2, setSelection2] = useState(false);
+    const [isSelected3, setSelection3] = useState(false);
+    const [isSelected4, setSelection4] = useState(false);
+    const [isSelected5, setSelection5] = useState(false);
+    const [isSelected6, setSelection6] = useState(false);
+    const [isSelected7, setSelection7] = useState(false);
 
     const modeMaker = () => {
         if (dimensions.screen.width > dimensions.screen.height) {
@@ -123,49 +131,257 @@ const FifthPage = ({ navigation }) => {
 
 
                     {/* **************************part 14 ********************************** */}
-                    <View style={{justifyContent:'center',alignItems:'center'}}>
-              <Text
-                style={styles.hBlack14}>
-                Want to help? Become a Volunteer
+                    <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                        <Text
+                            style={styles.hBlack14}>
+                            Want to help? Become a Volunteer
           </Text>
 
-              <Text
-                style={styles.pGray14}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+                        <Text
+                            style={styles.pGray14}>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
           </Text>
-            </View>
-
-                    {/* *************************      PART 10     ***************************** */}
-
-                    <View style={{
-                        width: '100%',
-                        marginTop: 50,
-                    }}>
-                        <ImageBackground source={image12} style={styles.imgbk10}>
-
-                            <View style={styles.viewImg10}>
-                                <Text style={styles.hBlack10}>Want to help? Become a Volunteer</Text>
-                                <Text style={styles.p10}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</Text>
-                                <View style={{ flexDirection: 'row', flex: 1 }}>
-
-                                    <TouchableOpacity
-                                        style={mode === "portrait" ? styles.touchableL10 : styles.touchableL102} onPress={() => navigation.navigate('FirstPage')}
-                                        underlayColor='#fff'>
-                                        <Text style={styles.touchableTCBlack}>View pdf details</Text>
-                                    </TouchableOpacity>
-
-                                    <TouchableOpacity
-                                        style={mode === "portrait" ? styles.touchable2L10 : styles.touchable2L102} onPress={() => navigation.navigate('FirstPage')}
-                                        underlayColor='#fff'>
-                                        <Text style={styles.touchableTCBlack}>Register now</Text>
-                                    </TouchableOpacity>
-
-                                </View>
-                            </View>
-                        </ImageBackground>
-
                     </View>
 
+                    {/* ***********************Part 15 ******************************** */}
+                    <View style={styles.view15}>
+
+                        <View>
+                            <Text style={styles.txt15}>First Name</Text>
+                            <TextInput placeholder={'First Name'} style={styles.input}
+                            />
+                        </View>
+
+                        <View>
+                            <Text style={styles.txt15}>Last Name</Text>
+                            <TextInput placeholder={'Last Name'} style={styles.input}
+                            />
+                        </View>
+
+                        <View>
+                            <Text style={styles.txt15}>Address</Text>
+                            <TextInput placeholder={'Your Address'} style={styles.input} />
+                            <TextInput style={styles.input} />
+                        </View>
+
+
+                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                            <View style={styles.inputRow15}>
+                                <Text style={styles.txt15}>City</Text>
+                                <TextInput placeholder={'Select City'} style={styles.input} />
+
+                            </View>
+
+                            <View style={styles.inputRow15}>
+                                <Text style={styles.txt15}>State</Text>
+                                <TextInput placeholder={'Select State'} style={styles.input} />
+                            </View>
+
+                        </View>
+
+                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                            <View style={styles.inputRow15}>
+                                <Text style={styles.txt15}>Country</Text>
+                                <TextInput placeholder={'Select Coutry'} style={styles.input} />
+
+                            </View>
+
+                            <View style={styles.inputRow15}>
+                                <Text style={styles.txt15}>Postal Code</Text>
+                                <TextInput placeholder={'Postal Code'} style={styles.input} />
+                            </View>
+
+                        </View>
+
+
+                        <View style={{ flexDirection: 'row', flex: 1 }}>
+                            <View style={styles.inputRow15}>
+                                <Text style={styles.txt15}>Email Address</Text>
+                                <TextInput placeholder={'Email Address'} style={styles.input} />
+
+                            </View>
+
+                            <View style={styles.inputRow15}>
+                                <Text style={styles.txt15}>Phone Number</Text>
+                                <TextInput placeholder={'Phone Number'} style={styles.input} />
+                            </View>
+
+                        </View>
+
+                        <Text style={styles.txtDays15}> Which days you can be volunteer?</Text>
+
+                        {mode === "portrait" ? <View>
+
+                            <View style={{ flexDirection: 'row', flex: 1 }}>
+
+                                <View style={styles.checkboxContainer}>
+                                    <CheckBox
+                                        value={isSelected}
+                                        onValueChange={setSelection}
+                                        style={styles.checkbox}
+                                    />
+                                    <Text style={styles.label}>Monday</Text>
+                                </View>
+
+
+                                <View style={styles.checkboxContainer}>
+                                    <CheckBox
+                                        value={isSelected2}
+                                        onValueChange={setSelection2}
+                                        style={styles.checkbox}
+                                    />
+                                    <Text style={styles.label}>Tuesday</Text>
+
+                                    <CheckBox
+                                        value={isSelected3}
+                                        onValueChange={setSelection3}
+                                        style={styles.checkbox}
+                                    />
+                                    <Text style={styles.label}>Wednesday</Text>
+
+                                    <CheckBox
+                                        value={isSelected4}
+                                        onValueChange={setSelection4}
+                                        style={styles.checkbox}
+                                    />
+                                    <Text style={styles.label}>Thursday</Text>
+                                </View>
+
+                            </View>
+
+
+                            <View style={{ flexDirection: 'row', flex: 1 }}>
+
+                                <View style={styles.checkboxContainer}>
+                                    <CheckBox
+                                        value={isSelected5}
+                                        onValueChange={setSelection5}
+                                        style={styles.checkbox}
+                                    />
+                                    <Text style={styles.label}>Friday</Text>
+
+
+
+
+                                    <CheckBox
+                                        value={isSelected6}
+                                        onValueChange={setSelection6}
+                                        style={styles.checkbox}
+                                    />
+                                    <Text style={styles.label}>Saturday</Text>
+
+
+                                    <CheckBox
+                                        value={isSelected7}
+                                        onValueChange={setSelection7}
+                                        style={styles.checkbox}
+                                    />
+                                    <Text style={styles.label}>Sunday</Text>
+
+
+                                </View>
+
+
+
+
+                            </View>
+                        </View> :
+
+
+                            <View>
+
+                                <View style={{ flexDirection: 'row', flex: 1 }}>
+
+                                    <View style={styles.checkboxContainer}>
+                                        <CheckBox
+                                            value={isSelected}
+                                            onValueChange={setSelection}
+                                            style={styles.checkbox}
+                                        />
+                                        <Text style={styles.label}>Monday</Text>
+
+                                        <CheckBox
+                                            value={isSelected2}
+                                            onValueChange={setSelection2}
+                                            style={styles.checkbox}
+                                        />
+                                        <Text style={styles.label}>Tuesday</Text>
+
+                                        <CheckBox
+                                            value={isSelected3}
+                                            onValueChange={setSelection3}
+                                            style={styles.checkbox}
+                                        />
+                                        <Text style={styles.label}>Wednesday</Text>
+
+                                        <CheckBox
+                                            value={isSelected4}
+                                            onValueChange={setSelection4}
+                                            style={styles.checkbox}
+                                        />
+                                        <Text style={styles.label}>Thursday</Text>
+
+                                        <CheckBox
+                                            value={isSelected5}
+                                            onValueChange={setSelection5}
+                                            style={styles.checkbox}
+                                        />
+                                        <Text style={styles.label}>Friday</Text>
+
+
+
+
+                                        <CheckBox
+                                            value={isSelected6}
+                                            onValueChange={setSelection6}
+                                            style={styles.checkbox}
+                                        />
+                                        <Text style={styles.label}>Saturday</Text>
+
+
+                                        <CheckBox
+                                            value={isSelected7}
+                                            onValueChange={setSelection7}
+                                            style={styles.checkbox}
+                                        />
+                                        <Text style={styles.label}>Sunday</Text>
+
+
+                                    </View>
+
+                                </View>
+                            </View>}
+
+                        <View>
+                            <Text style={styles.txt15}>Volunteer Note</Text>
+
+                            <View style={styles.textAreaContainer15} >
+                                <TextInput
+                                    style={styles.textArea15}
+                                    underlineColorAndroid="transparent"
+                                    placeholder="Write message"
+                                    placeholderTextColor="grey"
+                                    numberOfLines={10}
+                                    multiline={true}
+                                />
+                            </View>
+
+                            <View style={styles.viewTouchable15}>
+
+                            <TouchableOpacity
+                                style={styles.touchable15}
+                                onPress={
+                                    () => navigation.navigate('FifthPage')
+                                }
+                                underlayColor='#fff'>
+                                <Text style={styles.touchableT15}>Send message</Text>
+                            </TouchableOpacity>
+
+                            </View>
+                        </View>
+
+
+                    </View>
 
 
 
@@ -472,7 +688,7 @@ const styles = ScaledSheet.create({
 
     h1:
     {
-        fontSize: "37@s",
+        fontSize: "40@s",
         color: '#fff',
         fontWeight: 'bold',
         textAlign: 'center',
@@ -505,7 +721,7 @@ const styles = ScaledSheet.create({
 
     {
         justifyContent: 'center',
-        marginBottom: '60@s',
+        marginBottom: '30@s',
 
 
     },
@@ -1260,7 +1476,9 @@ const styles = ScaledSheet.create({
         color: '#000',
         fontSize: "33@s",
         fontWeight: 'bold',
-        textAlign:'center',
+        textAlign: 'center',
+        paddingLeft: '10@s',
+        paddingRight: '10@s',
         marginBottom: "20@s",
         marginTop: "80@s"
     },
@@ -1268,13 +1486,107 @@ const styles = ScaledSheet.create({
     pGray14:
     {
         fontSize: "14@s",
-        textAlign:'center',
-        paddingLeft:'5@s',
-        paddingRight:'5@s',
+        textAlign: 'center',
+        paddingLeft: '15@s',
+        paddingRight: '15@s',
         color: '#5e5a5a',
         marginBottom: "20@s",
         lineHeight: "20@s"
     },
+
+    // //////////////////////PART 15 //////////////////////////////////
+
+    view15:
+    {
+        paddingRight: '15@s',
+        paddingLeft: '15@s',
+        marginBottom: '80@s',
+    },
+
+
+    input: {
+        width: '100%',
+        height: '44@s',
+        padding: '10@s',
+        marginTop: '15@s',
+        marginBottom: '10@s',
+        borderColor: '#ced4da',
+        borderWidth: 1,
+        borderRadius: 10
+
+    },
+
+    inputRow15:
+    {
+        flex: .5,
+        paddingLeft: '5@s',
+        paddingRight: '5@s',
+    },
+
+    txt15:
+    {
+        fontWeight: 'bold',
+
+    },
+
+    txtDays15:
+    {
+        fontWeight: 'bold',
+        marginBottom: '20@s',
+        marginTop: '10@s'
+
+
+    },
+
+    checkboxContainer: {
+        flexDirection: "row",
+        marginBottom: '20@s',
+    },
+    checkbox: {
+        alignSelf: "center",
+    },
+    label: {
+        margin: '5@s',
+        fontSize: '10@s'
+    },
+
+    textAreaContainer15: {
+        borderColor: '#ced4da',
+        borderWidth: 1,
+        padding: '5@s',
+        borderRadius: 20,
+        marginTop: '10@s'
+    },
+    textArea15: {
+        height: '150@s',
+        justifyContent: "flex-start"
+    },
+
+    touchable15:
+  {
+    marginTop: "10@s",
+    justifyContent: 'flex-end',
+    width:'200@s',
+    
+    paddingTop: "10@s",
+    paddingBottom: "10@s",
+    backgroundColor: '#fab700',
+  },
+
+  touchableT15:
+  {
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: '16@s',
+    fontWeight: 'bold',
+    paddingLeft: "20@s",
+    paddingRight: "20@s"
+  },
+  viewTouchable15:
+  {
+      justifyContent:'flex-end',
+      alignItems:'flex-end'
+  }
 
 
 
