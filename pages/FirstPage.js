@@ -1190,13 +1190,6 @@ const styles = ScaledSheet.create({
     backgroundColor: 'rgba(0, 0, 0, 0.6)'
   },
 
-  x5:
-  {
-    textAlign: 'right',
-    color: '#F1ECEB',
-    fontWeight: 'bold',
-    fontSize: '20@s'
-  },
 
   ///////////////////////////////// Part 6 /////////////////////////////////////////////
   hBlack6: {
