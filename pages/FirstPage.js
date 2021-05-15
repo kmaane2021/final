@@ -71,12 +71,42 @@ const FirstPage = ({ navigation }) => {
 
     <SafeAreaView style={styles.container}>
 
-      <ScrollView >
+      <ScrollView>
         <View style={styles.container2}>
 
           {/* ************************* PART 1  IMAGEBACKGROUND     ***************************** */}
 
           <ImageBackground source={image1} style={styles.imgBk1}>
+
+    
+              <View style={styles.view0}>
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')} underlayColor='#fff'>
+                  <Text style={mode === "portrait" ? styles.p0 : styles.p02 }>Home</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SecondPage')} underlayColor='#fff'>
+                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>About </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('ThirdPage')} underlayColor='#fff'>
+                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Cats</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('FourthdPage')} underlayColor='#fff'>
+                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Dogs</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.touchableVolunter} onPress={() => navigation.navigate('FifthPage')} underlayColor='#fff'>
+                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Volunteer</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SixthPage')} underlayColor='#fff'>
+                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Blog</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SeventhPage')} underlayColor='#fff'>
+                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Contact</Text>
+                </TouchableOpacity>
+
+
+              </View>
 
             <View style={styles.v1hLWhite}>
               <Text
@@ -861,6 +891,13 @@ const styles = ScaledSheet.create({
   /////////////////////////////////////////////////////////////////////////////////////////////
   /////////////////////////////////    STYLE      /////////////////////////////////////////////
   /////////////////////////////////////////////////////////////////////////////////////////////
+  
+  
+  
+  
+  
+
+
   container:
   {
     flexDirection: 'column',
@@ -873,7 +910,56 @@ const styles = ScaledSheet.create({
   {
     flex: 1,
     // alignItems: 'center',
-    // justifyContent: 'center'
+    //justifyContent: 'center'
+  },
+
+
+  touchable0: {
+    marginTop: "13@s",
+    flex: 1,
+    justifyContent: 'flex-start',
+    paddingTop: "10@s",
+    paddingBottom: "10@s"
+
+  },
+  touchableVolunter: {
+    marginTop: "13@s",
+    flex: 1.4,
+    justifyContent: 'flex-start',
+    paddingTop: "10@s",
+    paddingBottom: "10@s"
+
+  },
+
+
+
+
+
+  view0: {
+    flexDirection:'row',
+    flex:1,
+    backgroundColor:'white',
+    paddingLeft:'5@s',
+    paddingRight:'5@s'
+
+  },
+
+  p0:{
+
+    fontSize:'11@s',
+    fontWeight:'bold',
+    marginLeft:'3@s',
+    textDecorationLine: 'underline',
+
+  },
+
+  p02:{
+
+    fontSize:'17@s',
+    fontWeight:'bold',
+    marginLeft:'5@s',
+    textDecorationLine: 'underline',
+
   },
 
   imgBk1:
@@ -1513,7 +1599,7 @@ const styles = ScaledSheet.create({
     color: '#5e5a5a',
     fontSize: "15@s",
     paddingLeft: "15@s",
-    paddingRight:'18@s',
+    paddingRight: '18@s',
     lineHeight: "20@s"
   },
 
@@ -1551,7 +1637,7 @@ const styles = ScaledSheet.create({
   txtP11: {
     marginLeft: '60@s',
     color: '#5e5a5a',
-    flex: 1, 
+    flex: 1,
     fontSize: '17@s',
     lineHeight: 40
   },

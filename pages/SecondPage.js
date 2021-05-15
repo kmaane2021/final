@@ -77,6 +77,40 @@ const SecondPage = ({ navigation }) => {
           {/* ************************* PART 1  IMAGEBACKGROUND     ***************************** */}
 
           <ImageBackground source={image1} style={styles.imgBk1}>
+
+          <View style={styles.view0}>
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')} underlayColor='#fff'>
+                  <Text style={mode === "portrait" ? styles.p0 : styles.p02 }>Home</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SecondPage')} underlayColor='#fff'>
+                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>About </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('ThirdPage')} underlayColor='#fff'>
+                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Cats</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FourthdPage')} underlayColor='#fff'>
+                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Dogs</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FifthPage')} underlayColor='#fff'>
+                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Volunteer</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SixthPage')} underlayColor='#fff'>
+                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Blog</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SeventhPage')} underlayColor='#fff'>
+                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Contact</Text>
+                </TouchableOpacity>
+
+
+              </View>
+
+
+
+
+
             <View style={styles.viewPart1}>
               <View >
                 <Text style={styles.h1}> About Us</Text>
@@ -746,6 +780,38 @@ const styles = ScaledSheet.create({
     // alignItems: 'center',
     // justifyContent: 'center'
   },
+
+  view0: {
+    flexDirection:'row',
+    flex:1,
+    backgroundColor:'white',
+    paddingLeft:'5@s',
+    paddingRight:'5@s'
+
+  },
+
+  p0:{
+
+    fontSize:'12@s',
+    fontWeight:'bold',
+    marginLeft:'5@s',
+    textDecorationLine: 'underline',
+
+  },
+
+  p02:{
+
+    fontSize:'17@s',
+    fontWeight:'bold',
+    marginLeft:'10@s',
+    textDecorationLine: 'underline',
+
+  },
+
+
+
+
+
 
   imgBk1:
   {

@@ -60,7 +60,7 @@ function firstScreenStack({ navigation }) {
           title: 'PetShelter',
 
           headerTransparent: false,
-          headerStyle: { borderBottomWidth: 0,backgroundColor:'#000'},
+          headerStyle: { borderBottomWidth: 0, backgroundColor: '#000' },
 
           headerRight: () =>
             <NavigationDrawerStructure
@@ -81,7 +81,7 @@ function firstScreenStack({ navigation }) {
 
         }
 
-        
+
         }
       />
     </Stack.Navigator>
@@ -364,10 +364,12 @@ function App() {
           component={fifthScreenStack} />
 
 
-        <Drawer.Screen
-          name="SixthPage"
-          options={{ drawerLabel: 'Blog Home', }}
-          component={sixthScreenStack} />
+
+       
+          <Drawer.Screen
+            name="SixthPage"
+            options={{ drawerLabel: 'Blog Home', }}
+            component={sixthScreenStack} />
 
 
 
