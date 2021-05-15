@@ -97,28 +97,33 @@ function secondScreenStack({ navigation }) {
         name="SecondPage"
         component={SecondPage}
 
-        options={{
-          title: 'PetShelter', //Set Header Title
+         options={{
+          title: 'PetShelter',
+
+          headerTransparent: false,
+          headerStyle: { borderBottomWidth: 0, backgroundColor: '#000' },
 
           headerRight: () =>
             <NavigationDrawerStructure
               navigationProps={navigation}
             />,
-          headerStyle: {
 
-          },
+          headerTintColor: 'white',
 
-          headerTintColor: 'white', //Set Header text color
           headerRightContainerStyle: {
             paddingRight: 30,
             backgroundColor: 'rgba(0, 0, 0, 0.7)'
           },
-          headerTransparent: true,
-          headerTitleStyle: {
-            fontWeight: 'bold', //Set Header text style
 
+
+          headerTitleStyle: {
+            fontWeight: 'bold',
           },
-        }}
+
+        }
+
+
+        }
       />
     </Stack.Navigator>
   );
@@ -133,27 +138,32 @@ function thirdScreenStack({ navigation }) {
         component={ThirdPage}
 
         options={{
-          title: 'PetShelter', //Set Header Title
+          title: 'PetShelter',
+
+          headerTransparent: false,
+          headerStyle: { borderBottomWidth: 0, backgroundColor: '#000' },
 
           headerRight: () =>
             <NavigationDrawerStructure
               navigationProps={navigation}
             />,
-          headerStyle: {
 
-          },
+          headerTintColor: 'white',
 
-          headerTintColor: 'white', //Set Header text color
           headerRightContainerStyle: {
             paddingRight: 30,
             backgroundColor: 'rgba(0, 0, 0, 0.7)'
           },
-          headerTransparent: true,
-          headerTitleStyle: {
-            fontWeight: 'bold', //Set Header text style
 
+
+          headerTitleStyle: {
+            fontWeight: 'bold',
           },
-        }}
+
+        }
+
+
+        }
       />
     </Stack.Navigator>
   );
@@ -168,27 +178,32 @@ function fourthScreenStack({ navigation }) {
         component={FourthPage}
 
         options={{
-          title: 'PetShelter', //Set Header Title
+          title: 'PetShelter',
+
+          headerTransparent: false,
+          headerStyle: { borderBottomWidth: 0, backgroundColor: '#000' },
 
           headerRight: () =>
             <NavigationDrawerStructure
               navigationProps={navigation}
             />,
-          headerStyle: {
 
-          },
+          headerTintColor: 'white',
 
-          headerTintColor: 'white', //Set Header text color
           headerRightContainerStyle: {
             paddingRight: 30,
             backgroundColor: 'rgba(0, 0, 0, 0.7)'
           },
-          headerTransparent: true,
-          headerTitleStyle: {
-            fontWeight: 'bold', //Set Header text style
 
+
+          headerTitleStyle: {
+            fontWeight: 'bold',
           },
-        }}
+
+        }
+
+
+        }
       />
     </Stack.Navigator>
   );
@@ -204,27 +219,32 @@ function fifthScreenStack({ navigation }) {
         component={FifthPage}
 
         options={{
-          title: 'PetShelter', //Set Header Title
+          title: 'PetShelter',
+
+          headerTransparent: false,
+          headerStyle: { borderBottomWidth: 0, backgroundColor: '#000' },
 
           headerRight: () =>
             <NavigationDrawerStructure
               navigationProps={navigation}
             />,
-          headerStyle: {
 
-          },
+          headerTintColor: 'white',
 
-          headerTintColor: 'white', //Set Header text color
           headerRightContainerStyle: {
             paddingRight: 30,
             backgroundColor: 'rgba(0, 0, 0, 0.7)'
           },
-          headerTransparent: true,
-          headerTitleStyle: {
-            fontWeight: 'bold', //Set Header text style
 
+
+          headerTitleStyle: {
+            fontWeight: 'bold',
           },
-        }}
+
+        }
+
+
+        }
       />
     </Stack.Navigator>
   );
@@ -241,27 +261,32 @@ function sixthScreenStack({ navigation }) {
         component={SixthPage}
 
         options={{
-          title: 'PetShelter', //Set Header Title
+          title: 'PetShelter',
+
+          headerTransparent: false,
+          headerStyle: { borderBottomWidth: 0, backgroundColor: '#000' },
 
           headerRight: () =>
             <NavigationDrawerStructure
               navigationProps={navigation}
             />,
-          headerStyle: {
 
-          },
+          headerTintColor: 'white',
 
-          headerTintColor: 'white', //Set Header text color
           headerRightContainerStyle: {
             paddingRight: 30,
             backgroundColor: 'rgba(0, 0, 0, 0.7)'
           },
-          headerTransparent: true,
-          headerTitleStyle: {
-            fontWeight: 'bold', //Set Header text style
 
+
+          headerTitleStyle: {
+            fontWeight: 'bold',
           },
-        }}
+
+        }
+
+
+        }
       />
     </Stack.Navigator>
   );
@@ -277,27 +302,32 @@ function seventhScreenStack({ navigation }) {
         component={SeventhPage}
 
         options={{
-          title: 'PetShelter', //Set Header Title
+          title: 'PetShelter',
+
+          headerTransparent: false,
+          headerStyle: { borderBottomWidth: 0, backgroundColor: '#000' },
 
           headerRight: () =>
             <NavigationDrawerStructure
               navigationProps={navigation}
             />,
-          headerStyle: {
 
-          },
+          headerTintColor: 'white',
 
-          headerTintColor: 'white', //Set Header text color
           headerRightContainerStyle: {
             paddingRight: 30,
             backgroundColor: 'rgba(0, 0, 0, 0.7)'
           },
-          headerTransparent: true,
-          headerTitleStyle: {
-            fontWeight: 'bold', //Set Header text style
 
+
+          headerTitleStyle: {
+            fontWeight: 'bold',
           },
-        }}
+
+        }
+
+
+        }
       />
     </Stack.Navigator>
   );

@@ -4,6 +4,7 @@ import Carousel from "pinar";
 import { Video, AVPlaybackStatus } from 'expo-av';
 import { WebView } from "react-native-webview";
 import YoutubePlayer from 'react-native-youtube-iframe';
+import MapView from 'react-native-maps';
 import { useState, useEffect } from "react";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { ScaledSheet } from "react-native-size-matters";
@@ -16,7 +17,7 @@ const screen = Dimensions.get("screen");
 
 const SeventhPage = ({ navigation }) => {
 
-    const image1 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/blog/blog-home-banner.jpg' };
+    const image1 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/banner-bg.jpg' };
     const image2 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/blog/cat-widget1.jpg' };
     const image3 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/blog/cat-widget2.jpg' };
     const image4 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/blog/cat-widget3.jpg' };
@@ -79,62 +80,114 @@ const SeventhPage = ({ navigation }) => {
                     <ImageBackground source={image1} style={styles.imgBk1}>
                         <View style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
 
-                        <View style={styles.view0}>
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')} underlayColor='#fff'>
-                  <Text style={mode === "portrait" ? styles.p0 : styles.p02 }>Home</Text>
-                </TouchableOpacity>
 
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SecondPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>About </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('ThirdPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Cats</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FourthdPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Dogs</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FifthPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Volunteer</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SixthPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Blog</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SeventhPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Contact</Text>
-                </TouchableOpacity>
-
-
-              </View>
-
-
-
-                            <View style={styles.viewPart1}>
-                                <View >
-                                    <Text style={styles.h1}>Dude You’re Getting a Telescope</Text>
-
-                                    <Text style={styles.p1}>There is a moment in the life of any aspiring astronomer that it is time to buy that first</Text>
-                                </View>
-
-                                <TouchableOpacity
-                                    style={styles.viewTouchable1}
-                                    onPress={
-                                        () => navigation.navigate('SixthPage')
-                                    }
-                                    underlayColor='#fff'>
-                                    <Text style={styles.touchableText1}>View More</Text>
+                            <View style={styles.view0}>
+                                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')} underlayColor='#fff'>
+                                    <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Home</Text>
                                 </TouchableOpacity>
+
+                                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SecondPage')} underlayColor='#fff'>
+                                    <Text style={mode === "portrait" ? styles.p0 : styles.p02}>About </Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('ThirdPage')} underlayColor='#fff'>
+                                    <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Cats</Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('FourthdPage')} underlayColor='#fff'>
+                                    <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Dogs</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={styles.touchableVolunteer} onPress={() => navigation.navigate('FifthPage')} underlayColor='#fff'>
+                                    <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Volunteer</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SixthPage')} underlayColor='#fff'>
+                                    <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Blog</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SeventhPage')} underlayColor='#fff'>
+                                    <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Contact</Text>
+                                </TouchableOpacity>
+
 
                             </View>
 
 
+
+                           
+            <View style={styles.viewPart1}>
+              <View >
+                <Text style={styles.h1}> Contact Us</Text>
+              </View>
+
+              <View style={styles.viewTouchable1}>
+                <View style={{ flex: .4 }}>
+                  <TouchableOpacity
+
+                    onPress={() => navigation.navigate('FirstPage')}
+                    underlayColor='#fff'>
+                    <Text style={styles.touchableText1}>Home</Text>
+                  </TouchableOpacity>
+
+                </View>
+                <View style={{ flex: .1 }}>
+                  <Icon style={styles.icon1} name="arrow-right" color='white' size={30} />
+                </View>
+
+
+                <View style={{ flex: .4 }}>
+
+                  <TouchableOpacity
+
+                    onPress={() => navigation.navigate('SecondPage')}
+                    underlayColor='#fff'>
+                    <Text style={styles.touchableText1}>Contact Us</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+
+            </View>
+
                         </View>
                     </ImageBackground>
 
+                    {/* ************************18*************************** */}
+                    <View style={styles.container18}>
+                        <MapView style={styles.map18} />
+                    </View>
+
+{/* /////////////19 */}
+                    
+                <View style={styles.v19}>
+                    <View style={styles.viewContact19}>
+                                <Icon style={styles.iconContact19} name="home" color="orange" size={30} />
+                                <Text style={styles.iconText19}>Binghamton, New York</Text>
+                            </View>
+
+                            <Text style={styles.txtP19}>4343 Hinkle Deegan Lake Road</Text>
 
 
-                   
+                            <View style={styles.viewContact19}>
+                                <Icon style={styles.iconContact19} name="phone" color="orange" size={30} />
+                                <Text style={styles.iconText19}>00 (953) 9865 562</Text>
+                            </View>
+
+
+                            <Text style={styles.txtP19}>Mon to Fri 9am to 6 pmd</Text>
+
+
+                            <View style={styles.viewContact19}>
+                                <Icon style={styles.iconContact19} name="envelope" color="orange" size={30} />
+                                <Text style={styles.iconText19}>support@colorlib.com</Text>
+                            </View>
+
+                            <Text style={styles.txtP19}>Send us your query anytime!</Text>
+
+                            </View>
+
+
+
+
+
+
                     {/* ***********************PART 11************************** */}
 
 
@@ -429,92 +482,104 @@ const styles = ScaledSheet.create({
     },
 
 
+    touchable0: {
+        marginTop: "10@s",
+        flex: 1,
+        justifyContent: 'flex-start',
+        paddingTop: "10@s",
+        paddingBottom: "10@s"
+
+    },
+    touchableVolunteer: {
+        marginTop: "10@s",
+        flex: 1.4,
+        justifyContent: 'flex-start',
+        paddingTop: "10@s",
+        paddingBottom: "10@s"
+
+    },
+
+
+
+
+
     view0: {
-        flexDirection:'row',
-        flex:1,
-        backgroundColor:'white',
-        paddingLeft:'5@s',
-        paddingRight:'5@s'
-    
-      },
-    
-      p0:{
-    
-        fontSize:'12@s',
-        fontWeight:'bold',
-        marginLeft:'5@s',
+        flexDirection: 'row',
+        flex: 1,
+        backgroundColor: 'white',
+        paddingLeft: '5@s',
+        paddingRight: '5@s'
+
+    },
+
+    p0: {
+
+        fontSize: '12@s',
+        fontWeight: 'bold',
+        marginLeft: '3@s',
         textDecorationLine: 'underline',
-    
-      },
-    
-      p02:{
-    
-        fontSize:'17@s',
-        fontWeight:'bold',
-        marginLeft:'10@s',
+
+    },
+
+    p02: {
+
+        fontSize: '17@s',
+        fontWeight: 'bold',
+        marginLeft: '5@s',
         textDecorationLine: 'underline',
-    
-      },
+
+    },
 
     imgBk1:
     {
-        height: null,
-        width: "100%",
-        resizeMode: "cover",
-        overflow: "hidden",
+      height: null,
+      width: "100%",
+      resizeMode: "cover",
+      overflow: "hidden",
     },
-
+  
     h1:
     {
-        fontSize: "40@s",
-        color: '#fff',
-        fontWeight: 'bold',
-        textAlign: 'center',
-        marginBottom: "15@s",
-        marginTop: "200@s",
+      fontSize: "37@s",
+      color: '#fff',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      marginBottom: "15@s",
+      marginTop: "200@s",
     },
-
-    p1:
-    {
-        fontSize: "14@s",
-        textAlign: 'center',
-        color: 'white',
-        marginBottom: "20@s",
-        lineHeight: "20@s"
-    },
-
-
-
+  
+  
+  
     touchableText1:
     {
-        color: 'black',
-        fontSize: '19@s',
-        textAlign: 'center',
-        fontWeight: 'bold',
+      color: 'white',
+      fontSize: '19@s',
+      textAlign: 'center'
     },
-
+  
     viewTouchable1:
-
     {
-
-        fontWeight: 'bold',
-        backgroundColor: 'white',
-        paddingTop: '10@s',
-        paddingBottom: '10@s',
-        marginBottom: '90@s',
-        marginLeft: '70@s',
-        marginRight: '70@s',
+      //width: '250@s',
+      marginLeft: '40@s',
+      marginRight: '40@s',
+      flexDirection: 'row',
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginBottom: '90@s'
     },
-
+  
     viewPart1:
-
+  
     {
-        justifyContent: 'center',
-        justifyContent: 'center',
-        marginBottom: '30@s',
-
-
+      justifyContent: 'center',
+      marginBottom: '60@s',
+  
+  
     },
+  
+  
+  
 
 
     ///////////////////////////////// Part 11 /////////////////////////////////////////////
@@ -615,41 +680,95 @@ const styles = ScaledSheet.create({
 
     /////////////////    PART13    ///////////////////////////////////
 
-  img13:
-  {
-    height: "500@s",
-    width: "100%",
-    paddingLeft:'5@s',
-    paddingRight:'5@s',
+    img13:
+    {
+        height: "500@s",
+        width: "100%",
+        paddingLeft: '5@s',
+        paddingRight: '5@s',
 
-    flex: 1
-  },
+        flex: 1
+    },
 
-  viewImg13:
-  {
-    marginTop: '50@s',
-    flexDirection: 'column',
+    viewImg13:
+    {
+        marginTop: '50@s',
+        flexDirection: 'column',
+        flex: 1,
+        paddingLeft: '10@s',
+        paddingRight: '10@s',
+    },
+
+    viewImg132:
+    {
+        marginTop: '50@s',
+        flexDirection: 'column',
+        flex: .5,
+        paddingLeft: '10@s',
+        paddingRight: '10@s',
+        paddingTop: '10@s',
+        paddingBottom: '10@s',
+    },
+
+    view13:
+    {
+        marginBottom: '5@s',
+        marginTop: '20@s'
+    },
+//////////////////////18//////////////////////////////
+
+container18: {
     flex: 1,
-    paddingLeft: '10@s',
-    paddingRight: '10@s',
+    marginTop:'60@s',
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  map18: {
+    // width: Dimensions.get('window').width,
+    // height: Dimensions.get('window').height,
+
+    width:'100%',
+    height:'300@s'
   },
 
-  viewImg132:
+
+
+  ////////////////19//////////////////////
+  viewContact19:
   {
-    marginTop: '50@s',
-    flexDirection: 'column',
-    flex:.5,
-    paddingLeft: '10@s',
-    paddingRight: '10@s',
-    paddingTop: '10@s',
-    paddingBottom: '10@s',
+      marginTop: '30@s',
+      flexDirection: 'row',
+      flex: 1,
+      width: '300@s'
   },
 
-  view13:
+  iconContact19:
   {
-    marginBottom: '5@s',
-    marginTop:'20@s'
+      marginLeft: '20@s',
+      flex: 1
   },
+  iconText19:
+  {
+      marginLeft: '-189@s',
+      color: 'black',
+      flex: 1,
+      fontSize: '17@s',
+      lineHeight: 40
+  },
+
+  txtP19: {
+    marginLeft: '60@s',
+    color: '#5e5a5a',
+    flex: 1,
+    fontSize: '17@s',
+    lineHeight: 40
+},
+
+v19:{
+    marginBottom:'80@s',
+    marginTop:'80@s'
+}
 
 
 });

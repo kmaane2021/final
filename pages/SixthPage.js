@@ -78,6 +78,40 @@ const SixthPage = ({ navigation }) => {
 
                     <ImageBackground source={image1} style={styles.imgBk1}>
                         <View style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
+
+                        <View style={styles.view0}>
+                                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')} underlayColor='#fff'>
+                                    <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Home</Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SecondPage')} underlayColor='#fff'>
+                                    <Text style={mode === "portrait" ? styles.p0 : styles.p02}>About </Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('ThirdPage')} underlayColor='#fff'>
+                                    <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Cats</Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('FourthdPage')} underlayColor='#fff'>
+                                    <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Dogs</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={styles.touchableVolunteer} onPress={() => navigation.navigate('FifthPage')} underlayColor='#fff'>
+                                    <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Volunteer</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SixthPage')} underlayColor='#fff'>
+                                    <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Blog</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SeventhPage')} underlayColor='#fff'>
+                                    <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Contact</Text>
+                                </TouchableOpacity>
+
+
+                            </View>
+
+
+
+
+
                             <View style={styles.viewPart1}>
                                 <View >
                                     <Text style={styles.h1}>Dude You’re Getting a Telescope</Text>
@@ -109,36 +143,35 @@ const SixthPage = ({ navigation }) => {
 
 
 
-                        <View style={styles.view0}>
+                        
+              <View style={styles.view0}>
                 <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')} underlayColor='#fff'>
                   <Text style={mode === "portrait" ? styles.p0 : styles.p02 }>Home</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SecondPage')} underlayColor='#fff'>
+                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SecondPage')} underlayColor='#fff'>
                   <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>About </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('ThirdPage')} underlayColor='#fff'>
+                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('ThirdPage')} underlayColor='#fff'>
                   <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Cats</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FourthdPage')} underlayColor='#fff'>
+                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('FourthdPage')} underlayColor='#fff'>
                   <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Dogs</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FifthPage')} underlayColor='#fff'>
+                <TouchableOpacity style={styles.touchableVolunteer} onPress={() => navigation.navigate('FifthPage')} underlayColor='#fff'>
                   <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Volunteer</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SixthPage')} underlayColor='#fff'>
+                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SixthPage')} underlayColor='#fff'>
                   <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Blog</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SeventhPage')} underlayColor='#fff'>
+                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SeventhPage')} underlayColor='#fff'>
                   <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Contact</Text>
                 </TouchableOpacity>
 
 
               </View>
-
-
 
                             <View style={styles.viewPart16}>
 
@@ -1802,7 +1835,28 @@ const styles = ScaledSheet.create({
 
 
 
-    view0: {
+    touchable0: {
+        marginTop: "10@s",
+        flex: 1,
+        justifyContent: 'flex-start',
+        paddingTop: "10@s",
+        paddingBottom: "10@s"
+    
+      },
+      touchableVolunteer: {
+        marginTop: "10@s",
+        flex: 1.4,
+        justifyContent: 'flex-start',
+        paddingTop: "10@s",
+        paddingBottom: "10@s"
+    
+      },
+    
+    
+    
+    
+    
+      view0: {
         flexDirection:'row',
         flex:1,
         backgroundColor:'white',
@@ -1815,7 +1869,7 @@ const styles = ScaledSheet.create({
     
         fontSize:'12@s',
         fontWeight:'bold',
-        marginLeft:'5@s',
+        marginLeft:'3@s',
         textDecorationLine: 'underline',
     
       },
@@ -1824,11 +1878,13 @@ const styles = ScaledSheet.create({
     
         fontSize:'17@s',
         fontWeight:'bold',
-        marginLeft:'10@s',
+        marginLeft:'5@s',
         textDecorationLine: 'underline',
     
       },
-
+    
+    
+    
     imgBk1:
     {
         height: null,
@@ -1985,6 +2041,84 @@ const styles = ScaledSheet.create({
         fontSize: '17@s',
         lineHeight: 40
     },
+
+
+    
+  ///////////////////////////////// Part 12 /////////////////////////////////////////////
+
+
+  view12:
+  {
+    backgroundColor: '#484848',
+    width: '100%',
+    paddingTop: '40@s',
+    paddingBottom: '20@s'
+  },
+
+  txt12:
+  {
+    fontSize: '12@s',
+    color: 'white',
+    paddingLeft: '10@s'
+  },
+
+  viewTextIcon12:
+  {
+    flexDirection: 'row',
+    flex: 1,
+    paddingBottom: '10@s',
+    paddingTop: '5@s',
+    paddingLeft: '10@s',
+    width: '192@s',
+    fontSize: '12@s'
+  },
+
+  icons12:
+  {
+    flexDirection: 'row',
+    flex: 1,
+    width: '140@s',
+    backgroundColor: '#484848',
+    paddingLeft: '25@s',
+    paddingBottom: '30@s'
+  },
+  view122:
+  {
+    flexDirection: 'row',
+    flex: 1,
+    backgroundColor: '#484848',
+    width: '100%',
+    paddingTop: '40@s',
+    paddingBottom: '20@s'
+  },
+
+  txt122:
+  {
+    fontSize: '12@s',
+    color: 'white',
+    paddingLeft: '10@s'
+  },
+
+  viewTextIcon122:
+  {
+    flexDirection: 'row',
+    flex: 1,
+    paddingBottom: '10@s',
+    paddingTop: '5@s',
+    paddingLeft: '10@s',
+    width: '250@s',
+    fontSize: '12@s'
+  },
+
+  icons122:
+  {
+    flexDirection: 'row',
+    flex: 1,
+    width: '140@s',
+    backgroundColor: '#484848',
+    paddingLeft: '25@s',
+    paddingBottom: '30@s'
+  },
 
 
     /////////////////    PART13    ///////////////////////////////////

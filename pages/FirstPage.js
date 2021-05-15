@@ -95,7 +95,7 @@ const FirstPage = ({ navigation }) => {
                 <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('FourthdPage')} underlayColor='#fff'>
                   <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Dogs</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.touchableVolunter} onPress={() => navigation.navigate('FifthPage')} underlayColor='#fff'>
+                <TouchableOpacity style={styles.touchableVolunteer} onPress={() => navigation.navigate('FifthPage')} underlayColor='#fff'>
                   <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Volunteer</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SixthPage')} underlayColor='#fff'>
@@ -915,15 +915,15 @@ const styles = ScaledSheet.create({
 
 
   touchable0: {
-    marginTop: "13@s",
+    marginTop: "10@s",
     flex: 1,
     justifyContent: 'flex-start',
     paddingTop: "10@s",
     paddingBottom: "10@s"
 
   },
-  touchableVolunter: {
-    marginTop: "13@s",
+  touchableVolunteer: {
+    marginTop: "10@s",
     flex: 1.4,
     justifyContent: 'flex-start',
     paddingTop: "10@s",
@@ -946,7 +946,7 @@ const styles = ScaledSheet.create({
 
   p0:{
 
-    fontSize:'11@s',
+    fontSize:'12@s',
     fontWeight:'bold',
     marginLeft:'3@s',
     textDecorationLine: 'underline',

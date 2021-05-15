@@ -78,29 +78,30 @@ const SecondPage = ({ navigation }) => {
 
           <ImageBackground source={image1} style={styles.imgBk1}>
 
+          
           <View style={styles.view0}>
                 <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')} underlayColor='#fff'>
                   <Text style={mode === "portrait" ? styles.p0 : styles.p02 }>Home</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SecondPage')} underlayColor='#fff'>
+                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SecondPage')} underlayColor='#fff'>
                   <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>About </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('ThirdPage')} underlayColor='#fff'>
+                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('ThirdPage')} underlayColor='#fff'>
                   <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Cats</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FourthdPage')} underlayColor='#fff'>
+                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('FourthdPage')} underlayColor='#fff'>
                   <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Dogs</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FifthPage')} underlayColor='#fff'>
+                <TouchableOpacity style={styles.touchableVolunteer} onPress={() => navigation.navigate('FifthPage')} underlayColor='#fff'>
                   <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Volunteer</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SixthPage')} underlayColor='#fff'>
+                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SixthPage')} underlayColor='#fff'>
                   <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Blog</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SeventhPage')} underlayColor='#fff'>
+                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SeventhPage')} underlayColor='#fff'>
                   <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Contact</Text>
                 </TouchableOpacity>
 
@@ -781,6 +782,27 @@ const styles = ScaledSheet.create({
     // justifyContent: 'center'
   },
 
+  touchable0: {
+    marginTop: "10@s",
+    flex: 1,
+    justifyContent: 'flex-start',
+    paddingTop: "10@s",
+    paddingBottom: "10@s"
+
+  },
+  touchableVolunteer: {
+    marginTop: "10@s",
+    flex: 1.4,
+    justifyContent: 'flex-start',
+    paddingTop: "10@s",
+    paddingBottom: "10@s"
+
+  },
+
+
+
+
+
   view0: {
     flexDirection:'row',
     flex:1,
@@ -794,7 +816,7 @@ const styles = ScaledSheet.create({
 
     fontSize:'12@s',
     fontWeight:'bold',
-    marginLeft:'5@s',
+    marginLeft:'3@s',
     textDecorationLine: 'underline',
 
   },
@@ -803,13 +825,10 @@ const styles = ScaledSheet.create({
 
     fontSize:'17@s',
     fontWeight:'bold',
-    marginLeft:'10@s',
+    marginLeft:'5@s',
     textDecorationLine: 'underline',
 
   },
-
-
-
 
 
 
