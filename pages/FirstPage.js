@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Button, View, Text, Image, StyleSheet, SafeAreaView, ScrollView, ImageBackground, TouchableOpacity, ViewComponent, Modal, Pressable, Dimensions, } from 'react-native';
 import Carousel from "pinar";
-import { Video, AVPlaybackStatus } from 'expo-av';
+//import { Video, AVPlaybackStatus } from 'expo-av';
 import { WebView } from "react-native-webview";
-import YoutubePlayer from 'react-native-youtube-iframe';
+//import YoutubePlayer from 'react-native-youtube-iframe';
 import { useState, useEffect } from "react";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { ScaledSheet } from "react-native-size-matters";
@@ -34,16 +34,17 @@ const FirstPage = ({ navigation }) => {
   const [mode, setMode] = useState("portrait");
 
   const [modalVisible, setModalVisible] = useState(false);
-  const video = React.useRef(null);
-  const [status, setStatus] = React.useState({});
-  const [playing, setPlaying] = useState(false);
+
+  //const video = React.useRef(null);
+  //const [status, setStatus] = React.useState({});
+  //const [playing, setPlaying] = useState(false);
 
   const modeMaker = () => {
-    if (dimensions.screen.width > dimensions.screen.height) {
-      setMode("landscape")
+    if (dimensions.screen.width < dimensions.screen.height) {
+      setMode("portrait")
 
     } else {
-      setMode("portrait")
+      setMode("landscape")
 
     }
     console.log(mode)
@@ -78,35 +79,35 @@ const FirstPage = ({ navigation }) => {
 
           <ImageBackground source={image1} style={styles.imgBk1}>
 
-    
-              <View style={styles.view0}>
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')} underlayColor='#fff'>
-                  <Text style={mode === "portrait" ? styles.p0 : styles.p02 }>Home</Text>
-                </TouchableOpacity>
 
-                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SecondPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>About </Text>
-                </TouchableOpacity>
+            <View style={styles.view0}>
+              <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')} underlayColor='#fff'>
+                <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Home</Text>
+              </TouchableOpacity>
 
-                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('ThirdPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Cats</Text>
-                </TouchableOpacity>
+              <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SecondPage')} underlayColor='#fff'>
+                <Text style={mode === "portrait" ? styles.p0 : styles.p02}>About </Text>
+              </TouchableOpacity>
 
-                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('FourthdPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Dogs</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.touchableVolunteer} onPress={() => navigation.navigate('FifthPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Volunteer</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SixthPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Blog</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SeventhPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Contact</Text>
-                </TouchableOpacity>
+              <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('ThirdPage')} underlayColor='#fff'>
+                <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Cats</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('FourthdPage')} underlayColor='#fff'>
+                <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Dogs</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.touchableVolunteer} onPress={() => navigation.navigate('FifthPage')} underlayColor='#fff'>
+                <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Volunteer</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SixthPage')} underlayColor='#fff'>
+                <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Blog</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SeventhPage')} underlayColor='#fff'>
+                <Text style={mode === "portrait" ? styles.p0 : styles.p02}>Contact</Text>
+              </TouchableOpacity>
 
 
-              </View>
+            </View>
 
             <View style={styles.v1hLWhite}>
               <Text
@@ -215,8 +216,6 @@ const FirstPage = ({ navigation }) => {
               <Text style={styles.touchableTCWhite}>Fill Adoption Form</Text>
             </TouchableOpacity>
           </View>
-
-
 
 
 
@@ -565,17 +564,6 @@ const FirstPage = ({ navigation }) => {
               </Carousel>
 
 
-
-
-
-
-
-
-
-
-
-
-
             }
 
           </View>
@@ -656,12 +644,12 @@ const FirstPage = ({ navigation }) => {
 
 
               <View style={{ flexDirection: 'row', flex: 1 }}>
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SeventhPage')}
                   underlayColor='#fff'>
                   <Text style={styles.p11}>About </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SixthPage')}
                   underlayColor='#fff'>
                   <Text style={styles.p11}>Blog</Text>
                 </TouchableOpacity>
@@ -888,14 +876,17 @@ const FirstPage = ({ navigation }) => {
 
 const styles = ScaledSheet.create({
 
+
+
+
+
   /////////////////////////////////////////////////////////////////////////////////////////////
   /////////////////////////////////    STYLE      /////////////////////////////////////////////
   /////////////////////////////////////////////////////////////////////////////////////////////
-  
-  
-  
-  
-  
+
+
+
+
 
 
   container:
@@ -903,8 +894,7 @@ const styles = ScaledSheet.create({
     flexDirection: 'column',
     flex: 1,
     backgroundColor: '#fff'
-    //alignItems: 'center',
-    //justifyContent: 'center'
+
   },
   container2:
   {
@@ -936,28 +926,28 @@ const styles = ScaledSheet.create({
 
 
   view0: {
-    flexDirection:'row',
-    flex:1,
-    backgroundColor:'white',
-    paddingLeft:'5@s',
-    paddingRight:'5@s'
+    flexDirection: 'row',
+    flex: 1,
+    backgroundColor: 'white',
+    paddingLeft: '5@s',
+    paddingRight: '5@s'
 
   },
 
-  p0:{
+  p0: {
 
-    fontSize:'12@s',
-    fontWeight:'bold',
-    marginLeft:'3@s',
+    fontSize: '12@s',
+    fontWeight: 'bold',
+    marginLeft: '3@s',
     textDecorationLine: 'underline',
 
   },
 
-  p02:{
+  p02: {
 
-    fontSize:'17@s',
-    fontWeight:'bold',
-    marginLeft:'5@s',
+    fontSize: '17@s',
+    fontWeight: 'bold',
+    marginLeft: '5@s',
     textDecorationLine: 'underline',
 
   },
@@ -1276,6 +1266,13 @@ const styles = ScaledSheet.create({
     backgroundColor: 'rgba(0, 0, 0, 0.6)'
   },
 
+  x5:
+  {
+    textAlign: 'right',
+    color: '#F1ECEB',
+    fontWeight: 'bold',
+    fontSize: '20@s'
+  },
 
   ///////////////////////////////// Part 6 /////////////////////////////////////////////
   hBlack6: {

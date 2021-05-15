@@ -1,16 +1,11 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import {
-  Button,
-  View,
-  Text,
-  TouchableOpacity,
-  Image
-} from 'react-native';
+import {Button,View,Text,TouchableOpacity,Image,Dimensions} from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { useState, useEffect } from "react";
 
 import FirstPage from './pages/FirstPage';
 import SecondPage from './pages/SecondPage';
@@ -19,6 +14,10 @@ import FourthPage from './pages/FourthPage';
 import FifthPage from './pages/FifthPage';
 import SixthPage from './pages/SixthPage';
 import SeventhPage from './pages/SeventhPage';
+
+
+
+
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -337,6 +336,9 @@ function seventhScreenStack({ navigation }) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function App() {
+
+
+
   return (
     <NavigationContainer>
       <Drawer.Navigator
@@ -355,8 +357,6 @@ function App() {
           backgroundColor: 'rgba(0, 0, 0, 0.8)',
 
         }}
-
-
 
 
 
@@ -407,14 +407,7 @@ function App() {
           name="SeventhPage"
           options={{ drawerLabel: 'Blog Single' }}
           component={seventhScreenStack} />
-
-        {/*      
-        <Drawer.Screen
-          name="EighthPage"
-          options={{ drawerLabel: 'DROPDOWN' }}
-          component={eighthScreenStack} />  */}
-
-
+ 
 
       </Drawer.Navigator>
     </NavigationContainer>

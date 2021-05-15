@@ -143,36 +143,7 @@ const SixthPage = ({ navigation }) => {
 
 
 
-                        
-              <View style={styles.view0}>
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')} underlayColor='#fff'>
-                  <Text style={mode === "portrait" ? styles.p0 : styles.p02 }>Home</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SecondPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>About </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('ThirdPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Cats</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('FourthdPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Dogs</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.touchableVolunteer} onPress={() => navigation.navigate('FifthPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Volunteer</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SixthPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Blog</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.touchable0} onPress={() => navigation.navigate('SeventhPage')} underlayColor='#fff'>
-                  <Text  style={mode === "portrait" ? styles.p0 : styles.p02 }>Contact</Text>
-                </TouchableOpacity>
-
-
-              </View>
-
+            
                             <View style={styles.viewPart16}>
 
                                 <Text style={styles.h16}>SOCIAL LIFE</Text>

@@ -112,39 +112,39 @@ const SeventhPage = ({ navigation }) => {
 
 
 
-                           
-            <View style={styles.viewPart1}>
-              <View >
-                <Text style={styles.h1}> Contact Us</Text>
-              </View>
 
-              <View style={styles.viewTouchable1}>
-                <View style={{ flex: .4 }}>
-                  <TouchableOpacity
+                            <View style={styles.viewPart1}>
+                                <View >
+                                    <Text style={styles.h1}> Contact Us</Text>
+                                </View>
 
-                    onPress={() => navigation.navigate('FirstPage')}
-                    underlayColor='#fff'>
-                    <Text style={styles.touchableText1}>Home</Text>
-                  </TouchableOpacity>
+                                <View style={styles.viewTouchable1}>
+                                    <View style={{ flex: .4 }}>
+                                        <TouchableOpacity
 
-                </View>
-                <View style={{ flex: .1 }}>
-                  <Icon style={styles.icon1} name="arrow-right" color='white' size={30} />
-                </View>
+                                            onPress={() => navigation.navigate('FirstPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.touchableText1}>Home</Text>
+                                        </TouchableOpacity>
+
+                                    </View>
+                                    <View style={{ flex: .1 }}>
+                                        <Icon style={styles.icon1} name="arrow-right" color='white' size={30} />
+                                    </View>
 
 
-                <View style={{ flex: .4 }}>
+                                    <View style={{ flex: .4 }}>
 
-                  <TouchableOpacity
+                                        <TouchableOpacity
 
-                    onPress={() => navigation.navigate('SecondPage')}
-                    underlayColor='#fff'>
-                    <Text style={styles.touchableText1}>Contact Us</Text>
-                  </TouchableOpacity>
-                </View>
-              </View>
+                                            onPress={() => navigation.navigate('SeventhPage')}
+                                            underlayColor='#fff'>
+                                            <Text style={styles.touchableText1}>Contact Us</Text>
+                                        </TouchableOpacity>
+                                    </View>
+                                </View>
 
-            </View>
+                            </View>
 
                         </View>
                     </ImageBackground>
@@ -154,34 +154,91 @@ const SeventhPage = ({ navigation }) => {
                         <MapView style={styles.map18} />
                     </View>
 
-{/* /////////////19 */}
+                    {/* /////////////19 */}
+
+                    <View style={styles.v19}>
+                        <View style={styles.viewContact19}>
+                            <Icon style={styles.iconContact19} name="home" color="orange" size={30} />
+                            <Text style={styles.iconText19}>Binghamton, New York</Text>
+                        </View>
+
+                        <Text style={styles.txtP19}>4343 Hinkle Deegan Lake Road</Text>
+
+
+                        <View style={styles.viewContact19}>
+                            <Icon style={styles.iconContact19} name="phone" color="orange" size={30} />
+                            <Text style={styles.iconText19}>00 (953) 9865 562</Text>
+                        </View>
+
+
+                        <Text style={styles.txtP19}>Mon to Fri 9am to 6 pmd</Text>
+
+
+                        <View style={styles.viewContact19}>
+                            <Icon style={styles.iconContact19} name="envelope" color="orange" size={30} />
+                            <Text style={styles.iconText19}>support@colorlib.com</Text>
+                        </View>
+
+                        <Text style={styles.txtP19}>Send us your query anytime!</Text>
+
+                    </View>
+
+
+
+                    {/* /***************************20 ******************/}
+
+
+                    <View style={styles.view20}>
+
+                        <View>
+                            
+                            <TextInput placeholder={'Enter your name'} style={styles.input}
+                            />
+                        </View>
+
+                        <View>
+                          
+                            <TextInput placeholder={'Enter your subject'} style={styles.input}
+                            />
+                        </View>
+
+                        <View>
+                          
+                            <TextInput placeholder={'Enter your subject'} style={styles.input} />
+                           
+                        </View>
+
                     
-                <View style={styles.v19}>
-                    <View style={styles.viewContact19}>
-                                <Icon style={styles.iconContact19} name="home" color="orange" size={30} />
-                                <Text style={styles.iconText19}>Binghamton, New York</Text>
+                        <View>
+                           
+                            <View style={styles.textAreaContainer20} >
+                                <TextInput
+                                    style={styles.textArea20}
+                                    underlineColorAndroid="transparent"
+                                    placeholder="Message"
+                                    placeholderTextColor="grey"
+                                    numberOfLines={10}
+                                    multiline={true}
+                                />
                             </View>
 
-                            <Text style={styles.txtP19}>4343 Hinkle Deegan Lake Road</Text>
+                            <View style={styles.viewTouchable20}>
 
-
-                            <View style={styles.viewContact19}>
-                                <Icon style={styles.iconContact19} name="phone" color="orange" size={30} />
-                                <Text style={styles.iconText19}>00 (953) 9865 562</Text>
-                            </View>
-
-
-                            <Text style={styles.txtP19}>Mon to Fri 9am to 6 pmd</Text>
-
-
-                            <View style={styles.viewContact19}>
-                                <Icon style={styles.iconContact19} name="envelope" color="orange" size={30} />
-                                <Text style={styles.iconText19}>support@colorlib.com</Text>
-                            </View>
-
-                            <Text style={styles.txtP19}>Send us your query anytime!</Text>
+                                <TouchableOpacity
+                                    style={styles.touchable20}
+                                    onPress={
+                                        () => navigation.navigate('FifthPage')
+                                    }
+                                    underlayColor='#fff'>
+                                    <Text style={styles.touchableT20}>Send Message</Text>
+                                </TouchableOpacity>
 
                             </View>
+                        </View>
+
+
+                    </View>
+
 
 
 
@@ -477,8 +534,8 @@ const styles = ScaledSheet.create({
     container2:
     {
         flex: 1,
-        // alignItems: 'center',
-        // justifyContent: 'center'
+        backgroundColor:'#f9f9ff'
+        
     },
 
 
@@ -532,54 +589,54 @@ const styles = ScaledSheet.create({
 
     imgBk1:
     {
-      height: null,
-      width: "100%",
-      resizeMode: "cover",
-      overflow: "hidden",
+        height: null,
+        width: "100%",
+        resizeMode: "cover",
+        overflow: "hidden",
     },
-  
+
     h1:
     {
-      fontSize: "37@s",
-      color: '#fff',
-      fontWeight: 'bold',
-      textAlign: 'center',
-      marginBottom: "15@s",
-      marginTop: "200@s",
+        fontSize: "37@s",
+        color: '#fff',
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginBottom: "15@s",
+        marginTop: "200@s",
     },
-  
-  
-  
+
+
+
     touchableText1:
     {
-      color: 'white',
-      fontSize: '19@s',
-      textAlign: 'center'
+        color: 'white',
+        fontSize: '19@s',
+        textAlign: 'center'
     },
-  
+
     viewTouchable1:
     {
-      //width: '250@s',
-      marginLeft: '40@s',
-      marginRight: '40@s',
-      flexDirection: 'row',
-      flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
-      marginBottom: '90@s'
+        //width: '250@s',
+        marginLeft: '40@s',
+        marginRight: '40@s',
+        flexDirection: 'row',
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: '90@s'
     },
-  
+
     viewPart1:
-  
+
     {
-      justifyContent: 'center',
-      marginBottom: '60@s',
-  
-  
+        justifyContent: 'center',
+        marginBottom: '60@s',
+
+
     },
-  
-  
-  
+
+
+
 
 
     ///////////////////////////////// Part 11 /////////////////////////////////////////////
@@ -678,6 +735,83 @@ const styles = ScaledSheet.create({
         lineHeight: 40
     },
 
+
+    ///////////////////////////////// Part 12 /////////////////////////////////////////////
+
+
+  view12:
+  {
+    backgroundColor: '#484848',
+    width: '100%',
+    paddingTop: '40@s',
+    paddingBottom: '20@s'
+  },
+
+  txt12:
+  {
+    fontSize: '12@s',
+    color: 'white',
+    paddingLeft: '10@s'
+  },
+
+  viewTextIcon12:
+  {
+    flexDirection: 'row',
+    flex: 1,
+    paddingBottom: '10@s',
+    paddingTop: '5@s',
+    paddingLeft: '10@s',
+    width: '192@s',
+    fontSize: '12@s'
+  },
+
+  icons12:
+  {
+    flexDirection: 'row',
+    flex: 1,
+    width: '140@s',
+    backgroundColor: '#484848',
+    paddingLeft: '25@s',
+    paddingBottom: '30@s'
+  },
+  view122:
+  {
+    flexDirection: 'row',
+    flex: 1,
+    backgroundColor: '#484848',
+    width: '100%',
+    paddingTop: '40@s',
+    paddingBottom: '20@s'
+  },
+
+  txt122:
+  {
+    fontSize: '12@s',
+    color: 'white',
+    paddingLeft: '10@s'
+  },
+
+  viewTextIcon122:
+  {
+    flexDirection: 'row',
+    flex: 1,
+    paddingBottom: '10@s',
+    paddingTop: '5@s',
+    paddingLeft: '10@s',
+    width: '250@s',
+    fontSize: '12@s'
+  },
+
+  icons122:
+  {
+    flexDirection: 'row',
+    flex: 1,
+    width: '140@s',
+    backgroundColor: '#484848',
+    paddingLeft: '25@s',
+    paddingBottom: '30@s'
+  },
+
     /////////////////    PART13    ///////////////////////////////////
 
     img13:
@@ -715,60 +849,133 @@ const styles = ScaledSheet.create({
         marginBottom: '5@s',
         marginTop: '20@s'
     },
-//////////////////////18//////////////////////////////
+    //////////////////////18//////////////////////////////
 
-container18: {
-    flex: 1,
-    marginTop:'60@s',
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  map18: {
-    // width: Dimensions.get('window').width,
-    // height: Dimensions.get('window').height,
+    container18: {
+        flex: 1,
+        marginTop: '60@s',
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    map18: {
+        // width: Dimensions.get('window').width,
+        // height: Dimensions.get('window').height,
 
-    width:'100%',
-    height:'300@s'
-  },
+        width: '100%',
+        height: '300@s'
+    },
 
 
 
-  ////////////////19//////////////////////
-  viewContact19:
+    ////////////////19//////////////////////
+    viewContact19:
+    {
+        marginTop: '30@s',
+        flexDirection: 'row',
+        flex: 1,
+        width: '300@s'
+    },
+
+    iconContact19:
+    {
+        marginLeft: '20@s',
+        flex: 1
+    },
+    iconText19:
+    {
+        marginLeft: '-189@s',
+        color: 'black',
+        flex: 1,
+        fontSize: '17@s',
+        lineHeight: 40
+    },
+
+    txtP19: {
+        marginLeft: '60@s',
+        color: '#5e5a5a',
+        flex: 1,
+        fontSize: '17@s',
+        lineHeight: 40
+    },
+
+    v19: {
+        marginBottom: '80@s',
+        marginTop: '80@s'
+    },
+
+    // //////////////////////20 //////////////////////////////////
+
+    view20:
+    {
+        paddingRight: '15@s',
+        paddingLeft: '15@s',
+        marginBottom: '80@s',
+    },
+
+
+    input: {
+        width: '100%',
+        height: '44@s',
+        padding: '10@s',
+        marginTop: '15@s',
+        marginBottom: '10@s',
+        borderColor: '#ced4da',
+        borderWidth: 1,
+        borderRadius: 10
+
+    },
+
+
+    txt20:
+    {
+        fontWeight: 'bold',
+
+    },
+
+    
+
+
+    textAreaContainer20: {
+        borderColor: '#ced4da',
+        borderWidth: 1,
+        padding: '5@s',
+        borderRadius: 20,
+        marginTop: '10@s'
+    },
+    textArea20: {
+        height: '150@s',
+        justifyContent: "flex-start"
+    },
+
+    touchable20:
   {
-      marginTop: '30@s',
-      flexDirection: 'row',
-      flex: 1,
-      width: '300@s'
+    marginTop: "10@s",
+    justifyContent: 'flex-end',
+    width:'200@s',
+    
+    paddingTop: "10@s",
+    paddingBottom: "10@s",
+    backgroundColor: '#fab700',
+    borderRadius:50
   },
 
-  iconContact19:
+  touchableT20:
   {
-      marginLeft: '20@s',
-      flex: 1
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: '16@s',
+    fontWeight: 'bold',
+    paddingLeft: "20@s",
+    paddingRight: "20@s",
+   
   },
-  iconText19:
+  viewTouchable20:
   {
-      marginLeft: '-189@s',
-      color: 'black',
-      flex: 1,
-      fontSize: '17@s',
-      lineHeight: 40
-  },
-
-  txtP19: {
-    marginLeft: '60@s',
-    color: '#5e5a5a',
-    flex: 1,
-    fontSize: '17@s',
-    lineHeight: 40
-},
-
-v19:{
-    marginBottom:'80@s',
-    marginTop:'80@s'
-}
+      justifyContent:'flex-end',
+      alignItems:'flex-end',
+     
+  }
 
 
 });
