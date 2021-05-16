@@ -335,7 +335,12 @@ function seventhScreenStack({ navigation }) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
+
 function App() {
+
+
 
 
 
@@ -398,14 +403,14 @@ function App() {
        
           <Drawer.Screen
             name="SixthPage"
-            options={{ drawerLabel: 'Blog Home', }}
+            options={{ drawerLabel: 'Blog', }}
             component={sixthScreenStack} />
 
 
 
         <Drawer.Screen
           name="SeventhPage"
-          options={{ drawerLabel: 'Blog Single' }}
+          options={{ drawerLabel: 'About Us' }}
           component={seventhScreenStack} />
  
 
