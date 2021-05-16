@@ -255,7 +255,8 @@ const FirstPage = ({ navigation }) => {
             animationType="fade"
             transparent={true}
             visible={modalVisible}
-            supportedOrientations={['landscape']}
+            supportedOrientations={['portrait', 'landscape']}
+            onOrientationChange={['portrait', 'landscape']}
           
             onRequestClose={() => {
               a
@@ -1194,12 +1195,16 @@ const styles = ScaledSheet.create({
 
   icon52:
   {
-    paddingLeft: "10@s",
-    paddingTop: "100@s"
+    // paddingLeft: "10@s",
+     paddingTop: "110@s"
   },
 
   view5:
   {
+
+    justifyContent:'center',
+    alignItems:'center',
+    alignContent:'center',
     paddingRight: '15@s',
     paddingLeft: '15@s',
 
@@ -1207,6 +1212,9 @@ const styles = ScaledSheet.create({
 
   view52:
   {
+    justifyContent:'center',
+    alignItems:'center',
+    alignContent:'center',
     paddingRight: '30@s',
     paddingLeft: '30@s',
 
