@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import {Button,View,Text,TouchableOpacity,Image,Dimensions} from 'react-native';
+import { View, Text, TouchableOpacity, Image, Dimensions } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -22,8 +22,11 @@ import SeventhPage from './pages/SeventhPage';
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
+
+//navigatin Drawer
+
 const NavigationDrawerStructure = (props) => {
-  //Structure for the navigatin Drawer
+
   const toggleDrawer = () => {
     //Props to open/close the drawer
     props.navigationProps.toggleDrawer();
@@ -45,6 +48,9 @@ const NavigationDrawerStructure = (props) => {
     </View>
   );
 }
+
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function firstScreenStack({ navigation }) {
@@ -96,7 +102,7 @@ function secondScreenStack({ navigation }) {
         name="SecondPage"
         component={SecondPage}
 
-         options={{
+        options={{
           title: 'PetShelter',
 
           headerTransparent: false,
@@ -337,10 +343,7 @@ function seventhScreenStack({ navigation }) {
 
 
 
-
 function App() {
-
-
 
 
 
@@ -400,19 +403,19 @@ function App() {
 
 
 
-       
-          <Drawer.Screen
-            name="SixthPage"
-            options={{ drawerLabel: 'Blog', }}
-            component={sixthScreenStack} />
+
+        <Drawer.Screen
+          name="SixthPage"
+          options={{ drawerLabel: 'BLOG', }}
+          component={sixthScreenStack} />
 
 
 
         <Drawer.Screen
           name="SeventhPage"
-          options={{ drawerLabel: 'About Us' }}
+          options={{ drawerLabel: 'CONTACT US' }}
           component={seventhScreenStack} />
- 
+
 
       </Drawer.Navigator>
     </NavigationContainer>

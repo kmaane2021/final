@@ -1,9 +1,5 @@
 import * as React from 'react';
-import { CheckBox, TextInput, Button, View, Text, Image, StyleSheet, SafeAreaView, ScrollView, ImageBackground, TouchableOpacity, ViewComponent, Modal, Pressable, Dimensions, } from 'react-native';
-import Carousel from "pinar";
-import { Video, AVPlaybackStatus } from 'expo-av';
-import { WebView } from "react-native-webview";
-import YoutubePlayer from 'react-native-youtube-iframe';
+import { View, Text, Image,SafeAreaView, ScrollView, ImageBackground, TouchableOpacity, Dimensions} from 'react-native';
 import { useState, useEffect } from "react";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { ScaledSheet } from "react-native-size-matters";
@@ -31,10 +27,6 @@ const SixthPage = ({ navigation }) => {
     const [dimensions, setDimensions] = useState({ window, screen });
     const [mode, setMode] = useState("portrait");
 
-    const [modalVisible, setModalVisible] = useState(false);
-    const video = React.useRef(null);
-    const [status, setStatus] = React.useState({});
-    const [playing, setPlaying] = useState(false);
 
 
     const modeMaker = () => {
@@ -1540,12 +1532,12 @@ const SixthPage = ({ navigation }) => {
                             </View>
 
                             <View style={{ flexDirection: 'row', flex: 1 }}>
-                                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SixthPage')}
                                     underlayColor='#fff'>
                                     <Text style={styles.p11}>Service</Text>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SixthPage')}
                                     underlayColor='#fff'>
                                     <Text style={styles.p11}>Team</Text>
                                 </TouchableOpacity>
@@ -1554,12 +1546,12 @@ const SixthPage = ({ navigation }) => {
 
 
                             <View style={{ flexDirection: 'row', flex: 1 }}>
-                                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SecondPage')}
                                     underlayColor='#fff'>
                                     <Text style={styles.p11}>About </Text>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SixthPage')}
                                     underlayColor='#fff'>
                                     <Text style={styles.p11}>Blog</Text>
                                 </TouchableOpacity>
@@ -1630,7 +1622,7 @@ const SixthPage = ({ navigation }) => {
                                         </TouchableOpacity>
 
                                         <TouchableOpacity style={styles.touchableL11}
-                                            onPress={() => navigation.navigate('FirstPage')}
+                                            onPress={() => navigation.navigate('SixthPage')}
                                             underlayColor='#fff'>
                                             <Text style={styles.p11}>Pricing</Text>
                                         </TouchableOpacity>
@@ -1638,12 +1630,12 @@ const SixthPage = ({ navigation }) => {
                                     </View>
 
                                     <View style={{ flexDirection: 'row', flex: 1 }}>
-                                        <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                                        <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SixthPage')}
                                             underlayColor='#fff'>
                                             <Text style={styles.p11}>Service</Text>
                                         </TouchableOpacity>
 
-                                        <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                                        <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SixthPage')}
                                             underlayColor='#fff'>
                                             <Text style={styles.p11}>Team</Text>
                                         </TouchableOpacity>
@@ -1652,12 +1644,12 @@ const SixthPage = ({ navigation }) => {
 
 
                                     <View style={{ flexDirection: 'row', flex: 1 }}>
-                                        <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                                        <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SecondPage')}
                                             underlayColor='#fff'>
                                             <Text style={styles.p11}>About </Text>
                                         </TouchableOpacity>
 
-                                        <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                                        <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SixthPage')}
                                             underlayColor='#fff'>
                                             <Text style={styles.p11}>Blog</Text>
                                         </TouchableOpacity>
@@ -1665,7 +1657,7 @@ const SixthPage = ({ navigation }) => {
 
 
                                     <View style={{ flexDirection: 'row', flex: 1 }}>
-                                        <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                                        <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SixthPage')}
                                             underlayColor='#fff'>
                                             <Text style={styles.p11}>Case Study </Text>
                                         </TouchableOpacity>
@@ -1794,14 +1786,12 @@ const styles = ScaledSheet.create({
         flexDirection: 'column',
         flex: 1,
         backgroundColor: '#fff'
-        //alignItems: 'center',
-        //justifyContent: 'center'
+       
     },
     container2:
     {
         flex: 1,
-        // alignItems: 'center',
-        // justifyContent: 'center'
+        
     },
 
 

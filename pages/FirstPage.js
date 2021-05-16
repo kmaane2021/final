@@ -1,9 +1,7 @@
 import * as React from 'react';
-import { Button, View, Text, Image, StyleSheet, SafeAreaView, ScrollView, ImageBackground, TouchableOpacity, ViewComponent, Modal, Pressable, Dimensions, } from 'react-native';
+import { View, Text, Image, SafeAreaView, ScrollView, ImageBackground, TouchableOpacity, Modal, Pressable, Dimensions, } from 'react-native';
 import Carousel from "pinar";
-//import { Video, AVPlaybackStatus } from 'expo-av';
 import { WebView } from "react-native-webview";
-//import YoutubePlayer from 'react-native-youtube-iframe';
 import { useState, useEffect } from "react";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { ScaledSheet } from "react-native-size-matters";
@@ -22,7 +20,6 @@ const FirstPage = ({ navigation }) => {
   const image5 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/c4.jpg' };
   const image6 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/about-img.jpg' };
   const image7 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/video-bg.jpg' };
-  const image8 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/play-btn.png' };
   const image9 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/t1.png' };
   const image10 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/t2.png' };
   const image11 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/t3.png' };
@@ -35,16 +32,13 @@ const FirstPage = ({ navigation }) => {
 
   const [modalVisible, setModalVisible] = useState(false);
 
-  //const video = React.useRef(null);
-  //const [status, setStatus] = React.useState({});
-  //const [playing, setPlaying] = useState(false);
 
   const modeMaker = () => {
-    if (dimensions.screen.width < dimensions.screen.height) {
-      setMode("portrait")
+    if (dimensions.screen.width > dimensions.screen.height) {
+      setMode("landscape")
 
     } else {
-      setMode("landscape")
+      setMode("portrait")
 
     }
     console.log(mode)
@@ -262,6 +256,7 @@ const FirstPage = ({ navigation }) => {
             transparent={true}
             visible={modalVisible}
             supportedOrientations={['landscape']}
+          
             onRequestClose={() => {
               a
               Alert.alert("Modal has been closed.");
@@ -644,7 +639,7 @@ const FirstPage = ({ navigation }) => {
 
 
               <View style={{ flexDirection: 'row', flex: 1 }}>
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SeventhPage')}
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SecondPage')}
                   underlayColor='#fff'>
                   <Text style={styles.p11}>About </Text>
                 </TouchableOpacity>
@@ -742,12 +737,12 @@ const FirstPage = ({ navigation }) => {
 
 
                   <View style={{ flexDirection: 'row', flex: 1 }}>
-                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SecondPage')}
                       underlayColor='#fff'>
                       <Text style={styles.p11}>About </Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SixthPage')}
                       underlayColor='#fff'>
                       <Text style={styles.p11}>Blog</Text>
                     </TouchableOpacity>
@@ -877,17 +872,9 @@ const FirstPage = ({ navigation }) => {
 const styles = ScaledSheet.create({
 
 
-
-
-
   /////////////////////////////////////////////////////////////////////////////////////////////
   /////////////////////////////////    STYLE      /////////////////////////////////////////////
   /////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
 
   container:
   {
@@ -899,10 +886,7 @@ const styles = ScaledSheet.create({
   container2:
   {
     flex: 1,
-    // alignItems: 'center',
-    //justifyContent: 'center'
   },
-
 
   touchable0: {
     marginTop: "10@s",

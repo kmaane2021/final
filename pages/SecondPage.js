@@ -1,9 +1,7 @@
 import * as React from 'react';
-import { Button, View, Text, Image, StyleSheet, SafeAreaView, ScrollView, ImageBackground, TouchableOpacity, ViewComponent, Modal, Pressable, Dimensions, } from 'react-native';
+import {View, Text, Image,SafeAreaView, ScrollView, ImageBackground, TouchableOpacity,Modal, Pressable, Dimensions} from 'react-native';
 import Carousel from "pinar";
-import { Video, AVPlaybackStatus } from 'expo-av';
 import { WebView } from "react-native-webview";
-import YoutubePlayer from 'react-native-youtube-iframe';
 import { useState, useEffect } from "react";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { ScaledSheet } from "react-native-size-matters";
@@ -16,13 +14,8 @@ const screen = Dimensions.get("screen");
 const SecondPage = ({ navigation }) => {
 
   const image1 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/banner-bg.jpg' };
-  const image2 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/c1.jpg' };
-  const image3 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/c2.jpg' };
-  const image4 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/c3.jpg' };
-  const image5 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/c4.jpg' };
   const image6 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/about-img.jpg' };
   const image7 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/video-bg.jpg' };
-  const image8 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/play-btn.png' };
   const image9 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/t1.png' };
   const image10 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/t2.png' };
   const image11 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/t3.png' };
@@ -34,9 +27,7 @@ const SecondPage = ({ navigation }) => {
   const [mode, setMode] = useState("portrait");
 
   const [modalVisible, setModalVisible] = useState(false);
-  const video = React.useRef(null);
-  const [status, setStatus] = React.useState({});
-  const [playing, setPlaying] = useState(false);
+
 
   const modeMaker = () => {
     if (dimensions.screen.width > dimensions.screen.height) {
@@ -155,7 +146,7 @@ const SecondPage = ({ navigation }) => {
             animationType="fade"
             transparent={true}
             visible={modalVisible}
-            supportedOrientations={['landscape']}
+            onOrientationChange={['landscape']}
             onRequestClose={() => {
               a
               Alert.alert("Modal has been closed.");
@@ -439,17 +430,6 @@ const SecondPage = ({ navigation }) => {
 
 
               </Carousel>
-
-
-
-
-
-
-
-
-
-
-
 
 
             }
@@ -772,14 +752,12 @@ const styles = ScaledSheet.create({
     flexDirection: 'column',
     flex: 1,
     backgroundColor: '#fff'
-    //alignItems: 'center',
-    //justifyContent: 'center'
+   
   },
   container2:
   {
     flex: 1,
-    // alignItems: 'center',
-    // justifyContent: 'center'
+  
   },
 
   touchable0: {

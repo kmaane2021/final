@@ -1,9 +1,5 @@
 import * as React from 'react';
-import { Button, View, Text, Image, StyleSheet, SafeAreaView, ScrollView, ImageBackground, TouchableOpacity, ViewComponent, Modal, Pressable, Dimensions, } from 'react-native';
-import Carousel from "pinar";
-import { Video, AVPlaybackStatus } from 'expo-av';
-import { WebView } from "react-native-webview";
-import YoutubePlayer from 'react-native-youtube-iframe';
+import {View, Text, Image, SafeAreaView, ScrollView, ImageBackground, TouchableOpacity,Dimensions} from 'react-native';
 import { useState, useEffect } from "react";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { ScaledSheet } from "react-native-size-matters";
@@ -16,18 +12,7 @@ const screen = Dimensions.get("screen");
 const FourthPage = ({ navigation }) => {
 
   const image1 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/banner-bg.jpg' };
-  const image2 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/c1.jpg' };
-  const image3 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/c2.jpg' };
-  const image4 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/c3.jpg' };
-  const image5 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/c4.jpg' };
-  const image6 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/about-img.jpg' };
-  const image7 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/video-bg.jpg' };
-  const image8 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/play-btn.png' };
-  const image9 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/t1.png' };
-  const image10 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/t2.png' };
-  const image11 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/t3.png' };
   const image12 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/call-bg.jpg' };
-
   const image13 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/dg2.jpg' };
   const image14 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/dg3.jpg' };
   const image15 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/dg4.jpg' };
@@ -35,7 +20,6 @@ const FourthPage = ({ navigation }) => {
   const image17 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/dg6.jpg' };
   const image18 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/dg7.jpg' };
   const image19 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/dg8.jpg' };
-
   const image21 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/dg1.jpg' };
 
 
@@ -43,10 +27,7 @@ const FourthPage = ({ navigation }) => {
   const [dimensions, setDimensions] = useState({ window, screen });
   const [mode, setMode] = useState("portrait");
 
-  const [modalVisible, setModalVisible] = useState(false);
-  const video = React.useRef(null);
-  const [status, setStatus] = React.useState({});
-  const [playing, setPlaying] = useState(false);
+
 
   const modeMaker = () => {
     if (dimensions.screen.width > dimensions.screen.height) {
@@ -256,13 +237,13 @@ const FourthPage = ({ navigation }) => {
                 <View style={{ flexDirection: 'row', flex: 1 }}>
 
                   <TouchableOpacity
-                    style={mode === "portrait" ? styles.touchableL10 : styles.touchableL102} onPress={() => navigation.navigate('FirstPage')}
+                    style={mode === "portrait" ? styles.touchableL10 : styles.touchableL102} onPress={() => navigation.navigate('FourthPage')}
                     underlayColor='#fff'>
                     <Text style={styles.touchableTCBlack}>View pdf details</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity
-                    style={mode === "portrait" ? styles.touchable2L10 : styles.touchable2L102} onPress={() => navigation.navigate('FirstPage')}
+                    style={mode === "portrait" ? styles.touchable2L10 : styles.touchable2L102} onPress={() => navigation.navigate('FourthPage')}
                     underlayColor='#fff'>
                     <Text style={styles.touchableTCBlack}>Register now</Text>
                   </TouchableOpacity>
@@ -297,7 +278,7 @@ const FourthPage = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.touchableL11}
-                  onPress={() => navigation.navigate('FirstPage')}
+                  onPress={() => navigation.navigate('FourthPage')}
                   underlayColor='#fff'>
                   <Text style={styles.p11}>Pricing</Text>
                 </TouchableOpacity>
@@ -305,12 +286,12 @@ const FourthPage = ({ navigation }) => {
               </View>
 
               <View style={{ flexDirection: 'row', flex: 1 }}>
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FourthPage')}
                   underlayColor='#fff'>
                   <Text style={styles.p11}>Service</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FourthPage')}
                   underlayColor='#fff'>
                   <Text style={styles.p11}>Team</Text>
                 </TouchableOpacity>
@@ -319,12 +300,12 @@ const FourthPage = ({ navigation }) => {
 
 
               <View style={{ flexDirection: 'row', flex: 1 }}>
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SecondPage')}
                   underlayColor='#fff'>
                   <Text style={styles.p11}>About </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SixthPage')}
                   underlayColor='#fff'>
                   <Text style={styles.p11}>Blog</Text>
                 </TouchableOpacity>
@@ -332,7 +313,7 @@ const FourthPage = ({ navigation }) => {
 
 
               <View style={{ flexDirection: 'row', flex: 1 }}>
-                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FourthPage')}
                   underlayColor='#fff'>
                   <Text style={styles.p11}>Case Study </Text>
                 </TouchableOpacity>
@@ -395,7 +376,7 @@ const FourthPage = ({ navigation }) => {
                     </TouchableOpacity>
 
                     <TouchableOpacity style={styles.touchableL11}
-                      onPress={() => navigation.navigate('FirstPage')}
+                      onPress={() => navigation.navigate('FourthPage')}
                       underlayColor='#fff'>
                       <Text style={styles.p11}>Pricing</Text>
                     </TouchableOpacity>
@@ -403,12 +384,12 @@ const FourthPage = ({ navigation }) => {
                   </View>
 
                   <View style={{ flexDirection: 'row', flex: 1 }}>
-                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FourthPage')}
                       underlayColor='#fff'>
                       <Text style={styles.p11}>Service</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FourthPage')}
                       underlayColor='#fff'>
                       <Text style={styles.p11}>Team</Text>
                     </TouchableOpacity>
@@ -417,12 +398,12 @@ const FourthPage = ({ navigation }) => {
 
 
                   <View style={{ flexDirection: 'row', flex: 1 }}>
-                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SecondPage')}
                       underlayColor='#fff'>
                       <Text style={styles.p11}>About </Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('SixthPage')}
                       underlayColor='#fff'>
                       <Text style={styles.p11}>Blog</Text>
                     </TouchableOpacity>
@@ -430,7 +411,7 @@ const FourthPage = ({ navigation }) => {
 
 
                   <View style={{ flexDirection: 'row', flex: 1 }}>
-                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FirstPage')}
+                    <TouchableOpacity style={styles.touchableL11} onPress={() => navigation.navigate('FourthPage')}
                       underlayColor='#fff'>
                       <Text style={styles.p11}>Case Study </Text>
                     </TouchableOpacity>
@@ -559,14 +540,12 @@ const styles = ScaledSheet.create({
     flexDirection: 'column',
     flex: 1,
     backgroundColor: '#fff'
-    //alignItems: 'center',
-    //justifyContent: 'center'
+   
   },
   container2:
   {
     flex: 1,
-    // alignItems: 'center',
-    // justifyContent: 'center'
+   
   },
 
   touchable0: {
@@ -890,9 +869,7 @@ const styles = ScaledSheet.create({
   button:
   {
     padding: "10@s",
-    //elevation: "2@s",
-    //marginBottom: "20@s",
-    //backgroundColor: "#2196F3",
+  
     backgroundColor: 'rgba(0, 0, 0, 0.6)'
   },
 
