@@ -146,8 +146,8 @@ const SecondPage = ({ navigation }) => {
             animationType="fade"
             transparent={true}
             visible={modalVisible}
-            supportedOrientations={['portrait', 'landscape']}
-            onOrientationChange={['portrait', 'landscape']}
+            supportedOrientations={['portrait']}
+            // onOrientationChange={['portrait']}
             onRequestClose={() => {
               a
               Alert.alert("Modal has been closed.");

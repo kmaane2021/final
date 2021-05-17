@@ -13,6 +13,7 @@ const screen = Dimensions.get("screen");
 
 const FirstPage = ({ navigation }) => {
 
+
   const image1 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/banner-bg.jpg' };
   const image2 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/c1.jpg' };
   const image3 = { uri: 'https://preview.colorlib.com/theme/animalshelter/img/c2.jpg' };
@@ -57,6 +58,8 @@ const FirstPage = ({ navigation }) => {
     };
 
   });
+
+  
 
 
 
@@ -255,8 +258,8 @@ const FirstPage = ({ navigation }) => {
             animationType="fade"
             transparent={true}
             visible={modalVisible}
-            supportedOrientations={['portrait', 'landscape']}
-            onOrientationChange={['portrait', 'landscape']}
+            supportedOrientations={['portrait']}
+            // onOrientationChange={['portrait']}
           
             onRequestClose={() => {
               a

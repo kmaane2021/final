@@ -54,6 +54,8 @@ const NavigationDrawerStructure = (props) => {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function firstScreenStack({ navigation }) {
+
+
   return (
     <Stack.Navigator initialRouteName="FirstPage">
       <Stack.Screen
@@ -97,7 +99,7 @@ function firstScreenStack({ navigation }) {
 
 function secondScreenStack({ navigation }) {
   return (
-    <Stack.Navigator initialRouteName="SecondPage">
+    <Stack.Navigator >
       <Stack.Screen
         name="SecondPage"
         component={SecondPage}
@@ -137,7 +139,7 @@ function secondScreenStack({ navigation }) {
 
 function thirdScreenStack({ navigation }) {
   return (
-    <Stack.Navigator initialRouteName="ThirdPage">
+    <Stack.Navigator >
       <Stack.Screen
         name="ThirddPage"
         component={ThirdPage}
@@ -177,7 +179,7 @@ function thirdScreenStack({ navigation }) {
 
 function fourthScreenStack({ navigation }) {
   return (
-    <Stack.Navigator initialRouteName="FourthPage">
+    <Stack.Navigator >
       <Stack.Screen
         name="FourthdPage"
         component={FourthPage}
@@ -260,7 +262,7 @@ function fifthScreenStack({ navigation }) {
 
 function sixthScreenStack({ navigation }) {
   return (
-    <Stack.Navigator initialRouteName="SixthPage">
+    <Stack.Navigator>
       <Stack.Screen
         name="SixthPage"
         component={SixthPage}
@@ -301,7 +303,7 @@ function sixthScreenStack({ navigation }) {
 
 function seventhScreenStack({ navigation }) {
   return (
-    <Stack.Navigator initialRouteName="SeventhPage">
+    <Stack.Navigator >
       <Stack.Screen
         name="SeventhPage"
         component={SeventhPage}
@@ -346,6 +348,8 @@ function seventhScreenStack({ navigation }) {
 function App() {
 
 
+  
+ 
 
   return (
     <NavigationContainer>
